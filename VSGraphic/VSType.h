@@ -3,11 +3,11 @@
 #include "VSPointer.h"
 #include "VSString.h"
 
-//һ���ڲ�ʹ�õĴ�object��̳еģ���Ҫ�������Եģ���������rtti���������ԣ�VSTYPE_MARCO
-//���������ڲ���object��̳еģ�֧��������Ϊ��λ��ʵ�����л�
+//一般内部使用的从object类继承的，是要区分属性的，所以声明rtti来区分属性，VSTYPE_MARCO
+//来区分是内部从object类继承的，支持以属性为单位来实现序列化
 
-//�Զ������ͣ������Ҫ֧���Զ�������л���Ҫ��CUSTOMTYPE_MARCO  ���������������ԣ�
-//����������԰汾�����Լ�Ҫ�ƶ���
+//自定义类型，如果想要支持自定义的序列化，要用CUSTOMTYPE_MARCO  声明，不区分属性，
+//里面类的属性版本兼容自己要制定。
 namespace VSEngine2
 {
 	//custom type

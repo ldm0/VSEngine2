@@ -2,7 +2,7 @@
 #define VSBEZIERCURVE3_H
 #include "VSControlCurve3.h"
 /*
-BezierÇúÏß£¬²ÎÊıtÔÚ0-1Ö®¼äÓÉ¿ØÖÆµãºÍ¶àÏîÊ½×é³É
+Bezieræ›²çº¿ï¼Œå‚æ•°tåœ¨0-1ä¹‹é—´ç”±æ§åˆ¶ç‚¹å’Œå¤šé¡¹å¼ç»„æˆ
 
 */
 namespace VSEngine2
@@ -12,16 +12,16 @@ class VSMATH_API VSBezierCurve3 : public  VSControlCurve3
 public:
 	VSBezierCurve3();
 	virtual ~VSBezierCurve3();
-	//ÉèÖÃ¿ØÖÆµã
+	//è®¾ç½®æ§åˆ¶ç‚¹
 	bool Set(const VSVector3 * pControlPoint,unsigned int uiControlPointNum);
-	//¿½±´
+	//æ‹·è´
 	bool Copy(const VSBezierCurve3 & BezierCurve3);
-	//Çóµ¼
+	//æ±‚å¯¼
 	virtual VSVector3	GetFirstDerivative(VSREAL t);
 	virtual VSVector3	GetSecondDerivative(VSREAL t);
 	virtual VSVector3	GetThirdDerivative(VSREAL t);
 	//virtual VSREAL		GetLength(VSREAL t1 ,VSREAL t2);
-	//Çóµã
+	//æ±‚ç‚¹
 	virtual VSVector3	GetPoint(VSREAL t);
 private:
 	FORCEINLINE VSREAL GetC(int i,int j)const;

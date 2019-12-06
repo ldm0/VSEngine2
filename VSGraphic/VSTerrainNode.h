@@ -27,8 +27,8 @@ namespace VSEngine2
 		}
 	protected:
 		VSTerrainNode();
-		unsigned int m_uiTesselationLevel;		//每个儿子层级，儿子几点个数和网格密度关系看GetChildNumX函数
-		unsigned int m_uiNumX;					//网格密度
+		unsigned int m_uiTesselationLevel;		//姣忎釜鍎垮瓙灞傜骇锛屽効瀛愬嚑鐐逛釜鏁板拰缃戞牸瀵嗗害鍏崇郴鐪婫etChildNumX鍑芥暟
+		unsigned int m_uiNumX;					//缃戞牸瀵嗗害
 		unsigned int m_uiNumZ;
 		unsigned int m_uiTotleNum;
 

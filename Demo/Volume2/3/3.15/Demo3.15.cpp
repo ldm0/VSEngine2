@@ -1,4 +1,4 @@
-//Êä³öÒ»¸öµØÃæÄ£ÐÍ£¬¸øºóÃæDemoÓÃ¡£
+//è¾“å‡ºä¸€ä¸ªåœ°é¢æ¨¡åž‹ï¼Œç»™åŽé¢Demoç”¨ã€‚
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

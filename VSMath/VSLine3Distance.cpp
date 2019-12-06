@@ -188,7 +188,7 @@ VSREAL VSLine3::SquaredDistance(const VSTriangle3 &Triangle,VSREAL &fLineParamet
 /*----------------------------------------------------------------*/
 VSREAL VSLine3::SquaredDistance(const VSRectangle3& Rectangle,VSREAL &fLineParameter,VSREAL fRectangleParameter[2])const
 {
-	//没有测试相交
+	//娌℃湁娴嬭瘯鐩镐氦
 
 
 	VSREAL fSqrDist = VSMAX_REAL;

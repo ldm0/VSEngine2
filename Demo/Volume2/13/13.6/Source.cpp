@@ -1,4 +1,4 @@
-//¿ªÆô¶àÏß³ÌäÖÈ¾²âÊÔ£¬·¢ËÍ¼ÆËãQuadµØÐÎMesh IndexÂß¼­µ½äÖÈ¾Ïß³Ì¡£
+//å¼€å¯å¤šçº¿ç¨‹æ¸²æŸ“æµ‹è¯•ï¼Œå‘é€è®¡ç®—Quadåœ°å½¢Mesh Indexé€»è¾‘åˆ°æ¸²æŸ“çº¿ç¨‹ã€‚
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

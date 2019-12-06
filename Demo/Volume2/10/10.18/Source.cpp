@@ -1,4 +1,4 @@
-//演示方向光的LightFunction
+//婕旂ず鏂瑰悜鍏夌殑LightFunction
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

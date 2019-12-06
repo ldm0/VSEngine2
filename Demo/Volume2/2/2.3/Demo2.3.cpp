@@ -1,4 +1,4 @@
-//¸øMonsterµÄÓÒÊÖ¹ÇÍ·´´½¨Ò»¸öSocket£¬Í¨¹ıÓÃ3DMax²é¿´FBXÎÄ¼ş¹Ç¼Ü£¬¿ÉÒÔÖªµÀÓÒÊÖ¹ÇÍ·Ãû×Ö½ĞBip01 R Hand£¬´´½¨SocketÃû×Ö½ĞHandSocket¡£
+//ç»™Monsterçš„å³æ‰‹éª¨å¤´åˆ›å»ºä¸€ä¸ªSocketï¼Œé€šè¿‡ç”¨3DMaxæŸ¥çœ‹FBXæ–‡ä»¶éª¨æ¶ï¼Œå¯ä»¥çŸ¥é“å³æ‰‹éª¨å¤´åå­—å«Bip01 R Handï¼Œåˆ›å»ºSocketåå­—å«HandSocketã€‚
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

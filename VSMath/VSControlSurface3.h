@@ -2,7 +2,7 @@
 #define VSCONTROLSURFACE3_H
 #include "VSSurface3.h"
 /*
-¿ØÖÆÇúÃæÀà£¬ËùÓĞµÄ¿ØÖÆµãÇúÃæ¶¼¼Ì³ĞÕâ¸öÀà£¬Ã»ÓĞÊµÀı
+æ§åˆ¶æ›²é¢ç±»ï¼Œæ‰€æœ‰çš„æ§åˆ¶ç‚¹æ›²é¢éƒ½ç»§æ‰¿è¿™ä¸ªç±»ï¼Œæ²¡æœ‰å®ä¾‹
 */
 namespace VSEngine2
 {
@@ -11,25 +11,25 @@ namespace VSEngine2
 	public:
 		VSControlSurface3();
 		virtual ~VSControlSurface3() = 0;
-		//¿½±´
+		//æ‹·è´
 		bool Copy(const VSControlSurface3& ControlSurface3);
-		//µÃµ½µã
+		//å¾—åˆ°ç‚¹
 		virtual VSVector3 GetPoint(VSREAL U,VSREAL V) = 0;
-		//ÇóÆ«µ¼
+		//æ±‚åå¯¼
 		virtual VSVector3 GetUPartialDerivative(VSREAL U,VSREAL V) = 0;
 		virtual VSVector3 GetVPartialDerivative(VSREAL U,VSREAL V) = 0;
 		/****************************FORCEINLINE********************************************/
-		//µÃµ½¿ØÖÆµã
+		//å¾—åˆ°æ§åˆ¶ç‚¹
 		FORCEINLINE VSVector3 GetControlPoint(unsigned int U,unsigned int V)const;
-		//¸Ä±ä¿ØÖÆµã
+		//æ”¹å˜æ§åˆ¶ç‚¹
 		FORCEINLINE bool ChangeControlPoint(unsigned int U,unsigned int V,const VSVector3& Value);
-		//µÃµ½¿ØÖÆµãÖ¸Õë
+		//å¾—åˆ°æ§åˆ¶ç‚¹æŒ‡é’ˆ
 		FORCEINLINE const VSVector3 *GetControlPoint()const;
-		//»ñµÃ¿ØÖÆµã¸öÊı
+		//è·å¾—æ§åˆ¶ç‚¹ä¸ªæ•°
 		FORCEINLINE unsigned int GetControlPointNum()const;
-		//»ñµÃĞĞÊı
+		//è·å¾—è¡Œæ•°
 		FORCEINLINE unsigned int GetRow()const;
-		//»ñµÃÁĞÊı
+		//è·å¾—åˆ—æ•°
 		FORCEINLINE unsigned int GetColumn()const;
 
 		VSREAL GetULength(VSREAL V,VSREAL U1, VSREAL U2,unsigned int uiIterations = 32);

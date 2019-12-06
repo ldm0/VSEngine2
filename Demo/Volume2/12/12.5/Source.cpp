@@ -1,4 +1,4 @@
-//��ʾ�۹�ƴ�ͳӰ��
+//演示聚光灯传统影子
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

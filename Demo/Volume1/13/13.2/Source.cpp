@@ -1,4 +1,4 @@
-//���Demoչʾ����һ��Demo 5��LOD Mesh����ȾЧ�������߿��԰�W���л��߿�ģʽ����ģ�͵�������
+//这个Demo展示了上一个Demo 5个LOD Mesh的渲染效果，读者可以按W键切换线框模式来看模型的面数。
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

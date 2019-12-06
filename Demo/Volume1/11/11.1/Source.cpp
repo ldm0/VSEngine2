@@ -1,4 +1,4 @@
-//展示了四叉树管理物体。Debug版本可能跑起来会吃力（Debug版本加了好多调试性的代码）读者尽量用Release版本来跑
+//灞曠ず浜嗗洓鍙夋爲绠＄悊鐗╀綋銆侱ebug鐗堟湰鍙兘璺戣捣鏉ヤ細鍚冨姏锛圖ebug鐗堟湰鍔犱簡濂藉璋冭瘯鎬х殑浠ｇ爜锛夎鑰呭敖閲忕敤Release鐗堟湰鏉ヨ窇
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

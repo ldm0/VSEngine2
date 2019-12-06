@@ -1,5 +1,5 @@
-//���ش�FBX�����һ��ʯͷ��FBX��ԴΪ��FBXResource\ Stone.FBXĿ¼�£�
-//������Դ��Bin\Resource\StaticMesh\Stone.STMODEL��Ĭ�ϵ�����û���κβ��ʵģ��õ�������Ĭ�ϲ���
+//加载从FBX导入的一个石头，FBX资源为在FBXResource\ Stone.FBX目录下，
+//导出资源在Bin\Resource\StaticMesh\Stone.STMODEL。默认导出是没有任何材质的，用的是引擎默认材质
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

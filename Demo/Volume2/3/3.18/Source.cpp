@@ -1,4 +1,4 @@
-//AnimTree走路、攻击、待机混合实例，为第二种解决方案
+//AnimTree璧拌矾銆佹敾鍑汇�佸緟鏈烘贩鍚堝疄渚嬶紝涓虹浜岀瑙ｅ喅鏂规
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

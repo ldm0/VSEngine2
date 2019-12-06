@@ -321,7 +321,7 @@ VSREAL VSVector3::SquaredDistance(const VSRectangle3 &Rectangle,VSREAL fRectangl
 
 }
 /*----------------------------------------------------------------*/
-//µ„∫ÕOBBæ‡¿Î
+//ÁÇπÂíåOBBË∑ùÁ¶ª
 VSREAL VSVector3::SquaredDistance(const VSOBB3 &OBB,VSREAL fOBBParameter[3])const
 {
 	return OBB.SquaredDistance(*this,fOBBParameter);

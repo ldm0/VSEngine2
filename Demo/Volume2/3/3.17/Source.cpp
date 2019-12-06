@@ -1,4 +1,4 @@
-//AnimTree×ßÂ·¡¢¹¥»÷¡¢´ý»ú»ìºÏÊµÀý£¬ÎªµÚÒ»ÖÖ½â¾ö·½°¸
+//AnimTreeèµ°è·¯ã€æ”»å‡»ã€å¾…æœºæ··åˆå®žä¾‹ï¼Œä¸ºç¬¬ä¸€ç§è§£å†³æ–¹æ¡ˆ
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

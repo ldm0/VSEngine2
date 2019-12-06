@@ -2,7 +2,7 @@
 #define VSCLODTERRAINGEOMETRY_H
 #include "VSGeometry.h"
 /*
-	顶点排列顺序
+	椤剁偣鎺掑垪椤哄簭
 j	4 9 14 19 24
 	3 8 13 18 23
 	2 7 12 17 22
@@ -41,7 +41,7 @@ namespace VSEngine2
 		virtual unsigned int GetTerrainGeometryType() = 0;
 		virtual bool AddNeighbor(VSCLodTerrainGeometry * pTerrainGemetry,unsigned int uiNeighbor);
 		virtual void LinkNeighbor() = 0;
-		//每个节点自己不允许变换，以免相邻的邻居和当前节点LOD出现问题
+		//姣忎釜鑺傜偣鑷繁涓嶅厑璁稿彉鎹紝浠ュ厤鐩搁偦鐨勯偦灞呭拰褰撳墠鑺傜偣LOD鍑虹幇闂
 		virtual void SetLocalScale(const VSVector3& Scale){};
 		virtual void SetLocalTranslate(const VSVector3& Translate){};
 		virtual void SetLocalRotate(const VSMatrix3X3 & Rotate){};

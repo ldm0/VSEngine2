@@ -330,7 +330,7 @@ bool VSVertexBuffer::LoadResource(VSRenderer * pRender)
 		return 1;
 	if(!m_pVertexFormat)
 	{
-		//´´½¨
+		//åˆ›å»º
 		VSResourceManager::LoadVertexFormat(this);
 	}
 	if(!m_pVertexFormat->LoadResource(pRender))

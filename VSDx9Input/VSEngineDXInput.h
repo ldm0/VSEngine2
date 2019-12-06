@@ -37,8 +37,8 @@ namespace VSEngine2
 		LPDIRECTINPUTDEVICE8	m_pMouseDevice;
 		LPDIRECTINPUTDEVICE8	m_pKeyBoardDevice;
 		static DWORD ms_BoardKey[BK_MAX];
-		HWND				m_hWndMain;         //´°¿Ú¾ä±ú
-		HINSTANCE			m_hInstance;        //ÊµÀı¾ä±ú
+		HWND				m_hWndMain;         //çª—å£å¥æŸ„
+		HINSTANCE			m_hInstance;        //å®ä¾‹å¥æŸ„
 	};
 
 

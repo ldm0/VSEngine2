@@ -1,6 +1,6 @@
 /*
-չʾ��ͬ�汾���ݣ����Կ�����ԭ������ȥ����һЩ����������Ȼ���Լ��ء����߿��ԶԱ�Demo8.6������m_pTestObject1��m_Name������m_pTestObject1��ָ�����ͣ�
-������ָ��Ķ���û�б��κ�ָ�����ã���ʱ������ڴ�й©�����������ڲ�������������������巽�������½ڻὲ�⡣
+展示不同版本兼容，可以看到对原来的类去掉了一些变量，但依然可以加载。读者可以对比Demo8.6，少了m_pTestObject1和m_Name，不过m_pTestObject1是指针类型，
+它本来指向的对象没有被任何指针引用，这时会出现内存泄漏，不过引擎内部把这种情况处理，具体方法后面章节会讲解。
 */
 #include <VSObject.h>
 #include "TestSaveLoad.h"

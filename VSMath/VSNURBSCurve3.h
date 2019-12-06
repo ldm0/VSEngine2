@@ -2,7 +2,7 @@
 #define VSNURBSCURVE3_H
 #include "VSB_SplineCurve3.h"
 /*
-NURBÇúÏßÀà
+NURBæ›²çº¿ç±»
 */
 namespace VSEngine2
 {
@@ -11,23 +11,23 @@ class VSMATH_API VSNURBSCurve3 : public VSB_SplineCurve3
 public:
 	VSNURBSCurve3();
 	virtual ~VSNURBSCurve3();
-	//ÉèÖÃÈ¨ÖØ
+	//è®¾ç½®æƒé‡
 	bool Set(const VSREAL * pWeight,unsigned int uiControlPointNum);
-	//¿½±´
+	//æ‹·è´
 	bool Copy(const VSNURBSCurve3 &NURBSCurve3);
 	/***************************************FORCEINLINE************************************/
-	//¸Ä±äÈ¨ÖØ
+	//æ”¹å˜æƒé‡
 	FORCEINLINE bool ChangeWeight(unsigned int i,VSREAL Weight);
-	//»ñÈ¡È¨ÖØÖ¸Õë
+	//è·å–æƒé‡æŒ‡é’ˆ
 	FORCEINLINE const VSREAL * GetWeight()const;
-	//µÃµ½È¨ÖØ
+	//å¾—åˆ°æƒé‡
 	FORCEINLINE VSREAL GetWeight(unsigned int i)const;
-	//È¡µÃµ¼Êı
+	//å–å¾—å¯¼æ•°
 	virtual VSVector3	GetFirstDerivative(VSREAL t);
 	virtual VSVector3	GetSecondDerivative(VSREAL t);
 	virtual VSVector3	GetThirdDerivative(VSREAL t);
 	//virtual VSREAL		GetLength(VSREAL t1 ,VSREAL t2);
-	//µÃµ½µã
+	//å¾—åˆ°ç‚¹
 	virtual VSVector3	GetPoint(VSREAL t);
 protected:
 	bool Get(unsigned int Order,VSREAL t ,VSVector3 *D0,VSVector3 *D1,VSVector3 *D2,VSVector3 *D3);

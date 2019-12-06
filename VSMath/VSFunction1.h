@@ -2,7 +2,7 @@
 #define VSFUNCTION2_H
 #include "VSMath.h"
 /*
-	Ò»Ôªº¯Êı
+	ä¸€å…ƒå‡½æ•°
 
 */
 namespace VSEngine2
@@ -12,23 +12,23 @@ namespace VSEngine2
 	public:
 		VSFunction1();
 		virtual ~VSFunction1() = 0;
-		//ÇóÖµ
+		//æ±‚å€¼
 		virtual VSREAL GetValue(VSREAL fParameter) = 0 ;
-		//Çóµ¼Êı
+		//æ±‚å¯¼æ•°
 		virtual VSREAL GetFirstDerivative(VSREAL fParameter) = 0;
 		virtual VSREAL GetSecondDerivative(VSREAL fParameter) = 0;
 		virtual VSREAL GetThirdDerivative(VSREAL fParameter) = 0;
-		//Çó»ı·Ö
+		//æ±‚ç§¯åˆ†
 		VSREAL Integration(VSREAL t1 , VSREAL t2,unsigned int uiIterator);
-		//Çó¼«Öµ
+		//æ±‚æå€¼
 		void GetExtremumValue(VSREAL t1 , VSREAL t2,VSREAL & Min,VSREAL &Max,unsigned int uiLevel);
-		//ÊÇ·ñÓĞ¸ù
+		//æ˜¯å¦æœ‰æ ¹
 		bool ISHaveRoot(VSREAL t1 , VSREAL t2,unsigned int uiIterator);
-		//¼ÆËã¸ù
+		//è®¡ç®—æ ¹
 		bool ComputeRoot(VSREAL t1 , VSREAL t2,unsigned int uiLevel);
-		//·µ»Ø¸ùÖ¸Õë
+		//è¿”å›æ ¹æŒ‡é’ˆ
 		FORCEINLINE VSREAL* GetRoot()const;
-		//·µ»Ø¸ù¸öÊı
+		//è¿”å›æ ¹ä¸ªæ•°
 		FORCEINLINE unsigned int GetRootNum()const;
 	protected:
 		typedef struct INTERVAL

@@ -39,12 +39,12 @@ namespace VSEngine2
 
 		}
 		virtual ~VSResourceChangedHandler() {}
-		// ¼ì²âÎÄ¼şÀàĞÍÊÇ·ñ¿ÉÒÔ´¦Àí
+		// æ£€æµ‹æ–‡ä»¶ç±»å‹æ˜¯å¦å¯ä»¥å¤„ç†
 		bool CheckFileType(const VSString & path)
 		{
 			return path.GetSubStringIndex(VSResource::GetFileSuffix(GetResourceType()), 1) != -1;
 		}
-		// ´¦ÀíÎÄ¼ş¸üĞÂÊÂ¼ş
+		// å¤„ç†æ–‡ä»¶æ›´æ–°äº‹ä»¶
 		virtual void OnFileChanged(const FileChangedArgs& args) = 0;
 
 		virtual unsigned int GetResourceType() const = 0;
@@ -65,7 +65,7 @@ namespace VSEngine2
 		{
 			return VSResource::RT_ACTION;
 		}
-		/// ´¦ÀíÎÄ¼ş¸üĞÂÊÂ¼ş
+		/// å¤„ç†æ–‡ä»¶æ›´æ–°äº‹ä»¶
 		virtual void OnFileChanged(const FileChangedArgs& args)
 		{
 
@@ -78,14 +78,14 @@ namespace VSEngine2
 		VSFileMonitor(VSMonitor * pOwner);
 		virtual ~VSFileMonitor();
 
-		// ÉèÖÃ¼àÊÓÄ¿Â¼
+		// è®¾ç½®ç›‘è§†ç›®å½•
 		void SetDirectory(const VSString& s);
-		// È¡µÃ¼àÊÓÄ¿Â¼
+		// å–å¾—ç›‘è§†ç›®å½•
 		const VSString & GetDirectory() const;
 
-		// ÉèÖÃÊÇ·ñÊ¹ÓÃÏà¶ÔÂ·¾¶
+		// è®¾ç½®æ˜¯å¦ä½¿ç”¨ç›¸å¯¹è·¯å¾„
 		void SetUseRelativePath(bool b);
-		// ÊÇ·ñÊ¹ÓÃÏà¶ÔÂ·¾¶
+		// æ˜¯å¦ä½¿ç”¨ç›¸å¯¹è·¯å¾„
 		bool IsUseRelativePath() const;
 
 	private:
@@ -146,19 +146,19 @@ namespace VSEngine2
 		VSResourceMonitor();
 		virtual ~VSResourceMonitor();
 
-		/// ¿ªÊ¼¼àÊÓ
+		/// å¼€å§‹ç›‘è§†
 		bool Open();
-		/// ¸üĞÂ
+		/// æ›´æ–°
 		void Update(double dAppTime);
-		/// ½áÊø¼àÊÓ
+		/// ç»“æŸç›‘è§†
 		void Close();
 
-		/// ÉèÖÃ¼àÊÓÄ¿Â¼
+		/// è®¾ç½®ç›‘è§†ç›®å½•
 		void SetMonitorDirectory(const VSString& path);
 
-		/// ×¢²áÎÄ¼şÀàĞÍ´¦Àí½Ó¿Ú
+		/// æ³¨å†Œæ–‡ä»¶ç±»å‹å¤„ç†æ¥å£
 		void RegisterHandler(VSResourceChangedHandler* handler);
-		/// É¾³ı¶ÔÓ¦´¦Àí½Ó¿Ú
+		/// åˆ é™¤å¯¹åº”å¤„ç†æ¥å£
 		void UnregisterHandler(VSResourceChangedHandler* handler);
 		static VSResourceMonitor * ms_pResourceMonitor;
 	protected:

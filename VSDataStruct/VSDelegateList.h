@@ -5,13 +5,13 @@
 namespace VSEngine2
 {
 	#define DELEGATE_PREFERRED_SYNTAX
-	//×¢	¸ù¾Ý²ÎÊý¸öÊý²»Í¬£¬¶ÔÓ¦Ã¿¸ö¸öÊý¶¼Òª±àÒë³öÀ´Ò»¸öÀà£¬Èç¹û´ò¿ªÕâ¸öºê±àÒë³öÀ´µÄËùÓÐÀàÃû¿ÉÒÔÏàÍ¬£¬
-	//		Í¬Ê±ÉùÃ÷µÄ·½·¨ºÍ´«Í³µÄÄ£°åÉùÃ÷²»Í¬£¬·ñÔò±àÒëÆ÷ÎÞ·¨Çø·ÖÀàÃûÏàÍ¬µÄÀà
-	//		Èç¹û²»´ò¿ªÕâ¸öºê£¬ÀàÃû¾Í²»Í¬·ñÔò±àÒë²»¹ý£¬µ«ÉùÃ÷ºÍ´«Í³ÉùÃ÷Ò»Ñù
-	//ÀýÈç £º¶ÔÓÚÒ»¸ö²ÎÊýint ºÍ·µ»ØÀàÐÍÊÇintµÄº¯ÊýÀ´Ëµ£¬´ò¿ªÕâ¸öºê£¬
-	//		VSDelegate<int(int)> k; ÕâÖÖ·½·¨´æÔÚ±àÒëÆ÷¼æÈÝÐÔ¡£
-	//		²»´ò¿ªÕâ¸öºê
-	//		VSDelegate1<int,int> ; ºóÃæµÄÊý×Ö±íÊ¾º¯Êý²ÎÊý¸öÊý
+	//æ³¨	æ ¹æ®å‚æ•°ä¸ªæ•°ä¸åŒï¼Œå¯¹åº”æ¯ä¸ªä¸ªæ•°éƒ½è¦ç¼–è¯‘å‡ºæ¥ä¸€ä¸ªç±»ï¼Œå¦‚æžœæ‰“å¼€è¿™ä¸ªå®ç¼–è¯‘å‡ºæ¥çš„æ‰€æœ‰ç±»åå¯ä»¥ç›¸åŒï¼Œ
+	//		åŒæ—¶å£°æ˜Žçš„æ–¹æ³•å’Œä¼ ç»Ÿçš„æ¨¡æ¿å£°æ˜Žä¸åŒï¼Œå¦åˆ™ç¼–è¯‘å™¨æ— æ³•åŒºåˆ†ç±»åç›¸åŒçš„ç±»
+	//		å¦‚æžœä¸æ‰“å¼€è¿™ä¸ªå®ï¼Œç±»åå°±ä¸åŒå¦åˆ™ç¼–è¯‘ä¸è¿‡ï¼Œä½†å£°æ˜Žå’Œä¼ ç»Ÿå£°æ˜Žä¸€æ ·
+	//ä¾‹å¦‚ ï¼šå¯¹äºŽä¸€ä¸ªå‚æ•°int å’Œè¿”å›žç±»åž‹æ˜¯intçš„å‡½æ•°æ¥è¯´ï¼Œæ‰“å¼€è¿™ä¸ªå®ï¼Œ
+	//		VSDelegate<int(int)> k; è¿™ç§æ–¹æ³•å­˜åœ¨ç¼–è¯‘å™¨å…¼å®¹æ€§ã€‚
+	//		ä¸æ‰“å¼€è¿™ä¸ªå®
+	//		VSDelegate1<int,int> ; åŽé¢çš„æ•°å­—è¡¨ç¤ºå‡½æ•°å‚æ•°ä¸ªæ•°
 	#ifdef DELEGATE_PREFERRED_SYNTAX
 		template <typename TSignature> class VSDelegate;
 		template <typename TSignature> class VSDelegateEvent;

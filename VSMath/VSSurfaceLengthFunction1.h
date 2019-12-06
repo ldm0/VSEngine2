@@ -3,7 +3,7 @@
 #include "VSFunction1.h"
 #include "VSSurface3.h"
 /*
-ÇóÇúÏß³¤¶Èº¯Êý
+æ±‚æ›²çº¿é•¿åº¦å‡½æ•°
 */
 namespace VSEngine2
 {
@@ -18,13 +18,13 @@ namespace VSEngine2
 		};
 		VSSurfaceLengthFunction1(unsigned int uiLengthType,VSREAL fTypePara);
 		~VSSurfaceLengthFunction1();
-		//µÃµ½Öµ
+		//å¾—åˆ°å€¼
 		virtual VSREAL GetValue(VSREAL fParameter);
-		//Çóµ¼Êý to do 
+		//æ±‚å¯¼æ•° to do 
 		virtual VSREAL GetFirstDerivative(VSREAL fParameter);
 		virtual VSREAL GetSecondDerivative(VSREAL fParameter);
 		virtual VSREAL GetThirdDerivative(VSREAL fParameter);
-		//ÉèÖÃÇúÏß
+		//è®¾ç½®æ›²çº¿
 		FORCEINLINE void SetSurface(VSSurface3 *pSurface){if(!pSurface) return ; m_pSurface = pSurface;}
 		FORCEINLINE VSSurface3 *GetSurface(){return m_pSurface;}
 	protected:

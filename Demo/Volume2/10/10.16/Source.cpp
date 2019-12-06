@@ -1,4 +1,4 @@
-//演示点光源的LightFunction
+//婕旂ず鐐瑰厜婧愮殑LightFunction
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

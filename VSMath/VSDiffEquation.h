@@ -2,7 +2,7 @@
 #define VSDIFFEQUATION_H
 #include "VSFunction1.h"
 /*
-	ÇóÒ»ÔªÎ¢·Ö·½³Ì
+	æ±‚ä¸€å…ƒå¾®åˆ†æ–¹ç¨‹
 
 
 */
@@ -13,19 +13,19 @@ class VSMATH_API VSDiffEquation
 public:
 	VSDiffEquation();
 	~VSDiffEquation();
-	//ÉèÖÃÔ­º¯Êý
+	//è®¾ç½®åŽŸå‡½æ•°
 	FORCEINLINE void SetFunction1(VSFunction1 * Func){if(!Func) return ; m_pFunc = Func;}
 	FORCEINLINE VSFunction1 *GetFunc(){return m_pFunc;}
-    //ÉèÖÃ²½³¤
+    //è®¾ç½®æ­¥é•¿
 	FORCEINLINE void SetStep(VSREAL Step){if(ABS(Step) < EPSILON_E4) return; m_Step = Step;}
 	FORCEINLINE VSREAL GetStep(){return m_Step;}
-	//ÉèÖÃ¿ªÊ¼×Ô±äÁ¿
+	//è®¾ç½®å¼€å§‹è‡ªå˜é‡
 	FORCEINLINE void SetBeginT(VSREAL BeginT){m_BeginT = BeginT;}
 	FORCEINLINE VSREAL GetBeginT(){return m_BeginT;}
-	//ÉèÖÃ¿ªÊ¼Öµ
+	//è®¾ç½®å¼€å§‹å€¼
 	FORCEINLINE void SetBeginX(VSREAL BeginX){m_BeginX = BeginX;}
 	FORCEINLINE VSREAL GetBeginX(){return m_BeginX;}
-	//¸üÐÂ
+	//æ›´æ–°
 	void Update();
 protected:
 	VSFunction1 * m_pFunc;

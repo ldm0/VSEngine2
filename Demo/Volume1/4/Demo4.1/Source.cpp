@@ -1,4 +1,4 @@
-//���ʾ������ҪĿ���ǣ���ʾ�����������ʼ������ù��캯������ҿ����ڹ��캯�������¸��ϵ㿴��
+//这个示例的主要目的是，演示在容器里面初始化会调用构造函数，大家可以在构造函数里面下个断点看看
 #include <VSMemManager.h>
 #include <VSArray.h>
 using namespace VSEngine2;

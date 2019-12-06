@@ -1,4 +1,4 @@
-//��ʾ��ջ�ڴ��������ʹ�÷�ʽ��һ���˳���ǰ�����������ջ�ڴ�Ŀռ�Ż��ͷ�
+//演示了栈内存分配器的使用方式，一旦退出当前函数，申请的栈内存的空间才会释放
 #include <VSMemManager.h>
 using namespace VSEngine2;
 struct MyStruct

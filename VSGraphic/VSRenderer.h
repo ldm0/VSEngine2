@@ -41,11 +41,11 @@ namespace VSEngine2
 	DECLARE_Proxy(VSFont);
 	typedef struct VSDISPLAYMODE_STURCT
 	{
-		UINT            uiWidth;			//ÏÔÊ¾·Ö±æÂÊ
+		UINT            uiWidth;			//æ˜¾ç¤ºåˆ†è¾¨ç‡
 		UINT            uiHeight;
-		UINT            uiRefreshRate;		//Ë¢ĞÂÂÊ
+		UINT            uiRefreshRate;		//åˆ·æ–°ç‡
 		UINT			uiBitFormat;			
-		VSString			StringExpress;		//×Ö·û´®±íÊ¾
+		VSString			StringExpress;		//å­—ç¬¦ä¸²è¡¨ç¤º
 	}VSDisplayMode, *VSDisplayModePtr;
 
 	typedef struct VSDEVICEINFO_STURCT
@@ -143,7 +143,7 @@ namespace VSEngine2
 		
 		virtual int GetRendererType () const = 0;
 		virtual const TCHAR * GetRendererStringType() const = 0;
-		// ÑÕÉ« Éî¶È Ä£°å buffer
+		// é¢œè‰² æ·±åº¦ æ¨¡æ¿ buffer
 		FORCEINLINE void SetClearColor (const VSColorRGBA& ClearColor);
 		FORCEINLINE const VSColorRGBA& GetClearColor () const;
 
@@ -375,9 +375,9 @@ namespace VSEngine2
 		virtual bool IsSupportGS()const = 0;
 protected:
 		
-		HWND	m_hMainWindow;          // Ö÷´°¿Ú						
+		HWND	m_hMainWindow;          // ä¸»çª—å£						
 		ChildWindowInfo * m_pChildWindowInfo;
-		int		m_iNumChildWindow;          // ´°¿Ú¸öÊı
+		int		m_iNumChildWindow;          // çª—å£ä¸ªæ•°
 		int		m_iCurWindowID;
 		bool	m_bIsRendering;
 

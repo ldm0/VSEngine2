@@ -29,7 +29,7 @@ namespace VSEngine2
 		void operator += (VSREAL f);                     
 		void operator -= (VSREAL f);                     
 
-		VSREAL     operator * (const VSVector2 &v)const; //µã»ý
+		VSREAL     operator * (const VSVector2 &v)const; //ç‚¹ç§¯
 
 		bool operator ==(const VSVector2 &v)const;
 

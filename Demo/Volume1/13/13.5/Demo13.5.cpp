@@ -1,4 +1,4 @@
-//Õâ¸öDemoÕ¹Ê¾´´½¨Ò»¸öCLOD Mesh¹ý³Ì£¬²¢´æ´¢ÎªÐÂµÄÄ£ÐÍ¡£
+//è¿™ä¸ªDemoå±•ç¤ºåˆ›å»ºä¸€ä¸ªCLOD Meshè¿‡ç¨‹ï¼Œå¹¶å­˜å‚¨ä¸ºæ–°çš„æ¨¡åž‹ã€‚
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

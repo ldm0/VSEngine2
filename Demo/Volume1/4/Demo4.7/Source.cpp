@@ -1,4 +1,4 @@
-//Õâ¸öÊ¾ÀıÑİÊ¾ÁËVSMatchµÄÊ¹ÓÃ
+//è¿™ä¸ªç¤ºä¾‹æ¼”ç¤ºäº†VSMatchçš„ä½¿ç”¨
 #include <VSMemManager.h>
 #include <VSMatch.h>
 #include <iostream>

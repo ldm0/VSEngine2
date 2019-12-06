@@ -6,7 +6,7 @@
 #include "VSGraphic.h"
 //#pragma comment(lib, "VSMath.lib")
 /*
-	正变换的变换顺序是S,R,T
+	姝ｅ彉鎹㈢殑鍙樻崲椤哄簭鏄疭,R,T
 
 
 */

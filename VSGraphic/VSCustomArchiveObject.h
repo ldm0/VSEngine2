@@ -7,8 +7,8 @@ namespace VSEngine2
 {
 	class VSStream;
 	class VSEditorElement;
-	//²»Ö§³ÖÖ¸ÕëĞòÁĞ»¯£¬²»Ö§³Öpostload ºÍ postclone
-	//Àà³ÉÔ±Èç¹ûÊÇVSType ÊÇÖ§³ÖµÄ
+	//ä¸æ”¯æŒæŒ‡é’ˆåºåˆ—åŒ–ï¼Œä¸æ”¯æŒpostload å’Œ postclone
+	//ç±»æˆå‘˜å¦‚æœæ˜¯VSType æ˜¯æ”¯æŒçš„
 	class VSGRAPHIC_API VSCustomArchiveObject:public VSMemObject
 	{
 	public:

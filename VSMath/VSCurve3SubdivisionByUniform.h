@@ -2,7 +2,7 @@
 #define  VSCURVESUBDIVISIONBYUNIFORM_H
 #include "VSCurve3Subdivision.h"
 /*
-¾ùÔÈ»®·Ö·¨
+å‡åŒ€åˆ’åˆ†æ³•
 
 
 
@@ -14,7 +14,7 @@ class VSMATH_API VSCurve3SubdivisionByUniform :public VSCurve3Subdivision
 public:
 	VSCurve3SubdivisionByUniform(unsigned int PointNum,VSREAL t1 = 0.0f,VSREAL t2 = 1.0f);
 	virtual ~VSCurve3SubdivisionByUniform();
-	//¸ø¶¨µãµÄ¸öÊı»®·ÖÇúÏß t1,t2Ö®¼ä
+	//ç»™å®šç‚¹çš„ä¸ªæ•°åˆ’åˆ†æ›²çº¿ t1,t2ä¹‹é—´
 	virtual bool Subdivision();
 	void SetPointNum(unsigned int uiPointNum);
 	virtual unsigned int GetSubdivisionMethod(){ return SM_UNIFORM;}

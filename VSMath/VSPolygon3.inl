@@ -28,7 +28,7 @@ FORCEINLINE void VSPolygon3::Set(const VSVector3 *pPoint,unsigned int PointNum)
 	
 	VSVector3 vcEdge0 = m_pPoint[1] - m_pPoint[0];
 	VSVector3 vcEdge1;
-	//¼ÆËãËùÔÚÆ½Ãæ,Ö±µ½ÕÒµ½²»Æ½ĞĞµÄÁ½¸öÏß¶ÎÎªÖ¹¡£
+	//è®¡ç®—æ‰€åœ¨å¹³é¢,ç›´åˆ°æ‰¾åˆ°ä¸å¹³è¡Œçš„ä¸¤ä¸ªçº¿æ®µä¸ºæ­¢ã€‚
 	for (unsigned int i = 2; i < PointNum ; i++) 
 	{
 		vcEdge1 = m_pPoint[i] - m_pPoint[0];
@@ -36,7 +36,7 @@ FORCEINLINE void VSPolygon3::Set(const VSVector3 *pPoint,unsigned int PointNum)
 		vcEdge0.Normalize();
 		vcEdge1.Normalize();
 
-		//²âÊÔÊÇ·ñÆ½ĞĞ
+		//æµ‹è¯•æ˜¯å¦å¹³è¡Œ
 		VSREAL dot = vcEdge0.Dot(vcEdge1);
 		if(ABS(dot) < VSREAL_1)      
 			break;

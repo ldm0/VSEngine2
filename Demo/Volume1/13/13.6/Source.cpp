@@ -1,4 +1,4 @@
-//��Ⱦ��һ��Demo����CLOD ģ�ͣ���Զ���ע�������ı仯��
+//渲染上一个Demo的新CLOD 模型，拉远相机注意面数的变化。
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

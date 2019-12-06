@@ -515,16 +515,16 @@ bool VSStream::NewLoadFromBuffer(unsigned char * pBuffer,unsigned int uiSize)
 	m_pcCurBufPtr	= NULL;
 	m_uiBufferSize	= 0;
 
-	//¶¼¼ÓÔØµ½ÄÚ´æÖĞ
+	//éƒ½åŠ è½½åˆ°å†…å­˜ä¸­
 	m_uiBufferSize = uiSize;
 	m_pcBuffer = pBuffer;
 
 	m_pcCurBufPtr = m_pcBuffer;
 
 	VSArray<ObjectTabel> ObjectTable;
-	//¼ÓÔØ°æ±¾ºÅ
+	//åŠ è½½ç‰ˆæœ¬å·
 	Read(&m_uiVerson,sizeof(unsigned int));
-	//¼ÓÔØÎïÌå¸öÊı
+	//åŠ è½½ç‰©ä½“ä¸ªæ•°
 	unsigned int iObjectNum = 0;
 	Read(&iObjectNum,sizeof(unsigned int));
 
@@ -533,12 +533,12 @@ bool VSStream::NewLoadFromBuffer(unsigned char * pBuffer,unsigned int uiSize)
 	for(unsigned int i = 0 ;i < iObjectNum ; i++)
 	{
 		VSObject * pObject = 0;
-		//¶ÁÈ¡Ö¸Õë
+		//è¯»å–æŒ‡é’ˆ
 		if(!Read(&ObjectTable[i].m_pAddr,sizeof(VSObject *)))
 		{
 			return 0;
 		}
-		//¶ÁÈ¡RTTI
+		//è¯»å–RTTI
 		if(!ReadString(ObjectTable[i].m_RttiName))
 		{
 			return 0;
@@ -570,13 +570,13 @@ bool VSStream::NewLoadFromBuffer(unsigned char * pBuffer,unsigned int uiSize)
 		{
 			pObject = VSObject::GetNoGCInstance(ObjectTable[i].m_RttiName);
 		}
-		//´´½¨¿Õ¶ÔÏó
+		//åˆ›å»ºç©ºå¯¹è±¡
 		
 		if(!pObject)
 		{		
 			continue;
 		}
-		//´´½¨¼ÓÔØÓ³Éä±í
+		//åˆ›å»ºåŠ è½½æ˜ å°„è¡¨
 		m_pmLoadMap.AddElement(ObjectTable[i].m_pAddr,pObject);
 
 
@@ -627,9 +627,9 @@ bool VSStream::NewLoadFromBuffer(unsigned char * pBuffer,unsigned int uiSize)
 		}
 	}
 	
-	//´¦ÀíÁ¬½Ó
+	//å¤„ç†è¿æ¥
 	m_uiStreamFlag = AT_LINK;
-	//±ØĞë´ÓºóÍùÇ°±ãÀû£¬ÒòÎªregisterµÄ¹ı³ÌÊÇµİ¹éµÄÉî¶È×¢²á£¬ËùÒÔ´ÓºóÍùÇ°link±£Ö¤×Ó½ÚµãÏÈÍê³É£¬È»ºó¸¸Ç×½ÚµãÍê³É¡£ 
+	//å¿…é¡»ä»åå¾€å‰ä¾¿åˆ©ï¼Œå› ä¸ºregisterçš„è¿‡ç¨‹æ˜¯é€’å½’çš„æ·±åº¦æ³¨å†Œï¼Œæ‰€ä»¥ä»åå¾€å‰linkä¿è¯å­èŠ‚ç‚¹å…ˆå®Œæˆï¼Œç„¶åçˆ¶äº²èŠ‚ç‚¹å®Œæˆã€‚ 
 	for(int i = m_pVObjectArray.GetNum() - 1; i >= 0 ; i--)
 	{
 
@@ -661,14 +661,14 @@ bool VSStream::NewLoad(const TCHAR * const pcFileName)
 		return 0;
 	}
 
-	//´ò¿ªÎÄ¼ş
+	//æ‰“å¼€æ–‡ä»¶
 	if(!pFile->Open(pcFileName,VSFile::OM_RB))
 	{
 		VSMAC_DELETE(pFile);
 		return 0;
 	}
 
-	//¶¼¼ÓÔØµ½ÄÚ´æÖĞ
+	//éƒ½åŠ è½½åˆ°å†…å­˜ä¸­
 	unsigned int uiBufferSize = pFile->GetFileSize();
 	unsigned char * pBuffer = VS_NEW unsigned char[uiBufferSize];
 	if(!pBuffer)
@@ -699,9 +699,9 @@ bool VSStream::NewSave(const TCHAR * const pcFileName)
 	unsigned int iObjectNum = m_pVObjectArray.GetNum();
 	m_uiBufferSize = 0;
 
-	//°æ±¾ºÅ
+	//ç‰ˆæœ¬å·
 	m_uiBufferSize += sizeof(unsigned int );
-	//ÎïÌå¸öÊı¿Õ¼ä
+	//ç‰©ä½“ä¸ªæ•°ç©ºé—´
 	m_uiBufferSize += sizeof(unsigned int);
 
 	VSArray<ObjectTabel> ObjectTable;
@@ -786,7 +786,7 @@ bool VSStream::NewSave(const TCHAR * const pcFileName)
 	{
 		m_pVObjectArray[i]->BeforeSave();
 	}
-	//ÉêÇë¿Õ¼ä
+	//ç”³è¯·ç©ºé—´
 	VSMAC_DELETEA(m_pcBuffer);
 	m_pcBuffer = VS_NEW unsigned char[m_uiBufferSize];	
 	if(!m_pcBuffer)
@@ -796,10 +796,10 @@ bool VSStream::NewSave(const TCHAR * const pcFileName)
 	m_pcCurBufPtr = m_pcBuffer;
 
 	m_uiVerson = ms_uiCurVerson;
-	//´æ´¢°æ±¾ºÅ
+	//å­˜å‚¨ç‰ˆæœ¬å·
 	Write(&m_uiVerson,sizeof(unsigned int));
 
-	//´æ´¢ÎïÌå¸öÊı
+	//å­˜å‚¨ç‰©ä½“ä¸ªæ•°
 	Write(&iObjectNum,sizeof(unsigned int));
 
 
@@ -866,7 +866,7 @@ bool VSStream::NewSave(const TCHAR * const pcFileName)
 		VSMAC_DELETEA(m_pcBuffer);
 		return 0;
 	}
-	//´ò¿ªÎÄ¼ş
+	//æ‰“å¼€æ–‡ä»¶
 	if(!pFile->Open(pcFileName,VSFile::OM_WB))
 	{
 		VSMAC_DELETE(pFile);

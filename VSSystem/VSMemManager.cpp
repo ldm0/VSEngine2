@@ -109,13 +109,13 @@ VSCriticalSection VSDebugMem::ms_MemLock;
 // 		pHeader->m_pcNext->m_pcPrev = pNewHeader;
 // 		pNewHeader->m_pcNext = pHeader->m_pcNext;
 // 
-// 		/*Èç¹ûÖ»Ê£ÏÂÒ»¸ö¿é£¬·Ö³É2¿é£¬pNewHeader¿éÁ½¸öÖ¸Õë¶¼ÒªÖ¸Ïò×Ô¼º,
-// 		pHeader->m_pcPrev µÈÓÚ pHeader
-// 		pHeader->m_pcPrev->m_pcNext = pNewHeader ¾ÍÊÇpHeader->m_pcNext = pNewHeader;
+// 		/*å¦‚æœåªå‰©ä¸‹ä¸€ä¸ªå—ï¼Œåˆ†æˆ2å—ï¼ŒpNewHeaderå—ä¸¤ä¸ªæŒ‡é’ˆéƒ½è¦æŒ‡å‘è‡ªå·±,
+// 		pHeader->m_pcPrev ç­‰äº pHeader
+// 		pHeader->m_pcPrev->m_pcNext = pNewHeader å°±æ˜¯pHeader->m_pcNext = pNewHeader;
 // 
-// 		pHeader->m_pcNext->m_pcPrev = pNewHeader; Ïàµ±ÓÚpNewHeader->m_pcPrev = pNewHeader;
+// 		pHeader->m_pcNext->m_pcPrev = pNewHeader; ç›¸å½“äºpNewHeader->m_pcPrev = pNewHeader;
 // 
-// 		pNewHeader->m_pcNext = pHeader->m_pcNext;Ïàµ±ÓÚ pNewHeader->m_pcNext = pNewHeader;
+// 		pNewHeader->m_pcNext = pHeader->m_pcNext;ç›¸å½“äº pNewHeader->m_pcNext = pNewHeader;
 // 		*/
 // 
 // 		if(pHeader == ms_pFreeList)
@@ -159,7 +159,7 @@ VSCriticalSection VSDebugMem::ms_MemLock;
 // 	{
 // 		if(pLeftHeader->m_bUsed == false)
 // 		{
-// 			//Ö»ÓĞÒ»¸ö¿é
+// 			//åªæœ‰ä¸€ä¸ªå—
 // 			if(pLeftHeader->m_pcNext == pLeftHeader)
 // 			{
 // 				ms_pFreeList = NULL;
@@ -332,11 +332,11 @@ bool VSDebugMem::InitDbgHelpLib()
 		*p = 0;
 	VSStrcat(szDbgName,MAX_PATH,_T("\\dbghelp.dll"));
 
-	// ²éÕÒµ±Ç°Ä¿Â¼µÄDLL
+	// æŸ¥æ‰¾å½“å‰ç›®å½•çš„DLL
 	s_DbgHelpLib = LoadLibrary(szDbgName);
 	if(s_DbgHelpLib == NULL)
 	{
-		// Ê¹ÓÃÏµÍ³µÄDLL
+		// ä½¿ç”¨ç³»ç»Ÿçš„DLL
 		s_DbgHelpLib = LoadLibrary(_T("dbghelp.dll"));
 		if(s_DbgHelpLib == NULL)
 			return false;

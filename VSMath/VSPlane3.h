@@ -12,8 +12,8 @@ namespace VSEngine2
 	class  VSMATH_API VSPlane3 
 	{
 	protected:
-		VSVector3	m_N;       //Æ½Ãæ·¨ÏòÁ¿
-		VSREAL		m_fD;       // µ½Ô­µãµÄ¾àÀë(ax+by+cz+d=0)
+		VSVector3	m_N;       //å¹³é¢æ³•å‘é‡
+		VSREAL		m_fD;       // åˆ°åŸç‚¹çš„è·ç¦»(ax+by+cz+d=0)
 	public:
 		VSPlane3();
 		VSPlane3(const VSVector3 &N, const VSVector3 &P);
@@ -31,72 +31,72 @@ namespace VSEngine2
 		FORCEINLINE void  Set(const VSVector3 Point[3]);
 		FORCEINLINE VSPlane3 GetPlane()const;
 		VSVector3 ReflectDir(const VSVector3 & Dir)const;
-		/*************************************¾àÀë************************************************/
-		//µãµ½Æ½Ãæ¾àÀë
+		/*************************************è·ç¦»************************************************/
+		//ç‚¹åˆ°å¹³é¢è·ç¦»
 		VSREAL Distance(const VSVector3 &Point,VSVector3 &PlanePoint)const;
-		//Æ½ÃæºÍÇòµÄ¾àÀë
+		//å¹³é¢å’Œçƒçš„è·ç¦»
 		VSREAL Distance(const VSSphere3 &Sphere,VSVector3 & SpherePoint)const;
-		//Ö±ÏßºÍÆ½Ãæ¾àÀë
+		//ç›´çº¿å’Œå¹³é¢è·ç¦»
 		VSREAL Distance(const VSLine3 &Line,VSVector3 &PlanePoint,VSVector3 &LinePoint)const;
-		//ÉäÏßºÍÆ½Ãæ¾àÀë
+		//å°„çº¿å’Œå¹³é¢è·ç¦»
 		VSREAL Distance(const VSRay3 & Ray,VSVector3 &PlanePoint,VSVector3 &RayPoint)const;
-		//Ïß¶ÎºÍÆ½Ãæ¾àÀë
+		//çº¿æ®µå’Œå¹³é¢è·ç¦»
 		VSREAL Distance(const VSSegment3 & Segment,VSVector3 &PlanePoint,VSVector3 &SegmentPoint)const;
 
-		//ÏÂÃæ¾àÀëº¯ÊıÔÙÃ»ÓĞ¿¼ÂÇÏà½»µÄÇé¿öÏÂ¼ÆËãµÄ£¬ÒòÎªÏà½»µÄÇé¿öÏÂ¾ÙÀıÎª0£¬ÏÈÓÃRelationWithÅĞ¶ÏÎ»ÖÃ¹ØÏµ£¬ÔÙÓÃÏÂÃæÀ´¼ÆËã¾àÀë
-		//Æ½ÃæºÍÆ½Ãæ¾àÀë
+		//ä¸‹é¢è·ç¦»å‡½æ•°å†æ²¡æœ‰è€ƒè™‘ç›¸äº¤çš„æƒ…å†µä¸‹è®¡ç®—çš„ï¼Œå› ä¸ºç›¸äº¤çš„æƒ…å†µä¸‹ä¸¾ä¾‹ä¸º0ï¼Œå…ˆç”¨RelationWithåˆ¤æ–­ä½ç½®å…³ç³»ï¼Œå†ç”¨ä¸‹é¢æ¥è®¡ç®—è·ç¦»
+		//å¹³é¢å’Œå¹³é¢è·ç¦»
 		VSREAL Distance(const VSPlane3 &Plane,VSVector3 &Plane1Point,VSVector3 &Plane2Point)const;
-		//Æ½ÃæºÍÈı½ÇĞÎ¾àÀë
+		//å¹³é¢å’Œä¸‰è§’å½¢è·ç¦»
 		VSREAL Distance(const VSTriangle3 &Triangle,VSVector3 &PlanePoint,VSVector3 &TrianglePoint)const;
-		//¾ØĞÎºÍÆ½Ãæ¾àÀë
+		//çŸ©å½¢å’Œå¹³é¢è·ç¦»
 		VSREAL Distance(const VSRectangle3 &Rectangle,VSVector3 &PlanePoint,VSVector3 &RectanglePoint)const;
-		//OBBºÍÆ½Ãæ¾àÀë
+		//OBBå’Œå¹³é¢è·ç¦»
 		VSREAL Distance(const VSOBB3& OBB,VSVector3 &PlanePoint,VSVector3 &OBBPoint)const;
-		//AABBºÍÆ½Ãæ¾àÀë
+		//AABBå’Œå¹³é¢è·ç¦»
 		VSREAL Distance(const VSAABB3 &AABB,VSVector3 &PlanePoint,VSVector3 &AABBPoint)const;
-		//Æ½ÃæºÍ¶à±ßĞÎ¾àÀë
+		//å¹³é¢å’Œå¤šè¾¹å½¢è·ç¦»
 		VSREAL Distance(const VSPolygon3 &Polygon,VSVector3 &PlanePoint,int& IndexTriangle,
 						VSVector3 &TrianglePoint)const;
 		/********************************RelationWith******************************************/
-		//µãºÍÆ½ÃæµÄÎ»ÖÃ¹ØÏµ(VSFRONT VSBACK VSPLANAR)
+		//ç‚¹å’Œå¹³é¢çš„ä½ç½®å…³ç³»(VSFRONT VSBACK VSPLANAR)
 		int RelationWith(const VSVector3 &Point)const;
-		//²âÊÔÖ±ÏßÓëÆ½ÃæÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•ç›´çº¿ä¸å¹³é¢ä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT VSON VSBACK VSFRONT
 		int RelationWith(const VSLine3 &Line, bool bCull,VSREAL &fLineParameter)const;
-		//²âÊÔÉäÏßÓëÆ½ÃæÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•å°„çº¿ä¸å¹³é¢ä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT VSON VSBACK VSFRONT
 		int RelationWith(const VSRay3 &Ray, bool bCull,VSREAL &fRayParameter)const;
-		//²âÊÔÏß¶ÎÓëÆ½ÃæÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•çº¿æ®µä¸å¹³é¢ä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT VSON VSBACK VSFRONT
 		int RelationWith(const VSSegment3 &Segment, bool bCull,VSREAL &fSegmentParameter)const;
-		//²âÊÔÆ½ÃæºÍOBBÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•å¹³é¢å’ŒOBBä½ç½®å…³ç³»
 		//VSFRONT VSBACK VSINTERSECT
 		int RelationWith(const VSOBB3 &OBB)const;
-		//²âÊÔÆ½ÃæºÍAABBÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•å¹³é¢å’ŒAABBä½ç½®å…³ç³»
 		//VSFRONT VSBACK VSINTERSECT
 		int RelationWith(const VSAABB3 &AABB)const;
-		//Æ½ÃæÓëÇòµÄÎ»ÖÃ¹ØÏµ
+		//å¹³é¢ä¸çƒçš„ä½ç½®å…³ç³»
 		//VSFRONT VSBACK VSINTERSECT
 		int RelationWith(const VSSphere3 &Sphere)const;
-		//Æ½ÃæºÍÈı½ÇĞÎÎ»ÖÃ¹ØÏµ
+		//å¹³é¢å’Œä¸‰è§’å½¢ä½ç½®å…³ç³»
 		//VSON VSFRONT VSBACK VSINTERSECT
 		int RelationWith(const VSTriangle3 &Triangle)const;
 		int RelationWith(const VSTriangle3 &Triangle ,VSSegment3 & Segment)const;
-		//²âÊÔ×öÎª²ÎÊıÆ½ÃæºÍÆ½ÃæÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•åšä¸ºå‚æ•°å¹³é¢å’Œå¹³é¢ä½ç½®å…³ç³»
 		//VSNOINTERSECT VSINTERSECT 
 		int RelationWith(const VSPlane3 &Plane)const;
 		int RelationWith(const VSPlane3 &Plane,VSLine3 &Line)const;
-		//Æ½ÃæºÍ¾ØĞÎÎ»ÖÃ¹ØÏµ
+		//å¹³é¢å’ŒçŸ©å½¢ä½ç½®å…³ç³»
 		//VSON VSFRONT VSBACK VSINTERSECT
 		int RelationWith(const VSRectangle3 & Rectangle)const;		
 		int RelationWith(const VSRectangle3 &Rectangle,VSSegment3 &Segment)const;
 
-		//Æ½ÃæºÍ¶à±ßĞÎÎ»ÖÃ¹ØÏµ
+		//å¹³é¢å’Œå¤šè¾¹å½¢ä½ç½®å…³ç³»
 		//VSON VSFRONT VSBACK VSINTERSECT
 		int RelationWith(const VSPolygon3 &Polygon)const;
 		int RelationWith(const VSPolygon3 &Polygon,VSSegment3 & Segment)const;
 
-		//Æ½ÃæºÍÔ²ÖùÎ»ÖÃ¹ØÏµ
+		//å¹³é¢å’Œåœ†æŸ±ä½ç½®å…³ç³»
 		int RelationWith(const VSCylinder3 &Cylinder3)const;
 
 	}; // class

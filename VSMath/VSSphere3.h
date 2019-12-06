@@ -6,71 +6,71 @@ namespace VSEngine2
 	class VSMATH_API VSSphere3
 	{
 	public:
-		VSVector3 m_Center;		//ÖĞĞÄ
-		VSREAL m_fRadius;		//°ë¾¶
+		VSVector3 m_Center;		//ä¸­å¿ƒ
+		VSREAL m_fRadius;		//åŠå¾„
 		VSSphere3();
 		~VSSphere3();
 		VSSphere3(const VSVector3 & Center, VSREAL fRadius);
-		//¸ù¾øµãÀ´½¨Á¢°üÎ§Çò
+		//æ ¹ç»ç‚¹æ¥å»ºç«‹åŒ…å›´çƒ
 		void CreateSphere(const VSVector3 *pPointArray,unsigned int uiPointNum);
-		//½áºÏ°üÎ§Çò
+		//ç»“åˆåŒ…å›´çƒ
 		VSSphere3 MergSpheres(const VSSphere3 &Sphere)const;
-		//±ä»»ÇòÌå
+		//å˜æ¢çƒä½“
 		void Transform(const VSSphere3 & Sphere,const VSMatrix3X3W &Mat); 
 		VSAABB3 GetAABB()const;
 		/*************************************FORCEINLINE************************************************/
 		FORCEINLINE void Set(const VSVector3 & Center, VSREAL fRadius);
 		
-		/*************************************¾àÀë************************************************/
-		//µãºÍÇòµÄ¾àÀë
+		/*************************************è·ç¦»************************************************/
+		//ç‚¹å’Œçƒçš„è·ç¦»
 		VSREAL Distance(const VSVector3 & Point,VSVector3 & SpherePoint)const;
-		//ÏßºÍÇòµÄ¾àÀë
+		//çº¿å’Œçƒçš„è·ç¦»
 		VSREAL Distance(const VSLine3 & Line,VSVector3 & SpherePoint,VSREAL &fLineParameter)const;
-		//ÉäÏßºÍÇòµÄ¾àÀë
+		//å°„çº¿å’Œçƒçš„è·ç¦»
 		VSREAL Distance(const VSRay3 & Ray,VSVector3 & SpherePoint,VSREAL &fRayParameter)const;
-		//Ïß¶ÎºÍÇòµÄ¾àÀë
+		//çº¿æ®µå’Œçƒçš„è·ç¦»
 		VSREAL Distance(const VSSegment3 & Segment,VSVector3 & SpherePoint,VSREAL &fSegmentParameter)const;
-		//OBBºÍÇòµÄ¾àÀë
+		//OBBå’Œçƒçš„è·ç¦»
 		VSREAL Distance(const VSOBB3 &OBB,VSVector3 & SpherePoint,VSREAL fOBBParameter[3])const;
-		//Æ½ÃæºÍÇòµÄ¾àÀë
+		//å¹³é¢å’Œçƒçš„è·ç¦»
 		VSREAL Distance(const VSPlane3 & Plane,VSVector3 & SpherePoint)const;
-		//¾ØĞÎºÍÇòµÄ¾àÀë
+		//çŸ©å½¢å’Œçƒçš„è·ç¦»
 		VSREAL Distance(const VSRectangle3 & Rectangle,VSVector3 & SpherePoint,VSREAL fRectangleParameter[2])const;
-		//Èı½ÇĞÎºÍÇòµÄ¾àÀë
+		//ä¸‰è§’å½¢å’Œçƒçš„è·ç¦»
 		VSREAL Distance(const VSTriangle3 Triangle,VSVector3 & SpherePoint,VSREAL fTriangleParameter[3])const;
-		//AABBºÍÇòµÄ¾àÀë
+		//AABBå’Œçƒçš„è·ç¦»
 		VSREAL Distance(const VSAABB3 &AABB,VSVector3 & SpherePoint,VSREAL fAABBParameter[3])const;
 
-		//¶à±ßĞÎºÍÇòµÄ¾àÀë
+		//å¤šè¾¹å½¢å’Œçƒçš„è·ç¦»
 		VSREAL Distance(const VSPolygon3 &Polygon,VSVector3 & SpherePoint,int& IndexTriangle,
 						VSREAL fTriangleParameter[3])const;
 		/********************************RelationWith******************************************/
-		//µãºÍÇòÎ»ÖÃ¹ØÏµ
+		//ç‚¹å’Œçƒä½ç½®å…³ç³»
 		//VSIN VSOUT VSON	
 		int RelationWith(const VSVector3 &Point)const;
-		//Ö±ÏßÓëÇòÎ»ÖÃ¹ØÏµ
+		//ç›´çº¿ä¸çƒä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT
 		int RelationWith(const VSLine3 &Line, unsigned int &Quantity,VSREAL &tNear,VSREAL &tFar)const;
-		//ÉäÏßÓëÇòÎ»ÖÃ¹ØÏµ
+		//å°„çº¿ä¸çƒä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT
 		int RelationWith(const VSRay3 &Ray, unsigned int &Quantity,VSREAL &tNear,VSREAL &tFar)const;
-		//Ïß¶ÎÓëÇòÎ»ÖÃ¹ØÏµ
+		//çº¿æ®µä¸çƒä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT VSIN
 		int RelationWith(const VSSegment3 &Segment, unsigned int &Quantity,VSREAL &tNear,VSREAL &tFar)const;
-		//Æ½ÃæÓëÇòµÄÎ»ÖÃ¹ØÏµ
+		//å¹³é¢ä¸çƒçš„ä½ç½®å…³ç³»
 		//VSFRONT VSBACK VSINTERSECT
 		int RelationWith(const VSPlane3 &Plane)const;
-		//Èı½ÇĞÎºÍÔ²Î»ÖÃ¹ØÏµ
+		//ä¸‰è§’å½¢å’Œåœ†ä½ç½®å…³ç³»
 		//VSNOINTERSECT VSINTERSECT VSIN
 		int RelationWith(const VSTriangle3 Triangle)const;
-		//¾ØĞÎºÍÔ²Î»ÖÃ¹ØÏµ
+		//çŸ©å½¢å’Œåœ†ä½ç½®å…³ç³»
 		//VSNOINTERSECT VSINTERSECT VSIN
 		int RelationWith(const VSRectangle3 &Rectangle)const;
 
-		//OBBºÍÔ²Î»ÖÃ¹ØÏµ
+		//OBBå’Œåœ†ä½ç½®å…³ç³»
 		//VSNOINTERSECT VSINTERSECT
 		int RelationWith(const VSOBB3 &OBB)const;
-		//Ô°ºÍÔ²Î»ÖÃ¹ØÏµ
+		//å›­å’Œåœ†ä½ç½®å…³ç³»
 		//VSNOINTERSECT VSINTERSECT
 		int RelationWith(const VSSphere3 &Sphere)const;
 	};

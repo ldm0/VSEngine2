@@ -2,7 +2,7 @@
 #define VSB_SPLINECURVE3_H
 #include "VSControlCurve3.h"
 /*
-	B_SplineÇúÏß£¬ÊôÓÚ¿ØÖÆµãÀàĞÍÇúÏßÒ»ÖÖ£¬ÓÉ¿ØÖÆµã£¬½ÚÏòÁ¿£¬ÇúÏßµÄ¶È£¬¶àÏîÊ½×é³É,²ÎÊıtÔÚ0-1Ö®¼ä
+	B_Splineæ›²çº¿ï¼Œå±äºæ§åˆ¶ç‚¹ç±»å‹æ›²çº¿ä¸€ç§ï¼Œç”±æ§åˆ¶ç‚¹ï¼ŒèŠ‚å‘é‡ï¼Œæ›²çº¿çš„åº¦ï¼Œå¤šé¡¹å¼ç»„æˆ,å‚æ•°tåœ¨0-1ä¹‹é—´
 
 */
 namespace VSEngine2
@@ -13,39 +13,39 @@ namespace VSEngine2
 	public:
 		VSB_SplineCurve3();
 		virtual ~VSB_SplineCurve3();
-		//¸´ÖÆ
+		//å¤åˆ¶
 		bool Copy(const VSB_SplineCurve3 & B_SplineCurve3);
-		//ÉèÖÃ¿ØÖÆµã
+		//è®¾ç½®æ§åˆ¶ç‚¹
 		bool Set(const VSVector3 * pControlPoint,unsigned int uiControlPointNum);
-		//°Ñ¿ØÖÆµã±ä»»³É±ÕºÏ¿ª·ÅÊ½¿ØÖÆµã
+		//æŠŠæ§åˆ¶ç‚¹å˜æ¢æˆé—­åˆå¼€æ”¾å¼æ§åˆ¶ç‚¹
 		bool ChangeToOpenClosePoints();
-		//°Ñ¿ØÖÆµã±ä»»³ÉÖÜÆÚ±ÕºÏ¿ØÖÆµã
+		//æŠŠæ§åˆ¶ç‚¹å˜æ¢æˆå‘¨æœŸé—­åˆæ§åˆ¶ç‚¹
 		bool ChangeToPeriodicClosePoints(unsigned int uiDegree);
-		//ÉèÖÃ½ÚÏòÁ¿
+		//è®¾ç½®èŠ‚å‘é‡
 		bool SetKnotVector(const VSREAL * pKnotVector,unsigned int uiDegree,unsigned int uiControlPointNum);
-		//½¨Á¢¿ª·¢µÈ¾à½ÚÏòÁ¿
+		//å»ºç«‹å¼€å‘ç­‰è·èŠ‚å‘é‡
 		bool CreateOpenUniformKnotVector(unsigned int uiDegree,unsigned int uiControlPointNum);
-		//½¨Á¢ÖÜÆÚ½ÚÏòÁ¿
+		//å»ºç«‹å‘¨æœŸèŠ‚å‘é‡
 		bool CreatePeriodicKnotVector(unsigned int uiDegree,unsigned int uiControlPointNum);
-		//Çóµ¼Êı
+		//æ±‚å¯¼æ•°
 		virtual VSVector3	GetFirstDerivative(VSREAL t);
 		virtual VSVector3	GetSecondDerivative(VSREAL t);
 		virtual VSVector3	GetThirdDerivative(VSREAL t);
 		//virtual VSREAL		GetLength(VSREAL t1 ,VSREAL t2);
-		//µÃµ½ÉÏÃæµÄµã
+		//å¾—åˆ°ä¸Šé¢çš„ç‚¹
 		virtual VSVector3	GetPoint(VSREAL t);
 
 	/***************************************FORCEINLINE************************************/
 
 	public:
-		//ÉèÖÃ½ÚÏòÁ¿µÄÒ»¸öÖµ
+		//è®¾ç½®èŠ‚å‘é‡çš„ä¸€ä¸ªå€¼
 		FORCEINLINE bool SetKnotVector(unsigned int i,VSREAL Value);
-		//µÃµ½½ÚÏòÁ¿Ö¸Õë
+		//å¾—åˆ°èŠ‚å‘é‡æŒ‡é’ˆ
 		FORCEINLINE const VSREAL * GetpKnotVector()const;
-		//µÃµ½½ÚÏòÁ¿µÄÒ»¸öÖµ
+		//å¾—åˆ°èŠ‚å‘é‡çš„ä¸€ä¸ªå€¼
 		FORCEINLINE VSREAL GetKnotVectorValue(unsigned int i)const;
 	protected:
-		//·½±ãÇó³ö¶àÏîÊ½Öµ¶øÉèÖÃ
+		//æ–¹ä¾¿æ±‚å‡ºå¤šé¡¹å¼å€¼è€Œè®¾ç½®
 		FORCEINLINE void SetBasisValue(int i, int j, VSREAL Value);
 		FORCEINLINE VSREAL GetBasisValue(int i ,int j)const;
 
@@ -58,9 +58,9 @@ namespace VSEngine2
 		FORCEINLINE void SetBasisTDValue(int i, int j, VSREAL Value);
 		FORCEINLINE VSREAL GetBasisTDValue(int i ,int j)const;
 	public:
-		//·µ»Ø¶È
+		//è¿”å›åº¦
 		FORCEINLINE unsigned int GetDegree()const;
-		//·µ»Ø½ÚÏòÁ¿¸öÊı
+		//è¿”å›èŠ‚å‘é‡ä¸ªæ•°
 		FORCEINLINE unsigned int GetKnotNum()const;
 	protected:
 		int GetKey(VSREAL t)const;

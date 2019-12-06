@@ -29,8 +29,8 @@ namespace VSEngine2
 	private:
 		bool CheckIsCircle(const VSPriority *pChecked)const;
 		unsigned int CheckPriorityNum();
-		//0¼È±íÊ¾ÓÅÏÈ¼¶±ğ×î´ó£¬Ò²»òÕßÃ»ÓĞÓÅÏÈ¼¶¡£Èç¹ûm_pPriorityThanListÎŞ³ÉÔ±£¬±íÊ¾×î´óÓĞÏŞ¼¶±ğ
-		//·ñÔòĞèÒª¼ÆËãÓÅÏÈ¼¶±ğ
+		//0æ—¢è¡¨ç¤ºä¼˜å…ˆçº§åˆ«æœ€å¤§ï¼Œä¹Ÿæˆ–è€…æ²¡æœ‰ä¼˜å…ˆçº§ã€‚å¦‚æœm_pPriorityThanListæ— æˆå‘˜ï¼Œè¡¨ç¤ºæœ€å¤§æœ‰é™çº§åˆ«
+		//å¦åˆ™éœ€è¦è®¡ç®—ä¼˜å…ˆçº§åˆ«
 		unsigned int m_uiPriorityNum;
 		VSArray<VSPriority *> m_pPriorityThanList;
 	

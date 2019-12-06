@@ -1,4 +1,4 @@
-//输出11节中两个AnimTree资源
+//杈撳嚭11鑺備腑涓や釜AnimTree璧勬簮
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

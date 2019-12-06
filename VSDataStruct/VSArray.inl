@@ -52,7 +52,7 @@ void VSArray<T,MMFun>::AddBufferNum(unsigned int uiBufferNum)
 {
 	if(uiBufferNum)
 	{
-		//Èç¹û¾­³£ĞèÒª·ÖÅäÄÚ´æ£¬¾Í°Ñm_uiGrowByÖğ½¥Ôö³¤
+		//å¦‚æœç»å¸¸éœ€è¦åˆ†é…å†…å­˜ï¼Œå°±æŠŠm_uiGrowByé€æ¸å¢é•¿
 		m_uiAllocNum++;
 		m_uiGrowBy = m_uiAllocNum * m_uiGrowBy;
 
@@ -295,7 +295,7 @@ void VSArray<T,MMFun>::Sort(unsigned int uiBegin,unsigned int uiEnd)
 	{
 		return ;
 	}
-	//¹é²¢ÅÅĞò ¸´ÔÓ¶È nlogn
+	//å½’å¹¶æ’åº å¤æ‚åº¦ nlogn
 	T * pBuffer = New(uiEnd - uiBegin + 1);
 	for (unsigned int i = 0; i < uiEnd - uiBegin + 1; i++)
 	{
@@ -303,7 +303,7 @@ void VSArray<T,MMFun>::Sort(unsigned int uiBegin,unsigned int uiEnd)
 	}
 	MergeSort(m_pBuffer + uiBegin, pBuffer, uiEnd - uiBegin + 1);
 	Delete(pBuffer, uiEnd - uiBegin + 1);
-//	Ã°ÅİÅÅĞò ¸´ÔÓ¶È n(n+1)/2
+//	å†’æ³¡æ’åº å¤æ‚åº¦ n(n+1)/2
 // 	for (unsigned int i = uiBegin ; i < uiEnd; i++)
 // 	{
 // 		for (unsigned int j = uiBegin ; j < uiEnd - uiBegin - i; j++)
@@ -328,7 +328,7 @@ void VSArray<T,MMFun>::Sort(unsigned int uiBegin,unsigned int uiEnd,N Compare)
 	{
 		return ;
 	}
-//¹é²¢ÅÅĞò ¸´ÔÓ¶È nlogn
+//å½’å¹¶æ’åº å¤æ‚åº¦ nlogn
 	T * pBuffer = New(uiEnd - uiBegin + 1);
 	for (unsigned int i = 0; i < uiEnd - uiBegin + 1;i++)
 	{
@@ -336,7 +336,7 @@ void VSArray<T,MMFun>::Sort(unsigned int uiBegin,unsigned int uiEnd,N Compare)
 	}
 	MergeSort(m_pBuffer + uiBegin, pBuffer, uiEnd - uiBegin + 1, Compare);
 	Delete(pBuffer, uiEnd - uiBegin + 1);
-//	Ã°ÅİÅÅĞò ¸´ÔÓ¶È n(n+1)/2
+//	å†’æ³¡æ’åº å¤æ‚åº¦ n(n+1)/2
 // 	for (unsigned int i = uiBegin ; i < uiEnd; i++)
 // 	{
 // 		for (unsigned int j = uiBegin ; j < uiEnd - uiBegin - i; j++)

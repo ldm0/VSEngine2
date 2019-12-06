@@ -29,7 +29,7 @@ FORCEINLINE VSViewPort * VSCamera::GetViewPort(unsigned int i )const
 {
 	return &m_ViewPort[i];
 }
-FORCEINLINE bool VSCamera::AddViewPort(const VSViewPort &ViewPort)//йс©з		
+FORCEINLINE bool VSCamera::AddViewPort(const VSViewPort &ViewPort)//Х╖├Е▐ё		
 {
 	if (ViewPort.XMin < 0 || ViewPort.XMax > 1.0f || ViewPort.XMin > ViewPort.XMax ||
 		ViewPort.YMin < 0 ||ViewPort.YMax > 1.0f || ViewPort.YMin > ViewPort.YMax ||

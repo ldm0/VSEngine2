@@ -1,4 +1,4 @@
-//方向光的ShadowVolume
+//鏂瑰悜鍏夌殑ShadowVolume
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

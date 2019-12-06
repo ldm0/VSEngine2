@@ -70,7 +70,7 @@ bool VSLineSet::CreateIndex(unsigned int uiLineType)
 			pIndexBuffer[2 * i] = i;
 			pIndexBuffer[2 * i + 1] = i + 1;
 		}
-		//iÒÑ¾­µİÔö£¬×îºóÒ»¸öË÷ÒıÓ¦¸ÃÊÇ0£¬ËùÒÔĞŞ¸Ä 2 * ( i - 1) + 1 =  2 * i - 1
+		//iå·²ç»é€’å¢ï¼Œæœ€åä¸€ä¸ªç´¢å¼•åº”è¯¥æ˜¯0ï¼Œæ‰€ä»¥ä¿®æ”¹ 2 * ( i - 1) + 1 =  2 * i - 1
 		pIndexBuffer[2 * i - 1] = 0;
 	}
 	else if(uiLineType == LT_SEGMENT)

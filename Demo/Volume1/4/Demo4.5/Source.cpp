@@ -1,4 +1,4 @@
-//Õâ¸öÊ¾ÀıÑİÊ¾ÁËVSStackµÄÊ¹ÓÃ
+//è¿™ä¸ªç¤ºä¾‹æ¼”ç¤ºäº†VSStackçš„ä½¿ç”¨
 #include <VSMemManager.h>
 #include <VSStack.h>
 #include <VSList.h>

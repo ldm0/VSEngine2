@@ -3,7 +3,7 @@
 #include "VSFunction1.h"
 #include "VSCurve3.h"
 /*
-ÇóÇúÏß³¤¶Èº¯Êý
+æ±‚æ›²çº¿é•¿åº¦å‡½æ•°
 */
 namespace VSEngine2
 {
@@ -13,13 +13,13 @@ namespace VSEngine2
 	public:
 		VSCurveLengthFunction1();
 		~VSCurveLengthFunction1();
-		//µÃµ½Öµ
+		//å¾—åˆ°å€¼
 		virtual VSREAL GetValue(VSREAL fParameter);
-		//Çóµ¼Êý to do 
+		//æ±‚å¯¼æ•° to do 
 		virtual VSREAL GetFirstDerivative(VSREAL fParameter);
 		virtual VSREAL GetSecondDerivative(VSREAL fParameter);
 		virtual VSREAL GetThirdDerivative(VSREAL fParameter);
-		//ÉèÖÃÇúÏß
+		//è®¾ç½®æ›²çº¿
 		FORCEINLINE void SetCurve(VSCurve3 *pCurve){if(!pCurve) return ; m_pCurve = pCurve;}
 		FORCEINLINE VSCurve3 *GetCurve(){return m_pCurve;}
 	protected:

@@ -40,18 +40,18 @@ bool VSMorphSet::SetMorph(VSMorph * pMorph)
 	}
 	if (m_pMorphArray.GetNum() != 0)
 	{
-		//是否存在
+		//鏄惁瀛樺湪
 		for (unsigned int i = 0 ; i < m_pMorphArray.GetNum() ; i++)
 		{
 			if(m_pMorphArray[i] == pMorph || m_pMorphArray[i]->m_cName == pMorph->m_cName)
 				return 1;
 		}
-		//bufferNum 统一
+		//bufferNum 缁熶竴
 		if(pMorph->GetBufferNum() != m_pMorphArray[0]->GetBufferNum())
 		{
 			return 0;
 		}
-		//分别对每个morph 的每个buffer进行校验
+		//鍒嗗埆瀵规瘡涓猰orph 鐨勬瘡涓猙uffer杩涜鏍￠獙
 		for (unsigned int i = 0 ;i < pMorph->GetBufferNum() ; i++)
 		{
 			if (pMorph->GetVertexNum(i))

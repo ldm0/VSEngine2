@@ -1,4 +1,4 @@
-//¶àÏß³Ì¸üÐÂ
+//å¤šçº¿ç¨‹æ›´æ–°
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

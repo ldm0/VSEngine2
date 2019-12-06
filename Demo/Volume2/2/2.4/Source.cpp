@@ -1,4 +1,4 @@
-//´´½¨Ò»¸öÄ¬ÈÏµÄActor£¬°ó¶¨µ½HandSocketÉÏ¡£
+//åˆ›å»ºä¸€ä¸ªé»˜è®¤çš„Actorï¼Œç»‘å®šåˆ°HandSocketä¸Šã€‚
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

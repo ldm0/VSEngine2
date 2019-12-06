@@ -1,4 +1,4 @@
-//��������ڷ�ֵ���۲�CLOD�����仯���̡������ϵ�+��-�����������Ӻͼ��ٷ�ֵ�ģ����߿��԰�W�л����߿�ģʽ��
+//近距离调节阀值来观察CLOD面数变化过程。键盘上的+、-号是用来增加和减少阀值的，读者可以按W切换到线框模式。
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

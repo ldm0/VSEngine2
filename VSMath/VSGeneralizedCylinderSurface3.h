@@ -3,7 +3,7 @@
 #include "VSCurve3.h"
 #include "VSSurface3.h"
 /*
-	Ò»°ãÖùĞÎÇúÃæ
+	ä¸€èˆ¬æŸ±å½¢æ›²é¢
 
 */
 namespace VSEngine2

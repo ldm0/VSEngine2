@@ -1,4 +1,4 @@
-//延续上一章最后一个Demo，展示了带Normal光照效果
+//寤剁画涓婁竴绔犳渶鍚庝竴涓狣emo锛屽睍绀轰簡甯ormal鍏夌収鏁堟灉
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

@@ -1,4 +1,4 @@
-//�����ʹ洢����ShaderFunction��ϲ��ʣ�10�й���ģ�Ͳ��ʣ�1���Զ�����ղ��ʣ�LightFunction����
+//创建和存储两个ShaderFunction混合材质，10中光照模型材质，1种自定义光照材质，LightFunction材质
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

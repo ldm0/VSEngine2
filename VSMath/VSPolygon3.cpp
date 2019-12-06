@@ -2,11 +2,11 @@
 using namespace VSEngine2;
 VSPolygon3::VSPolygon3()
 {
-	m_PointNum = 0;		//µã¸öÊı
-	m_IndexNum = 0;		//Ë÷Òı¸öÊı
-	m_Flag = 0;			// ±êÖ¾Î»
-	m_pPoint = NULL;		// µãÁĞ±í
-	m_pIndex = NULL;		// Ë÷ÒıÁĞ±í
+	m_PointNum = 0;		//ç‚¹ä¸ªæ•°
+	m_IndexNum = 0;		//ç´¢å¼•ä¸ªæ•°
+	m_Flag = 0;			// æ ‡å¿—ä½
+	m_pPoint = NULL;		// ç‚¹åˆ—è¡¨
+	m_pIndex = NULL;		// ç´¢å¼•åˆ—è¡¨
 }
 /*----------------------------------------------------------------*/
 VSPolygon3::~VSPolygon3()

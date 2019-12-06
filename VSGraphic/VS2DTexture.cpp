@@ -43,14 +43,14 @@ bool VS2DTexture:: SaveToFile(TCHAR * pSaveName)
 	
 	
 
-	unsigned char *pBufferTemp = NULL,*pBuffer = NULL;					//ÁÙÊ±»º³åÇø
+	unsigned char *pBufferTemp = NULL,*pBuffer = NULL;					//ä¸´æ—¶ç¼“å†²åŒº
 	pBufferTemp = VS_NEW unsigned char[uiHightSize];
 	pBuffer = GetBuffer(0);
 	if(!pBufferTemp)
 		return 0;
 
 	unsigned int  bytes_per_line = m_uiWidth * 4;
-	// °´ÐÐ·­×ª
+	// æŒ‰è¡Œç¿»è½¬
 	for (unsigned int index=0; index < m_uiHeight; index++)
 		VSMemcpy(&pBufferTemp[((m_uiHeight - 1) - index) * bytes_per_line],
 		&pBuffer[index * bytes_per_line], bytes_per_line);

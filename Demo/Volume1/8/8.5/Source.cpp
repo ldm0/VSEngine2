@@ -1,5 +1,5 @@
 /*
-չʾ�����л��洢�����������չʾ�˼�������֧�ֵ����ͣ��ṹ�壬�Զ������ͣ�ָ�룬����ָ�룬ö�٣����г����͡�����ļ�����bin\ test_stream�ļ���
+展示了序列化存储，这个例子中展示了几乎所有支持的类型，结构体，自定义类型，指针，智能指针，枚举，还有常类型。最后文件存在bin\ test_stream文件。
 */
 #include <VSObject.h>
 #include "TestSaveLoad.h"

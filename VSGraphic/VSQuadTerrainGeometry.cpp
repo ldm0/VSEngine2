@@ -45,12 +45,12 @@ bool VSQuadTerrainGeometry::RecursiveComputeVariance(unsigned int uiLevel)
 	VSREAL fVariance = 0;
 	unsigned int uiBias = pTerrainNode->GetTesselationLevel() - uiLevel;
 	unsigned int uiVarianceLength = (1 << pTerrainNode->GetTesselationLevel()) + 1;
-	//±éÀú¸Õ²ã´ÎµÄ½Úµã 1 << uiLevel ¸ö
+	//éå†åˆšå±‚æ¬¡çš„èŠ‚ç‚¹ 1 << uiLevel ä¸ª
 	for (unsigned int i = 0 ; i < (unsigned int)(1 << uiLevel) ; i++)
 	{
 		for(unsigned int j = 0 ; j < (unsigned int)(1 << uiLevel) ; j++)
 		{
-			//i·½ÏòÉÏµÄ(i << uiBias)£¬j·½ÏòÉÏµÄ(j << uiBias)£¬¿í¶È(1 << pTerrainNode->GetTesselationLevel() + 1)
+			//iæ–¹å‘ä¸Šçš„(i << uiBias)ï¼Œjæ–¹å‘ä¸Šçš„(j << uiBias)ï¼Œå®½åº¦(1 << pTerrainNode->GetTesselationLevel() + 1)
 			unsigned int A = (j << uiBias) + (i << uiBias) * uiVarianceLength;
 			unsigned int B = ((j + 1) << uiBias) + (i << uiBias) * uiVarianceLength;
 			unsigned int C = ((j + 1) << uiBias) + ((i + 1) << uiBias) * uiVarianceLength;
@@ -276,7 +276,7 @@ void VSQuadTerrainGeometry::UpdateOther(double dAppTime)
 		if (QuadTerrainUpdateGeometryPara.pNeightbor[NT_LEFT])
 		{
 			iLevelDelt = QuadTerrainUpdateGeometryPara.m_uiCurLevel - QuadTerrainUpdateGeometryPara.m_NeighborLevel[NT_LEFT];
-			if (iLevelDelt >= 0 && iLevelDelt == 1)//Ğ´³É == 1 ÆäÊµ¾Í¿ÉÒÔ
+			if (iLevelDelt >= 0 && iLevelDelt == 1)//å†™æˆ == 1 å…¶å®å°±å¯ä»¥
 			{
 
 				for (unsigned int j = 1 ; j < uiLength - 1 ; j ++)
@@ -321,7 +321,7 @@ void VSQuadTerrainGeometry::UpdateOther(double dAppTime)
 		if (QuadTerrainUpdateGeometryPara.pNeightbor[NT_RIGHT])
 		{
 			iLevelDelt = QuadTerrainUpdateGeometryPara.m_uiCurLevel - QuadTerrainUpdateGeometryPara.m_NeighborLevel[NT_RIGHT];
-			if (iLevelDelt >= 0 && iLevelDelt == 1)//Ğ´³É == 1 ÆäÊµ¾Í¿ÉÒÔ
+			if (iLevelDelt >= 0 && iLevelDelt == 1)//å†™æˆ == 1 å…¶å®å°±å¯ä»¥
 			{
 
 				for (unsigned int j = 1 ; j < uiLength - 1 ; j ++)
@@ -366,7 +366,7 @@ void VSQuadTerrainGeometry::UpdateOther(double dAppTime)
 		if (QuadTerrainUpdateGeometryPara.pNeightbor[NT_TOP])
 		{
 			iLevelDelt = QuadTerrainUpdateGeometryPara.m_uiCurLevel - QuadTerrainUpdateGeometryPara.m_NeighborLevel[NT_TOP];
-			if (iLevelDelt >= 0 && iLevelDelt == 1)//Ğ´³É == 1 ÆäÊµ¾Í¿ÉÒÔ
+			if (iLevelDelt >= 0 && iLevelDelt == 1)//å†™æˆ == 1 å…¶å®å°±å¯ä»¥
 			{
 
 				for (unsigned int i = 1 ; i < uiLength - 1 ; i ++)
@@ -409,7 +409,7 @@ void VSQuadTerrainGeometry::UpdateOther(double dAppTime)
 		if (QuadTerrainUpdateGeometryPara.pNeightbor[NT_BOTTOM])
 		{
 			iLevelDelt = QuadTerrainUpdateGeometryPara.m_uiCurLevel - QuadTerrainUpdateGeometryPara.m_NeighborLevel[NT_BOTTOM];
-			if (iLevelDelt >= 0 && iLevelDelt == 1) //Ğ´³É == 1 ÆäÊµ¾Í¿ÉÒÔ
+			if (iLevelDelt >= 0 && iLevelDelt == 1) //å†™æˆ == 1 å…¶å®å°±å¯ä»¥
 			{
 
 				for (unsigned int i = 1 ; i < uiLength - 1 ; i ++)
@@ -449,7 +449,7 @@ void VSQuadTerrainGeometry::UpdateOther(double dAppTime)
 			}
 
 		}
-		//´¦Àí4¸ö½Ç
+		//å¤„ç†4ä¸ªè§’
 		//left top
 		{
 			unsigned int A = ((uiLength - 1) << uiBias);
@@ -583,7 +583,7 @@ void VSQuadTerrainGeometry::UpdateOther(double dAppTime)
 	if (QuadTerrainUpdateGeometryPara.pNeightbor[NT_LEFT])
 	{
 		iLevelDelt = QuadTerrainUpdateGeometryPara.m_uiCurLevel - QuadTerrainUpdateGeometryPara.m_NeighborLevel[NT_LEFT];
-		if (iLevelDelt >= 0 && iLevelDelt == 1)//Ğ´³É == 1 ÆäÊµ¾Í¿ÉÒÔ
+		if (iLevelDelt >= 0 && iLevelDelt == 1)//å†™æˆ == 1 å…¶å®å°±å¯ä»¥
 		{
 
 			for (unsigned int j = 1 ; j < uiLength - 1 ; j ++)
@@ -628,7 +628,7 @@ void VSQuadTerrainGeometry::UpdateOther(double dAppTime)
 	if (QuadTerrainUpdateGeometryPara.pNeightbor[NT_RIGHT])
 	{
 		iLevelDelt = QuadTerrainUpdateGeometryPara.m_uiCurLevel - QuadTerrainUpdateGeometryPara.m_NeighborLevel[NT_RIGHT];
-		if (iLevelDelt >= 0 && iLevelDelt == 1)//Ğ´³É == 1 ÆäÊµ¾Í¿ÉÒÔ
+		if (iLevelDelt >= 0 && iLevelDelt == 1)//å†™æˆ == 1 å…¶å®å°±å¯ä»¥
 		{
 
 			for (unsigned int j = 1 ; j < uiLength - 1 ; j ++)
@@ -673,7 +673,7 @@ void VSQuadTerrainGeometry::UpdateOther(double dAppTime)
 	if (QuadTerrainUpdateGeometryPara.pNeightbor[NT_TOP])
 	{
 		iLevelDelt = QuadTerrainUpdateGeometryPara.m_uiCurLevel - QuadTerrainUpdateGeometryPara.m_NeighborLevel[NT_TOP];
-		if (iLevelDelt >= 0 && iLevelDelt == 1)//Ğ´³É == 1 ÆäÊµ¾Í¿ÉÒÔ
+		if (iLevelDelt >= 0 && iLevelDelt == 1)//å†™æˆ == 1 å…¶å®å°±å¯ä»¥
 		{
 
 			for (unsigned int i = 1 ; i < uiLength - 1 ; i ++)
@@ -716,7 +716,7 @@ void VSQuadTerrainGeometry::UpdateOther(double dAppTime)
 	if (QuadTerrainUpdateGeometryPara.pNeightbor[NT_BOTTOM])
 	{
 		iLevelDelt = QuadTerrainUpdateGeometryPara.m_uiCurLevel - QuadTerrainUpdateGeometryPara.m_NeighborLevel[NT_BOTTOM];
-		if (iLevelDelt >= 0 && iLevelDelt == 1) //Ğ´³É == 1 ÆäÊµ¾Í¿ÉÒÔ
+		if (iLevelDelt >= 0 && iLevelDelt == 1) //å†™æˆ == 1 å…¶å®å°±å¯ä»¥
 		{
 
 			for (unsigned int i = 1 ; i < uiLength - 1 ; i ++)
@@ -756,7 +756,7 @@ void VSQuadTerrainGeometry::UpdateOther(double dAppTime)
 		}
 
 	}
-	//´¦Àí4¸ö½Ç
+	//å¤„ç†4ä¸ªè§’
 	//left top
 	{
 		unsigned int A = ((uiLength - 1) << uiBias);

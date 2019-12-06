@@ -20,7 +20,7 @@ namespace VSEngine2
 			return true;
 		}
 	protected:
-		virtual void UpdateWorldBound(double dAppTime);//¸üÐÂÊÀ½ç±ß½çÌå 
+		virtual void UpdateWorldBound(double dAppTime);//æ›´æ–°ä¸–ç•Œè¾¹ç•Œä½“ 
 
 		virtual void UpdateNodeAll(double dAppTime);
 		virtual void ComputeNodeVisibleSet(VSCuller & Culler, bool bNoCull, double dAppTime);
@@ -45,7 +45,7 @@ namespace VSEngine2
 		virtual void DelayUpdate();
 	protected:
 		VSModelMeshNodePtr m_pNode;
-		//Cache Last ModelMeshNode m_pNode£¬other render thread will crash when it is delete.
+		//Cache Last ModelMeshNode m_pNodeï¼Œother render thread will crash when it is delete.
 		VSModelMeshNodePtr m_pSaveNode;
 		VSArray<unsigned int> m_UseID;
 		bool m_bCastShadow;

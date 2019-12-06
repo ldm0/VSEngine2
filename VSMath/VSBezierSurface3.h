@@ -2,7 +2,7 @@
 #define VSBEZIERSURFACE3_H
 #include "VSControlSurface3.h"
 /*
-BeizerÇúÃæ£¬ÓÉ2Î¬¿ØÖÆµãºÍ2¸ö¶àÏîÊ½¿ØÖÆ£¬U,VÔÚ0-1Ö®¼ä
+Beizeræ›²é¢ï¼Œç”±2ç»´æ§åˆ¶ç‚¹å’Œ2ä¸ªå¤šé¡¹å¼æ§åˆ¶ï¼ŒU,Våœ¨0-1ä¹‹é—´
 
 
 
@@ -14,13 +14,13 @@ class VSMATH_API VSBezierSurface3 : VSControlSurface3
 public:
 	VSBezierSurface3();
 	virtual ~VSBezierSurface3();
-	//ÉèÖÃ¿ØÖÆµã
+	//è®¾ç½®æ§åˆ¶ç‚¹
 	bool Set(const VSVector3 * pControlPoint,unsigned int uiRow,unsigned int uiColumn);
-	//¿½±´
+	//æ‹·è´
 	bool Copy(const VSBezierSurface3 & BezierSurface3);
-	//Çóµã
+	//æ±‚ç‚¹
 	virtual VSVector3 GetPoint(VSREAL U,VSREAL V);
-	//ÇóÆ«µ¼
+	//æ±‚åå¯¼
 	virtual VSVector3 GetUPartialDerivative(VSREAL U,VSREAL V);
 	virtual VSVector3 GetVPartialDerivative(VSREAL U,VSREAL V);
 private:

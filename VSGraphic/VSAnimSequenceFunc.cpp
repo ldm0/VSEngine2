@@ -434,9 +434,9 @@ void VSAnimSequenceFunc::UpDateBone()
 		VSBoneNode * pBone = pSkelecton->GetBoneNode(i);
 		if(pBone)
 		{
-			//Èç¹ûÇ°ÃæÃ»ÓĞ skelectonMesh Ã»ÓĞAnimTree,Èç¹û²¥·Åaddivtive¶¯»­£¬»á³ö´í¡£
-			//Ò²¾ÍÊÇÃ¿´Î¹ÇÍ·¾ØÕó¶¼»áµş¼Ó£¬Èç¹ûÓĞanimtree£¬Ã¿´Îanimtree¸üĞÂÍê±Ïºó£¬»áÖØĞÂÉèÖÃ¹ÇÍ·¾ØÕó
-			//È»ºóadditive µş¼ÓÉÏÈ¥£¬ÕâÑùÊÇÕıÈ·µÄ.
+			//å¦‚æœå‰é¢æ²¡æœ‰ skelectonMesh æ²¡æœ‰AnimTree,å¦‚æœæ’­æ”¾addivtiveåŠ¨ç”»ï¼Œä¼šå‡ºé”™ã€‚
+			//ä¹Ÿå°±æ˜¯æ¯æ¬¡éª¨å¤´çŸ©é˜µéƒ½ä¼šå åŠ ï¼Œå¦‚æœæœ‰animtreeï¼Œæ¯æ¬¡animtreeæ›´æ–°å®Œæ¯•åï¼Œä¼šé‡æ–°è®¾ç½®éª¨å¤´çŸ©é˜µ
+			//ç„¶åadditive å åŠ ä¸Šå»ï¼Œè¿™æ ·æ˜¯æ­£ç¡®çš„.
 			VSMatrix3X3W BoneOutMat;	
 			m_BoneOutPut[i].GetMatrix(BoneOutMat);
 

@@ -54,7 +54,7 @@ VSREAL VSPolygon3::SquaredDistance(const VSTriangle3 &Triangle,
 	}
 	return distTemp;
 }
-//多边形和矩形距离
+//澶氳竟褰㈠拰鐭╁舰璺濈
 VSREAL VSPolygon3::SquaredDistance(const VSRectangle3 &Rectangle,
 									int& IndexTriangle,
 									VSREAL fTriangleParameter[3],

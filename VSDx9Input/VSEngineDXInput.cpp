@@ -49,7 +49,7 @@ DWORD VSEngineDXInput::ms_BoardKey[BK_MAX] =
 	DIK_O               ,
 	DIK_P               ,
 
-	//Êı×Ö¼ü
+	//æ•°å­—é”®
 	DIK_1               ,
 	DIK_2               ,
 	DIK_3               ,
@@ -61,7 +61,7 @@ DWORD VSEngineDXInput::ms_BoardKey[BK_MAX] =
 	DIK_9               ,
 	DIK_0               ,
 
-	// FUNCTION ¼ü
+	// FUNCTION é”®
 	DIK_F1              ,
 	DIK_F2              ,
 	DIK_F3              ,
@@ -135,7 +135,7 @@ VSEngineDXInput::VSEngineDXInput(HINSTANCE hInstance,HWND hWnd,const MouseRange 
 	GUID guid;
 	DWORD dwFlags;
 
-	//´´½¨¼üÅÌÉè±¸
+	//åˆ›å»ºé”®ç›˜è®¾å¤‡
 	guid = GUID_SysKeyboard;
 	dwFlags = DISCL_FOREGROUND | DISCL_NONEXCLUSIVE;
 
@@ -150,7 +150,7 @@ VSEngineDXInput::VSEngineDXInput(HINSTANCE hInstance,HWND hWnd,const MouseRange 
 
 	m_pKeyBoardDevice->Acquire();
 
-	//´´½¨Êó±êÉè±¸
+	//åˆ›å»ºé¼ æ ‡è®¾å¤‡
 	guid = GUID_SysMouse;
 	dwFlags = DISCL_FOREGROUND | DISCL_EXCLUSIVE;
 
@@ -164,14 +164,14 @@ VSEngineDXInput::VSEngineDXInput(HINSTANCE hInstance,HWND hWnd,const MouseRange 
 	VSMAC_ASSERT(!FAILED(m_hResult));
 	
 	HANDLE	m_hEvent = NULL;
-	//´´½¨Í¨ÖªÊÂ¼ş
+	//åˆ›å»ºé€šçŸ¥äº‹ä»¶
 	m_hEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
 	VSMAC_ASSERT(m_hEvent);
 
 	m_hResult = m_pMouseDevice->SetEventNotification(m_hEvent);
 	VSMAC_ASSERT(!FAILED(m_hResult));
 
-	//ÎªÊó±ê½¨Á¢»º³åÇø
+	//ä¸ºé¼ æ ‡å»ºç«‹ç¼“å†²åŒº
 	DIPROPDWORD dipdw;
 	dipdw.diph.dwSize       = sizeof(DIPROPDWORD);
 	dipdw.diph.dwHeaderSize = sizeof(DIPROPHEADER);
@@ -179,7 +179,7 @@ VSEngineDXInput::VSEngineDXInput(HINSTANCE hInstance,HWND hWnd,const MouseRange 
 	dipdw.diph.dwHow        = DIPH_DEVICE;
 	dipdw.dwData            = BUFFER_SIZE;
 
-	//ÉèÖÃÊÂ¼ş¸öÊı»º³åÇø´óĞ¡
+	//è®¾ç½®äº‹ä»¶ä¸ªæ•°ç¼“å†²åŒºå¤§å°
 	m_hResult = m_pMouseDevice->SetProperty(DIPROP_BUFFERSIZE, &dipdw.diph);
 	VSMAC_ASSERT(!FAILED(m_hResult));
 	m_pMouseDevice->Acquire();
@@ -237,19 +237,19 @@ void VSEngineDXInput::KeyBoardUpdate()
 
 	if (FAILED(m_hResult)) 
 	{
-		//Éè±¸¶ªÊ§
+		//è®¾å¤‡ä¸¢å¤±
 		if ( (m_hResult == DIERR_NOTACQUIRED) || (m_hResult == DIERR_INPUTLOST) ) 
 		{
 
 			m_hResult = m_pKeyBoardDevice->Acquire();
-			//Èç¹ûÉè±¸Ò»Ö±¶ªÊ§£¬Ö±µ½µÃµ½Éè±¸
+			//å¦‚æœè®¾å¤‡ä¸€ç›´ä¸¢å¤±ï¼Œç›´åˆ°å¾—åˆ°è®¾å¤‡
 			while (m_hResult==DIERR_INPUTLOST)
 				m_hResult = m_pKeyBoardDevice->Acquire();
 
-			//Èç¹ûÓĞÆäËûÓ¦ÓÃ³ÌĞòÓÃ£¬ÔòÏÂÒ»FrameÔÚÈ¡µÃ
+			//å¦‚æœæœ‰å…¶ä»–åº”ç”¨ç¨‹åºç”¨ï¼Œåˆ™ä¸‹ä¸€Frameåœ¨å–å¾—
 			if (m_hResult == DIERR_OTHERAPPHASPRIO) return;
 
-			//Èç¹ûÖØĞÂµÃµ½Éè±¸
+			//å¦‚æœé‡æ–°å¾—åˆ°è®¾å¤‡
 			if (SUCCEEDED(m_hResult))
 			{		
 				m_hResult = m_pKeyBoardDevice->GetDeviceState(size, &m_Keys[0]);
@@ -294,19 +294,19 @@ void VSEngineDXInput::MouseUpdate()
 
 	if (FAILED(m_hResult)) 
 	{
-		//Éè±¸¶ªÊ§
+		//è®¾å¤‡ä¸¢å¤±
 		if ( (m_hResult == DIERR_NOTACQUIRED) || (m_hResult == DIERR_INPUTLOST) ) 
 		{
 
 			m_hResult = m_pMouseDevice->Acquire();
-			//Èç¹ûÉè±¸Ò»Ö±¶ªÊ§£¬Ö±µ½µÃµ½Éè±¸
+			//å¦‚æœè®¾å¤‡ä¸€ç›´ä¸¢å¤±ï¼Œç›´åˆ°å¾—åˆ°è®¾å¤‡
 			while (m_hResult == DIERR_INPUTLOST)
 				m_hResult = m_pMouseDevice->Acquire();
 
-			//Èç¹ûÓĞÆäËûÓ¦ÓÃ³ÌĞòÓÃ£¬ÔòÏÂÒ»FrameÔÚÈ¡µÃ
+			//å¦‚æœæœ‰å…¶ä»–åº”ç”¨ç¨‹åºç”¨ï¼Œåˆ™ä¸‹ä¸€Frameåœ¨å–å¾—
 			if (m_hResult == DIERR_OTHERAPPHASPRIO) return;
 
-			//Èç¹ûÖØĞÂµÃµ½Éè±¸
+			//å¦‚æœé‡æ–°å¾—åˆ°è®¾å¤‡
 			if (SUCCEEDED(m_hResult))
 			{
 				
@@ -322,12 +322,12 @@ void VSEngineDXInput::MouseUpdate()
 
 	m_bReleased[0] = m_bReleased[1] = m_bReleased[2] = false;
 
-	// ±éÀúËùÓĞÊó±êÊÂ¼şÊó±ê
+	// éå†æ‰€æœ‰é¼ æ ‡äº‹ä»¶é¼ æ ‡
 	for (DWORD i = 0 ; i < dwNumElem; i++) 
 	{
 		switch (od[i].dwOfs) 
 		{
-			// XÒÆ¶¯
+			// Xç§»åŠ¨
 		case DIMOFS_X: 
 			{
 				m_lX += od[i].dwData;
@@ -359,7 +359,7 @@ void VSEngineDXInput::MouseUpdate()
 				else if (bBackCage & (m_lZ > m_Cage.back))
 					m_lZ = m_Cage.back;
 			} break;
-			// °´¼üÒÆ¶¯
+			// æŒ‰é”®ç§»åŠ¨
 		case DIMOFS_BUTTON0: 
 			{
 				if (od[i].dwData & 0x80) 

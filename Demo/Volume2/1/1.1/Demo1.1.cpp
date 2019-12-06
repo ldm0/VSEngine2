@@ -1,4 +1,4 @@
-//展示了给导出的一个蒙皮模型添加材质的过程
+//灞曠ず浜嗙粰瀵煎嚭鐨勪竴涓挋鐨ā鍨嬫坊鍔犳潗璐ㄧ殑杩囩▼
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

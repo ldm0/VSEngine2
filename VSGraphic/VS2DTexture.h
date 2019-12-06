@@ -27,7 +27,7 @@ namespace VSEngine2
 
 		DECLARE_INITIAL
 
-		//Õâ¸öÓÃÀ´±£Ö¤Èç¹ûrendertargetÉèÖÃ½øÈ¥£¬Ôòtexture²»ÄÜÔÚÉèÖÃ£¬»á¸ø³ö´íÎóÌáÊ¾¡£
+		//è¿™ä¸ªç”¨æ¥ä¿è¯å¦‚æœrendertargetè®¾ç½®è¿›å»ï¼Œåˆ™textureä¸èƒ½åœ¨è®¾ç½®ï¼Œä¼šç»™å‡ºé”™è¯¯æç¤ºã€‚
 		bool m_bRtUsed;
 	public:
 		friend class VSRenderer;

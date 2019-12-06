@@ -7,8 +7,8 @@
 #include "VSSceneRender.h"
 namespace VSEngine2
 {
-	//cube shadow �������ڹ�Դ��������̫Զ��rt�ֱ��ʲ�������ž��徫�Ȳ���
-	//volume �������ڲ���ͶӰ����������Ǳպϵģ������ǹ⻬�ģ���ͬ�⻬������ǵĵط���Ҫ����Ƕ�����Ρ�
+	//cube shadow 限制在于光源距离物体太远，rt分辨率不够，存放具体精度不够
+	//volume 限制在于参与投影的物体必须是闭合的，表面是光滑的，不同光滑组有棱角的地方，要求内嵌三角形。
 	class VSStream;
 	class VSGRAPHIC_API VSPointLight : public VSLocalLight
 	{

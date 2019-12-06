@@ -2,7 +2,7 @@
 #define VSCURVESUBDIVISIONBYLENGTH_H
 #include "VSCurve3Subdivision.h"
 /*
-长度划分方法
+闀垮害鍒掑垎鏂规硶
 
 
 
@@ -14,7 +14,7 @@ class VSMATH_API VSCurve3SubdivisionByLength :public VSCurve3Subdivision
 public:
 	VSCurve3SubdivisionByLength(unsigned int PointNum,VSREAL t1,VSREAL t2,unsigned int uiIterations = 32);
 	virtual ~VSCurve3SubdivisionByLength();
-	//给定划分点个数和迭代次数，划分曲线按长度l1,l2之间
+	//缁欏畾鍒掑垎鐐逛釜鏁板拰杩唬娆℃暟锛屽垝鍒嗘洸绾挎寜闀垮害l1,l2涔嬮棿
 	virtual bool Subdivision();
 	void SetPointNum(unsigned int uiPointNum);
 	virtual unsigned int GetSubdivisionMethod(){ return SM_LENGTH;}

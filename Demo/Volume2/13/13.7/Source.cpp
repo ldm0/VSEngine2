@@ -1,4 +1,4 @@
-//¿ªÆô¶àÏß³ÌäÖÈ¾²âÊÔ£¬RoamµØĞÎÓÃË«IndexBuffer¼ÆËãµØĞÎMesh Index¡£
+//å¼€å¯å¤šçº¿ç¨‹æ¸²æŸ“æµ‹è¯•ï¼ŒRoamåœ°å½¢ç”¨åŒIndexBufferè®¡ç®—åœ°å½¢Mesh Indexã€‚
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

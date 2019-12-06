@@ -2,7 +2,7 @@
 #define VSCONTROLCURVE3_H
 #include "VSCurve3.h"
 /*
-¿ØÖÆµãÇúÏßÀà£¬ËùÓĞµÄ¿ØÖÆµãÀàĞÍÇúÏß¶¼¼¯³ÉÓÚËü£¬Ã»ÓĞÊµÀı
+æ§åˆ¶ç‚¹æ›²çº¿ç±»ï¼Œæ‰€æœ‰çš„æ§åˆ¶ç‚¹ç±»å‹æ›²çº¿éƒ½é›†æˆäºå®ƒï¼Œæ²¡æœ‰å®ä¾‹
 
 */
 namespace VSEngine2
@@ -14,37 +14,37 @@ public:
 	VSControlCurve3();
 	virtual ~VSControlCurve3() = 0;
 	virtual unsigned int GetCurveType(){return CT_CONTROL;}
-	//¿½±´
+	//æ‹·è´
 	bool Copy(const VSControlCurve3 & ControlCurve3);
 	/***************************************FORCEINLINE************************************/
-	//µÃµ½¿ØÖÆµãÖ¸Õë
+	//å¾—åˆ°æ§åˆ¶ç‚¹æŒ‡é’ˆ
 	FORCEINLINE const VSVector3 * GetpControlPoint()const;
-	//»ñµÃÄ³¸ö¿ØÖÆµã
+	//è·å¾—æŸä¸ªæ§åˆ¶ç‚¹
 	FORCEINLINE VSVector3 GetControlPoint(unsigned int i)const;
-	//¸Ä±äÄ³¸ö¿ØÖÆµã
+	//æ”¹å˜æŸä¸ªæ§åˆ¶ç‚¹
 	FORCEINLINE bool ChangeControlPoint(unsigned int i,const VSVector3 & ControlPoint);
-	//µÃµ½¿ØÖÆµã¸öÊı
+	//å¾—åˆ°æ§åˆ¶ç‚¹ä¸ªæ•°
 	FORCEINLINE unsigned int GetControlPointNum()const;
-	//µÃµ½ÇúÏßÀàĞÍ
+	//å¾—åˆ°æ›²çº¿ç±»å‹
 	FORCEINLINE unsigned int GetType()const;
-	//»ñµÃFRENET3¸ö·½Ïò
+	//è·å¾—FRENET3ä¸ªæ–¹å‘
 	virtual void	GetFrenetFrameBNT(VSREAL t,VSVector3 & B,VSVector3 & N,VSVector3 &T);
-	//Çóµ¼Êı
+	//æ±‚å¯¼æ•°
 	virtual VSVector3	GetFirstDerivative(VSREAL t)= 0 ;
 	virtual VSVector3	GetSecondDerivative(VSREAL t)= 0;
 	virtual VSVector3	GetThirdDerivative(VSREAL t)= 0;
-	//Çó³¤¶È
+	//æ±‚é•¿åº¦
 	virtual VSREAL		GetLength(VSREAL t1 ,VSREAL t2,unsigned int uiIterations = 32);
-	//µÃµ½µã
+	//å¾—åˆ°ç‚¹
 	virtual VSVector3	GetPoint(VSREAL t) = 0;
-	//µÃµ½×Ü³¤¶È
+	//å¾—åˆ°æ€»é•¿åº¦
 	virtual VSREAL		GetTotalLength(unsigned int uiIterations);
-	//¸ù¾İ³¤¶ÈÇóÊ±¼ä
+	//æ ¹æ®é•¿åº¦æ±‚æ—¶é—´
 	virtual VSREAL GetTime (VSREAL fLength, unsigned int uiIterations = 32,
 						VSREAL fTolerance = EPSILON_E4);
-	//µÃµ½ÇúÂÊ
+	//å¾—åˆ°æ›²ç‡
 	virtual VSREAL GetCurvature(VSREAL fTime);
-	//µÃµ½×ª¾Ø
+	//å¾—åˆ°è½¬çŸ©
 	virtual VSREAL GetTorsion(VSREAL fTime);
 protected:
 	unsigned int m_CurveType;

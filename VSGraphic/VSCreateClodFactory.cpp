@@ -65,8 +65,8 @@ VSCollapseRecordTri * VSCreateClodTriFactory::CreateClodTriangle( VSTriangleSet 
 	ms_RecordTriangle.Clear();
 
 	InitalDate();
-	//ÌîÈëÔ­Ê¼µÄÈı½ÇĞÎĞÅÏ¢£¬×÷ÎªµÚ 0 ¸öË÷ÒıµÄ record £¬ËùÒÔÌæ»»Èı½ÇĞÎË÷ÒıµÄmapindexÊı×éÎª0
-	//keep ºÍ throw ¶¼ÊÇÎŞĞ§µÄ
+	//å¡«å…¥åŸå§‹çš„ä¸‰è§’å½¢ä¿¡æ¯ï¼Œä½œä¸ºç¬¬ 0 ä¸ªç´¢å¼•çš„ record ï¼Œæ‰€ä»¥æ›¿æ¢ä¸‰è§’å½¢ç´¢å¼•çš„mapindexæ•°ç»„ä¸º0
+	//keep å’Œ throw éƒ½æ˜¯æ— æ•ˆçš„
 	RecordTriInfo CollapseRecord;
 	CollapseRecord.m_uiKeep = VSMAX_INTEGER;
 	CollapseRecord.m_uiThrow = VSMAX_INTEGER;
@@ -84,7 +84,7 @@ VSCollapseRecordTri * VSCreateClodTriFactory::CreateClodTriangle( VSTriangleSet 
 // 		}
 	}
 
-	//ÅÅĞòÈı½ÇĞÎ£¬°ÑÉ¾³ıµÄ£¬°´Ë³Ğò¶¼·ÅÔÚºóÃæ
+	//æ’åºä¸‰è§’å½¢ï¼ŒæŠŠåˆ é™¤çš„ï¼ŒæŒ‰é¡ºåºéƒ½æ”¾åœ¨åé¢
 	unsigned int uiExChangeIndex = 0;
 
 	VSDataBuffer * pIndexDate = ms_pTriangleSet->GetIndexBuffer()->GetIndexDate();
@@ -123,7 +123,7 @@ VSCollapseRecordTri * VSCreateClodTriFactory::CreateClodTriangle( VSTriangleSet 
 		uiExChangeIndex++;
 	}
 
-	//ÖØĞÂÓ³ÉäÈı½ÇĞÎË÷Òı
+	//é‡æ–°æ˜ å°„ä¸‰è§’å½¢ç´¢å¼•
 	for (int i = ms_pCRT->m_RecordInfo.GetNum() - 1 ;i >=0  ; i--)
 	{
 		RecordTriInfo & RecordInfoRef = ms_pCRT->m_RecordInfo[i];
@@ -151,7 +151,7 @@ VSCollapseRecordTri * VSCreateClodTriFactory::CreateClodTriangle( VSTriangleSet 
 	}
 	VSCollapseRecordTri * PReturn = ms_pCRT;
 	ms_pCRT = NULL;
-	//Ö»ÓĞÒ»¸öÔ­Ê¼ĞÅÏ¢£¬ÆäËûµÄ¼ÇÂ¼ĞÅÏ¢¶¼Ã»ÓĞ£¬ÔòÉ¾³ı,±íÊ¾Õâ¸öMeshÒÑ¾­ÎŞ·¨¾«¼ò
+	//åªæœ‰ä¸€ä¸ªåŸå§‹ä¿¡æ¯ï¼Œå…¶ä»–çš„è®°å½•ä¿¡æ¯éƒ½æ²¡æœ‰ï¼Œåˆ™åˆ é™¤,è¡¨ç¤ºè¿™ä¸ªMeshå·²ç»æ— æ³•ç²¾ç®€
 	if (PReturn->m_RecordInfo.GetNum() == 1)
 	{
 		VSMAC_DELETE(PReturn);
@@ -354,7 +354,7 @@ VSREAL VSCreateClodTriFactory::GetCollapseWeight(const Edge3DAttr & Edge3D)
 		VSVector3 T1N;
 		T1N.Cross(DiffT1_01,DiffT1_02);
 
-		//2¸öÈı½ÇĞĞÔ½´¹Ö±È¨ÖØÔ½´ó£¬c = |a| |b| sin; Ò²¾ÍÊÇºÍ2¸öÈı½ÇĞÎ¼Ğ½ÇÓĞ¹Ø£¬
+		//2ä¸ªä¸‰è§’è¡Œè¶Šå‚ç›´æƒé‡è¶Šå¤§ï¼Œc = |a| |b| sin; ä¹Ÿå°±æ˜¯å’Œ2ä¸ªä¸‰è§’å½¢å¤¹è§’æœ‰å…³ï¼Œ
 		VSVector3 CrossAngle;
 		CrossAngle.Cross(T0N,T1N);
 		fWeight += CrossAngle.GetLength() * cfAngleWeight;
@@ -388,8 +388,8 @@ bool VSCreateClodTriFactory::GetCollapseEV(unsigned int &uiE3DIndex,unsigned int
 			return 0;
 		}
 
-		//¼ì²â¹²ÏíÕâÌõ±ßÉÏ¶¥µãµÄËùÓĞ±ß£¬Èç¹ûÕâ¸ö¶¥µãµÄËùÓĞ±ß¶¼ÓĞ2¸öÈı½ÇĞÎ¹²Ïí£¬ÔòÕâ¸ö¶¥µã¾ÍÊÇthrow¡£Èç¹ûÕÒ²»µ½
-		//Ôò°ÑÕâ¸ö±ßµÄÈ¨ÖØ¸Ä³ÉVSMAX_REAL£¬¼ÌĞøÕÒ£¬Ö±µ½×îĞ¡È¨ÖØÎªVSMAX_REAL£¬½áÊø£¬ÔòÇóClodMesh½áÊø
+		//æ£€æµ‹å…±äº«è¿™æ¡è¾¹ä¸Šé¡¶ç‚¹çš„æ‰€æœ‰è¾¹ï¼Œå¦‚æœè¿™ä¸ªé¡¶ç‚¹çš„æ‰€æœ‰è¾¹éƒ½æœ‰2ä¸ªä¸‰è§’å½¢å…±äº«ï¼Œåˆ™è¿™ä¸ªé¡¶ç‚¹å°±æ˜¯throwã€‚å¦‚æœæ‰¾ä¸åˆ°
+		//åˆ™æŠŠè¿™ä¸ªè¾¹çš„æƒé‡æ”¹æˆVSMAX_REALï¼Œç»§ç»­æ‰¾ï¼Œç›´åˆ°æœ€å°æƒé‡ä¸ºVSMAX_REALï¼Œç»“æŸï¼Œåˆ™æ±‚ClodMeshç»“æŸ
 		unsigned int j = 0;
 		for (j = 0 ; j < 2 ; j++)
 		{
@@ -441,16 +441,16 @@ bool VSCreateClodTriFactory::Collapse(unsigned int uiE3DIndex,unsigned int uiKee
 	CollapseRecord.m_uiKeep = uiKeepV3DIndex;
 	CollapseRecord.m_uiThrow = uiThrowV3DIndex;
 	CollapseRecord.m_uiLeftTraingleNum = ms_uiLeftTrangleNum;
-	//1.É¾³ı¹²ÏíuiE3DIndex±ßµÄÈı½ÇĞÎ£¬ÒªÍ¬Ê±°Ñ¹²ÏíÕâ¸öÈı½ÇĞÎµÄ¶¥µãºÍ±ßÁĞ±íÖĞÉ¾³ı
+	//1.åˆ é™¤å…±äº«uiE3DIndexè¾¹çš„ä¸‰è§’å½¢ï¼Œè¦åŒæ—¶æŠŠå…±äº«è¿™ä¸ªä¸‰è§’å½¢çš„é¡¶ç‚¹å’Œè¾¹åˆ—è¡¨ä¸­åˆ é™¤
 	for (unsigned int i = 0 ; i < ms_E3Attr[uiE3DIndex].m_InTriangleIndexArray.GetNum() ; i++)
 	{
-		//É¾³ıÈı½ÇĞÎ
+		//åˆ é™¤ä¸‰è§’å½¢
 		unsigned int uiT3DIndex = ms_E3Attr[uiE3DIndex].m_InTriangleIndexArray[i];
 		VSMAC_ASSERT(uiT3DIndex < ms_T3Attr.GetNum());
 		VSMAC_ASSERT(!ms_T3Attr[uiT3DIndex].m_bIsDelete);
 		ms_T3Attr[uiT3DIndex].m_bIsDelete = true;
 		ms_uiLeftTrangleNum--;
-		//É¾³ıÈı½ÇĞÎµÄ3Ìõ±ßÖĞ¶ÔÓ¦µÄÈı½ÇĞÎĞÅÏ¢
+		//åˆ é™¤ä¸‰è§’å½¢çš„3æ¡è¾¹ä¸­å¯¹åº”çš„ä¸‰è§’å½¢ä¿¡æ¯
 		for (unsigned int j = 0 ; j < 3 ; j++)
 		{
 			unsigned int uiEdgeIndex = ms_T3Attr[uiT3DIndex].m_ContainEdgeIndex[j];
@@ -468,11 +468,11 @@ bool VSCreateClodTriFactory::Collapse(unsigned int uiE3DIndex,unsigned int uiKee
 					break;
 				}	
 			}
-			//ÕÒµ½ÁËÕâ¸öÈı½ÇĞÎ,Õâ¸ö±ß²»ÔÙÊôÓÚÕâ¸öÈı½ÇĞÎ£¬É¾³ı
+			//æ‰¾åˆ°äº†è¿™ä¸ªä¸‰è§’å½¢,è¿™ä¸ªè¾¹ä¸å†å±äºè¿™ä¸ªä¸‰è§’å½¢ï¼Œåˆ é™¤
 			VSMAC_ASSERT(k < ms_E3Attr[uiEdgeIndex].m_InTriangleIndexArray.GetNum());
 			ms_E3Attr[uiEdgeIndex].m_InTriangleIndexArray.Erase(k);
 		}
-		//É¾³ıÈı½ÇĞÎ¶ÔÓ¦µÄ3¸ö¶¥µãµÄÈı½ÇĞÎĞÅÏ¢
+		//åˆ é™¤ä¸‰è§’å½¢å¯¹åº”çš„3ä¸ªé¡¶ç‚¹çš„ä¸‰è§’å½¢ä¿¡æ¯
 		for (unsigned int j = 0 ; j < 3 ;j ++)
 		{
 			unsigned int uiVIndex = ms_T3Attr[uiT3DIndex].m_ContainVertexIndex[j];
@@ -487,14 +487,14 @@ bool VSCreateClodTriFactory::Collapse(unsigned int uiE3DIndex,unsigned int uiKee
 					break;
 				}	
 			}
-			//ÕÒµ½ÁËÕâ¸öÈı½ÇĞÎ£¬Õâ¸ö¶¥µã²»ÔÙÊôÓÚÕâ¸öÈı½ÇĞÎ£¬É¾³ı
+			//æ‰¾åˆ°äº†è¿™ä¸ªä¸‰è§’å½¢ï¼Œè¿™ä¸ªé¡¶ç‚¹ä¸å†å±äºè¿™ä¸ªä¸‰è§’å½¢ï¼Œåˆ é™¤
 			VSMAC_ASSERT(k < ms_V3Attr[uiVIndex].m_InTriangleIndexArray.GetNum());
 			ms_V3Attr[uiVIndex].m_InTriangleIndexArray.Erase(k);
 		}
 		ms_RecordTriangle.AddElement(uiT3DIndex);
 	}
 
-	//2.É¾³ı±ßĞÅÏ¢£¬Í¬Ê±¹²ÏíÕâ¸ö±ß¶¥µãÁĞ±íĞÅÏ¢£¬²»ÓÃÉ¾³ı¹²ÏíÕâ¸ö±ßÈı½ÇĞÎÁĞ±íĞÅÏ¢£¬ÒòÎªÕâ¸öÈı½ÇĞÎÒÑ¾­±»É¾³ı
+	//2.åˆ é™¤è¾¹ä¿¡æ¯ï¼ŒåŒæ—¶å…±äº«è¿™ä¸ªè¾¹é¡¶ç‚¹åˆ—è¡¨ä¿¡æ¯ï¼Œä¸ç”¨åˆ é™¤å…±äº«è¿™ä¸ªè¾¹ä¸‰è§’å½¢åˆ—è¡¨ä¿¡æ¯ï¼Œå› ä¸ºè¿™ä¸ªä¸‰è§’å½¢å·²ç»è¢«åˆ é™¤
 	ms_E3Attr[uiE3DIndex].m_bIsDelete = true;
 	for (unsigned int i = 0 ; i < ms_V3Attr[uiKeepV3DIndex].m_InEdgeIndexArray.GetNum() ; i++)
 	{
@@ -513,7 +513,7 @@ bool VSCreateClodTriFactory::Collapse(unsigned int uiE3DIndex,unsigned int uiKee
 		}
 	}
 
-	//3.´¦Àí¹²ÏíÒª±»É¾³ı¶¥µãµÄÈı½ÇĞÎ£¬Ìæ»»2¸ö¶¥µã
+	//3.å¤„ç†å…±äº«è¦è¢«åˆ é™¤é¡¶ç‚¹çš„ä¸‰è§’å½¢ï¼Œæ›¿æ¢2ä¸ªé¡¶ç‚¹
 	for (unsigned int i = 0 ; i < ms_V3Attr[uiThrowV3DIndex].m_InTriangleIndexArray.GetNum() ; i++)
 	{
 		unsigned int uiT3DIndex = ms_V3Attr[uiThrowV3DIndex].m_InTriangleIndexArray[i];
@@ -551,7 +551,7 @@ bool VSCreateClodTriFactory::Collapse(unsigned int uiE3DIndex,unsigned int uiKee
 		VSVector3 V2 = ms_V3Attr[V3DIndex].m_Position;
 
 
-		//Ìæ»»ĞÂ¶¥µã
+		//æ›¿æ¢æ–°é¡¶ç‚¹
 		ms_T3Attr[uiT3DIndex].m_ContainVertexIndex[uiFoundIndex] = uiKeepV3DIndex;
 
 		V3DIndex = ms_T3Attr[uiT3DIndex].m_ContainVertexIndex[0];
@@ -587,7 +587,7 @@ bool VSCreateClodTriFactory::Collapse(unsigned int uiE3DIndex,unsigned int uiKee
 
 	CollapseRecord.m_uiLeftTraingleNum = ms_uiLeftTrangleNum;
 
-	//4.±ßÌæ»»¶¥µã
+	//4.è¾¹æ›¿æ¢é¡¶ç‚¹
 	for (unsigned int i = 0 ; i < ms_V3Attr[uiThrowV3DIndex].m_InEdgeIndexArray.GetNum(); i++)
 	{
 		unsigned int uiE3DIndex = ms_V3Attr[uiThrowV3DIndex].m_InEdgeIndexArray[i];
@@ -605,7 +605,7 @@ bool VSCreateClodTriFactory::Collapse(unsigned int uiE3DIndex,unsigned int uiKee
 	
 
 	ms_V3Attr[uiThrowV3DIndex].m_bIsDelete = true;
-	//5.´¦ÀíÌæ»»¶¥µãºó£¬ÈßÓàµÄ±ßĞÅÏ¢,ºÏ²¢±ßĞÅÏ¢£¬È»ºó´¦Àí±ß¹²ÏíµÄÈı½ÇĞÎ£¬ºÍÕâĞ©¹²ÏíÈı½ÇĞÎµÄ±ßĞÅÏ¢
+	//5.å¤„ç†æ›¿æ¢é¡¶ç‚¹åï¼Œå†—ä½™çš„è¾¹ä¿¡æ¯,åˆå¹¶è¾¹ä¿¡æ¯ï¼Œç„¶åå¤„ç†è¾¹å…±äº«çš„ä¸‰è§’å½¢ï¼Œå’Œè¿™äº›å…±äº«ä¸‰è§’å½¢çš„è¾¹ä¿¡æ¯
 	for (unsigned int i = 0 ; i < ms_V3Attr[uiKeepV3DIndex].m_InEdgeIndexArray.GetNum(); i++)
 	{
 		unsigned int uiEIndex1 = ms_V3Attr[uiKeepV3DIndex].m_InEdgeIndexArray[i];
@@ -620,7 +620,7 @@ bool VSCreateClodTriFactory::Collapse(unsigned int uiE3DIndex,unsigned int uiKee
 				if (ms_E3Attr[uiEIndex1] == ms_E3Attr[uiEIndex2])
 				{
 					ms_E3Attr[uiEIndex2].m_bIsDelete = true;
-					//¹²ÏíÕâ¸ö±ßµÄÈı½ÇĞÎ£¬Õâ¸ö±ßÒªÌæ»»µô
+					//å…±äº«è¿™ä¸ªè¾¹çš„ä¸‰è§’å½¢ï¼Œè¿™ä¸ªè¾¹è¦æ›¿æ¢æ‰
 					for (unsigned int k = 0 ; k < ms_E3Attr[uiEIndex2].m_InTriangleIndexArray.GetNum(); k++)
 					{
 						unsigned int uiTIndex = ms_E3Attr[uiEIndex2].m_InTriangleIndexArray[k];
@@ -634,7 +634,7 @@ bool VSCreateClodTriFactory::Collapse(unsigned int uiE3DIndex,unsigned int uiKee
 						}
 						
 					}
-					//¹²ÏíÕâ¸ö±ßµÄ¶¥µã£¬Õâ¸ö±ßÒªÉ¾³ı
+					//å…±äº«è¿™ä¸ªè¾¹çš„é¡¶ç‚¹ï¼Œè¿™ä¸ªè¾¹è¦åˆ é™¤
 					ms_V3Attr[uiKeepV3DIndex].m_InEdgeIndexArray.Erase(j);
 					
 					unsigned int uiAnotherV = ms_E3Attr[uiEIndex2].m_ContainVertexIndex[0];
@@ -733,8 +733,8 @@ VSCollapseRecordLine * VSCreateClodLineFactory::CreateClodLine( VSLineSet * pLin
 	ms_RecordLine.Clear();
 
 	InitalDate();
-	//ÌîÈëÔ­Ê¼µÄÈı½ÇĞÎĞÅÏ¢£¬×÷ÎªµÚ 0 ¸öË÷ÒıµÄ record £¬ËùÒÔÌæ»»Èı½ÇĞÎË÷ÒıµÄmapindexÊı×éÎª0
-	//keep ºÍ throw ¶¼ÊÇÎŞĞ§µÄ
+	//å¡«å…¥åŸå§‹çš„ä¸‰è§’å½¢ä¿¡æ¯ï¼Œä½œä¸ºç¬¬ 0 ä¸ªç´¢å¼•çš„ record ï¼Œæ‰€ä»¥æ›¿æ¢ä¸‰è§’å½¢ç´¢å¼•çš„mapindexæ•°ç»„ä¸º0
+	//keep å’Œ throw éƒ½æ˜¯æ— æ•ˆçš„
 	RecordLineInfo CollapseRecord;
 	CollapseRecord.m_uiKeep = VSMAX_INTEGER;
 	CollapseRecord.m_uiThrow = VSMAX_INTEGER;
@@ -748,7 +748,7 @@ VSCollapseRecordLine * VSCreateClodLineFactory::CreateClodLine( VSLineSet * pLin
 
 	}
 
-	//ÅÅĞò±ß£¬°ÑÉ¾³ıµÄ£¬°´Ë³Ğò¶¼·ÅÔÚºóÃæ
+	//æ’åºè¾¹ï¼ŒæŠŠåˆ é™¤çš„ï¼ŒæŒ‰é¡ºåºéƒ½æ”¾åœ¨åé¢
 	unsigned int uiExChangeIndex = 0;
 
 	VSDataBuffer * pIndexDate = ms_pLineSet->GetIndexBuffer()->GetIndexDate();
@@ -783,7 +783,7 @@ VSCollapseRecordLine * VSCreateClodLineFactory::CreateClodLine( VSLineSet * pLin
 		uiExChangeIndex++;
 	}
  
-	//ÖØĞÂÓ³ÉäÈı½ÇĞÎË÷Òı
+	//é‡æ–°æ˜ å°„ä¸‰è§’å½¢ç´¢å¼•
 	for (int i = ms_pCRL->m_RecordInfo.GetNum() - 1 ;i >= 0  ; i--)
 	{
 		RecordLineInfo & RecordInfoRef = ms_pCRL->m_RecordInfo[i];
@@ -809,7 +809,7 @@ VSCollapseRecordLine * VSCreateClodLineFactory::CreateClodLine( VSLineSet * pLin
 	}
 	VSCollapseRecordLine * PReturn = ms_pCRL;
 	ms_pCRL = NULL;
-	//Ö»ÓĞÒ»¸öÔ­Ê¼ĞÅÏ¢£¬ÆäËûµÄ¼ÇÂ¼ĞÅÏ¢¶¼Ã»ÓĞ£¬ÔòÉ¾³ı,±íÊ¾Õâ¸öMeshÒÑ¾­ÎŞ·¨¾«¼ò
+	//åªæœ‰ä¸€ä¸ªåŸå§‹ä¿¡æ¯ï¼Œå…¶ä»–çš„è®°å½•ä¿¡æ¯éƒ½æ²¡æœ‰ï¼Œåˆ™åˆ é™¤,è¡¨ç¤ºè¿™ä¸ªMeshå·²ç»æ— æ³•ç²¾ç®€
 	if (PReturn->m_RecordInfo.GetNum() == 1)
 	{
 		VSMAC_DELETE(PReturn);
@@ -967,12 +967,12 @@ bool VSCreateClodLineFactory::Collapse(unsigned int uiThrowV3DIndex)
 	VSMAC_ASSERT(uiIndex0 < ms_E3Attr.GetNum() && uiIndex1 < ms_E3Attr.GetNum());
 	VSMAC_ASSERT(!ms_E3Attr[uiIndex0].m_bIsDelete && !ms_E3Attr[uiIndex1].m_bIsDelete );
 
-	//É¾³ı¶¥µãºÍ±ß
+	//åˆ é™¤é¡¶ç‚¹å’Œè¾¹
 	ms_V3Attr[uiThrowV3DIndex].m_bIsDelete = true;
 	ms_uiLeftLineNum--;
 	ms_E3Attr[uiIndex1].m_bIsDelete = true;
 
-	//ÕÒµ½±»É¾³ı±ßµÄºÍthrow²»ÏàÍ¬µÄÁíÒ»¸ö¶¥µã
+	//æ‰¾åˆ°è¢«åˆ é™¤è¾¹çš„å’Œthrowä¸ç›¸åŒçš„å¦ä¸€ä¸ªé¡¶ç‚¹
 	unsigned int uiEdgeV = ms_E3Attr[uiIndex1].m_ContainVertexIndex[0];
 
 	if (uiEdgeV == uiThrowV3DIndex)
@@ -988,7 +988,7 @@ bool VSCreateClodLineFactory::Collapse(unsigned int uiThrowV3DIndex)
 
 	VSMAC_ASSERT(!ms_V3Attr[uiEdgeV].m_bIsDelete);
 
-	//±ßÌæ»»¶¥µã
+	//è¾¹æ›¿æ¢é¡¶ç‚¹
 	unsigned int uiEdgeV1 = ms_E3Attr[uiIndex0].m_ContainVertexIndex[0];
 	unsigned int uiMapInde = 0;
 	if (uiEdgeV1 == uiThrowV3DIndex)
@@ -1005,7 +1005,7 @@ bool VSCreateClodLineFactory::Collapse(unsigned int uiThrowV3DIndex)
 		ms_E3Attr[uiIndex0].m_ContainVertexIndex[1] = uiEdgeV;
 	}
 
-	//Ìæ»»Õâ¸ö¶¥µãµÄ±ß
+	//æ›¿æ¢è¿™ä¸ªé¡¶ç‚¹çš„è¾¹
 	unsigned int i ;
 	for ( i = 0 ; i < ms_V3Attr[uiEdgeV].m_InEdgeIndexArray.GetNum() ;i++)
 	{

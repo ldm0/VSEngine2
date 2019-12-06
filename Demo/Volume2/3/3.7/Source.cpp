@@ -1,4 +1,4 @@
-//´´½¨×ßÂ·ºÍ´ý»ú¶¯»­Á¢¼´»ìºÏµÄAnimTree£¬²¢±£´æ¡£
+//åˆ›å»ºèµ°è·¯å’Œå¾…æœºåŠ¨ç”»ç«‹å³æ··åˆçš„AnimTreeï¼Œå¹¶ä¿å­˜ã€‚
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

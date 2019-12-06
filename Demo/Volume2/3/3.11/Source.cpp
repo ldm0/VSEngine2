@@ -1,4 +1,4 @@
-//部分混合动画，分别混合攻击动画的上半身和走路动画的下半身，实现可以边走边攻击动画
+//閮ㄥ垎娣峰悎鍔ㄧ敾锛屽垎鍒贩鍚堟敾鍑诲姩鐢荤殑涓婂崐韬拰璧拌矾鍔ㄧ敾鐨勪笅鍗婅韩锛屽疄鐜板彲浠ヨ竟璧拌竟鏀诲嚮鍔ㄧ敾
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

@@ -19,23 +19,23 @@ public:
 	VSQuat(void);
 	VSQuat(VSREAL _x, VSREAL _y, VSREAL _z, VSREAL _w);
 	void Set(VSREAL _x, VSREAL _y, VSREAL _z, VSREAL _w);
-	//Í¨¹ıĞı×ªÖáºÍĞı×ª½Ç¹¹ÔìËÄÔªÊı
+	//é€šè¿‡æ—‹è½¬è½´å’Œæ—‹è½¬è§’æ„é€ å››å…ƒæ•°
 	void CreateAxisAngle(const VSVector3& Axis,VSREAL fAngle);
-	//ÓÉÅ·À­½Ç¹¹ÔìËÄÔªÊı
+	//ç”±æ¬§æ‹‰è§’æ„é€ å››å…ƒæ•°
 	void  CreateEuler(VSREAL fRoll, VSREAL fPitch, VSREAL fYaw);
-	//µ¥Î»»¯
+	//å•ä½åŒ–
 	void  Normalize();
-	//Çó¹²éî
+	//æ±‚å…±è½­
 	VSQuat  GetConjugate()const;
-	//µÃµ½Å·À­½Ç
+	//å¾—åˆ°æ¬§æ‹‰è§’
 	void  GetEulers(VSREAL &fRoll, VSREAL &fPitch, VSREAL &fYaw)const;
-	//´ÓËÄÔªÊıµÃµ½±ä»»¾ØÕó
+	//ä»å››å…ƒæ•°å¾—åˆ°å˜æ¢çŸ©é˜µ
 	void  GetMatrix(VSMatrix3X3 &Matrix)const;
-	//µÃµ½³¤¶È
+	//å¾—åˆ°é•¿åº¦
 	VSREAL GetLength(void)const;
-	//È¡µÃÄæ
+	//å–å¾—é€†
 	VSQuat GetInverse()const;
-	//È¡µÃĞı×ªÖáºÍĞı×ª½Ç
+	//å–å¾—æ—‹è½¬è½´å’Œæ—‹è½¬è§’
 	void GetAxisAngle(VSVector3 & Axis , VSREAL & fAngle)const;
 	void    operator /= (VSREAL f);
 	VSQuat operator /  (VSREAL f)const;
@@ -55,28 +55,28 @@ public:
 	VSQuat operator -  (const VSQuat &q) const;
 
 	bool operator ==(const VSQuat &q)const;
-	//Çóµã»ı
+	//æ±‚ç‚¹ç§¯
 	VSREAL Dot(const VSQuat& q)const;
-	//Çó¹²éî
+	//æ±‚å…±è½­
 	VSQuat operator ~(void) const;
 
-	//Çóq2ÈÆq1Ğı×ªºóµÄËÄÔªÊı
+	//æ±‚q2ç»•q1æ—‹è½¬åçš„å››å…ƒæ•°
 	void Rotate(const VSQuat &q1, const VSQuat &q2);
 
-	//Ğı×ªÒ»¸öÏòÁ¿
+	//æ—‹è½¬ä¸€ä¸ªå‘é‡
 	VSVector3 Rotate(const VSVector3 &v)const;
-	//²åÖµ
+	//æ’å€¼
 	void Slerp(VSREAL t,const VSQuat & q1,const VSQuat & q2);
-	//Èı½ÇĞÎ2Î¬ÇòĞÍ²åÖµ
+	//ä¸‰è§’å½¢2ç»´çƒå‹æ’å€¼
 	void TriangleSlerp(VSREAL t1,VSREAL t2, const VSQuat & q1,const VSQuat & q2,const VSQuat & q3);
-	//ËÄÔªÊıÑùÌõ²åÖµ
+	//å››å…ƒæ•°æ ·æ¡æ’å€¼
 	void Slerp(VSREAL t,const VSQuat & q1,const VSQuat & q2,const VSQuat & s1,const VSQuat & s2);
 	void SlerpSValueOf(const VSQuat & q1,const VSQuat & q2,const VSQuat & q3);
-	//ÇóÃİ
+	//æ±‚å¹‚
 	VSQuat Pow(VSREAL exp)const;
-	//ÇóÒÔeÎªµ×µÄ¶ÔÊı
+	//æ±‚ä»¥eä¸ºåº•çš„å¯¹æ•°
 	VSQuat Ln()const;
-	//ÇóÒÔeÎªµ×Ö¸Êı
+	//æ±‚ä»¥eä¸ºåº•æŒ‡æ•°
 	VSQuat Exp()const;
 
 

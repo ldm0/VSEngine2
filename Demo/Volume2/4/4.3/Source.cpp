@@ -1,4 +1,4 @@
-//´´½¨MorphTree£¬²¢±£´æ¡£
+//åˆ›å»ºMorphTreeï¼Œå¹¶ä¿å­˜ã€‚
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

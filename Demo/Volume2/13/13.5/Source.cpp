@@ -1,4 +1,4 @@
-//	�������̸߳��ºͶ��߳���Ⱦ��
+//	开启多线程更新和多线程渲染。
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

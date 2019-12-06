@@ -61,7 +61,7 @@ public:
 protected:
 	VSSpatial();
 
-	virtual void UpdateWorldBound(double dAppTime) = 0;//¸üĞÂ±ß½çÌå 
+	virtual void UpdateWorldBound(double dAppTime) = 0;//æ›´æ–°è¾¹ç•Œä½“ 
 	virtual void UpdateNodeAll(double dAppTime) = 0;
 	virtual void ComputeNodeVisibleSet(VSCuller & Culler,bool bNoCull,double dAppTime)= 0;
 protected:
@@ -74,7 +74,7 @@ public:
 	bool m_bInheritScale;
 	bool m_bInheritRotate;
 	bool m_bInheritTranlate;
-	virtual void UpdateTransform(double dAppTime);//¸üĞÂ±ä»»ĞÅÏ¢ 
+	virtual void UpdateTransform(double dAppTime);//æ›´æ–°å˜æ¢ä¿¡æ¯ 
 	virtual void UpdateAll(double dAppTime);
 public:
 	FORCEINLINE void SetParent(VSSpatial * pParent);

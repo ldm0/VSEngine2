@@ -16,7 +16,7 @@ namespace VSEngine2
 		{
 			return m_pSteer;
 		}
-		//¼ÆËãºÏÁ¦
+		//è®¡ç®—åˆåŠ›
 		virtual VSVector3 Compute() = 0;
 	protected:
 		VSSteer * m_pSteer;

@@ -1,4 +1,4 @@
-//演示点光源Dual_Paraboloid影子
+//婕旂ず鐐瑰厜婧怐ual_Paraboloid褰卞瓙
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

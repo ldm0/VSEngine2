@@ -1,11 +1,11 @@
-//展示RTTI用来判断继承关系
+//灞曠ずRTTI鐢ㄦ潵鍒ゆ柇缁ф壙鍏崇郴
 #include <VSObject.h>
 #include <iostream>
 using namespace VSEngine2;
 class A
 {
 public:
-	//声明类A的RTTI
+	//澹版槑绫籄鐨凴TTI
 	virtual VSRtti & GetType()const{ return ms_Type; }
 	static VSRtti ms_Type;
 
@@ -14,7 +14,7 @@ public:
 	bool IsSameType(const VSRtti &Type)const;
 	bool IsDerived(const VSRtti &Type)const;
 };
-//定义类A的RTTI
+//瀹氫箟绫籄鐨凴TTI
 VSRtti A::ms_Type(_T("A"), NULL, NULL);
 bool A::IsSameType(const A *pObject)const
 {
@@ -35,20 +35,20 @@ bool A::IsDerived(const VSRtti &Type)const
 class B : public A
 {
 public:
-	//声明类B的RTTI
+	//澹版槑绫籅鐨凴TTI
 	virtual VSRtti & GetType()const{ return ms_Type; }
 	static VSRtti ms_Type;
 };
-//定义类B的RTTI
+//瀹氫箟绫籅鐨凴TTI
 VSRtti B::ms_Type(_T("A"), &A::ms_Type, NULL);
 class C : public A
 {
 public:
-	//声明类C的RTTI
+	//澹版槑绫籆鐨凴TTI
 	virtual VSRtti & GetType()const{ return ms_Type; }
 	static VSRtti ms_Type;
 };
-//定义类C的RTTI
+//瀹氫箟绫籆鐨凴TTI
 VSRtti C::ms_Type(_T("C"), &A::ms_Type, NULL);
 template <class T>
 T* StaticCast(A* pkObj)

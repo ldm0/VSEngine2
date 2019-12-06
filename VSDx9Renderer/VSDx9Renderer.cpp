@@ -812,7 +812,7 @@ void VSDX9Renderer::OnLoadVShaderFromString(VSVShader * pVShaderProgram, VSVProg
 	VSMap<VSString, VSString> Define;
 	pVShaderProgram->m_ShaderKey.GetDefine(Define);
 	D3DXMACRO * pMacro = GetDefine(Define);
-	LPD3DXCONSTANTTABLE          pConstantTable = NULL; //≥£¡ø±Ì∂‘œÛ
+	LPD3DXCONSTANTTABLE          pConstantTable = NULL; //Â∏∏ÈáèË°®ÂØπË±°
 	if (pVShaderProgram->GetBuffer().GetLength())
 	{
 		hResult = D3DXCompileShader((LPCSTR)pVShaderProgram->GetBuffer().GetBuffer(), pVShaderProgram->GetBuffer().GetLength(), pMacro, ms_pDx9IncludeShader, pVShaderProgram->GetMainFunName().GetBuffer(),
@@ -966,7 +966,7 @@ void VSDX9Renderer::OnLoadPShaderFromString(VSPShader* pPShaderProgram, VSPProgr
 	// #ifdef _DEBUG
 	// 	Flags = D3DXSHADER_DEBUG | D3DXSHADER_SKIPOPTIMIZATION;
 	// #endif
-	LPD3DXCONSTANTTABLE      pConstantTable; //≥£¡ø±Ì∂‘œÛ
+	LPD3DXCONSTANTTABLE      pConstantTable; //Â∏∏ÈáèË°®ÂØπË±°
 	VSMap<VSString, VSString> Define;
 	pPShaderProgram->m_ShaderKey.GetDefine(Define);
 	D3DXMACRO * pMacro = GetDefine(Define);
@@ -2168,7 +2168,7 @@ unsigned int VSDX9Renderer::SetIBuffer(VSIndexBuffer* pIBuffer)
 		return 1;
 	else if (FRI == FRI_FAIL)
 	{
-		SetIndices(NULL);	//ø…“‘…Ë÷√À˜“˝Œ™ø’ modify 2010.10.16
+		SetIndices(NULL);	//ÂèØ‰ª•ËÆæÁΩÆÁ¥¢Âºï‰∏∫Á©∫ modify 2010.10.16
 		return 1;
 	}
 	VSIBufferID* pIBufferID = (VSIBufferID *)pIBuffer->GetIdentifier();
@@ -2231,7 +2231,7 @@ bool VSDX9Renderer::SetRenderTarget(VSRenderTarget *pRenderTarget, unsigned int 
 
 	// 	VSMAC_RELEASE(pRenderTargetID->m_pSaveRenderTarget);
 	// 	hResult = m_pDevice->GetRenderTarget(i,&pRenderTargetID->m_pSaveRenderTarget);
-	// 	//»Áπ˚i != 0  ≤ª «÷˜buffer£¨ø…ƒ‹”–Œ Ã‚£¨√ª”–ºÏ≤Èπ˝°£
+	// 	//Â¶ÇÊûúi != 0  ‰∏çÊòØ‰∏ªbufferÔºåÂèØËÉΩÊúâÈóÆÈ¢òÔºåÊ≤°ÊúâÊ£ÄÊü•Ëøá„ÄÇ
 	// 	VSMAC_ASSERT(!FAILED(hResult));
 	// 	hResult = m_pDevice->SetRenderTarget(i,pSurface);
 	// 	VSMAC_ASSERT(!FAILED(hResult));
@@ -2464,7 +2464,7 @@ VSDX9Renderer::VSDX9Renderer(HWND hMainWindow, unsigned int uiScreenWidth, unsig
 	unsigned int uiAnisotropy, unsigned int uiMultisample,
 	ChildWindowInfo * pChildWindow, int uiNumChildWindow)
 {
-	// «∑Ò”–◊”¥∞ø⁄
+	//ÊòØÂê¶ÊúâÂ≠êÁ™óÂè£
 	if (uiNumChildWindow > 0 && pChildWindow && bIsWindowed)
 	{
 		m_pChildWindowInfo = VS_NEW ChildWindowInfo[uiNumChildWindow];
@@ -2494,7 +2494,7 @@ VSDX9Renderer::VSDX9Renderer(HWND hMainWindow, unsigned int uiScreenWidth, unsig
 	}
 	m_uinAdapter = 0;
 	m_uiDevType = 0;
-	//»°µ√œ‘ æƒ£ Ω
+	//ÂèñÂæóÊòæÁ§∫Ê®°Âºè
 	D3DDISPLAYMODE d3dDisplayMode;
 	HRESULT hResult = NULL;
 	hResult = ms_pMain->GetAdapterDisplayMode(D3DADAPTER_DEFAULT, &d3dDisplayMode);

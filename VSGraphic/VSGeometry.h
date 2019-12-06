@@ -72,7 +72,7 @@ namespace VSEngine2
 		unsigned int GetVertexNum()const;
 
 
-		//¸üĞÂºÍÊÓµãÎŞ¹ØµÄMesh ĞÅÏ¢
+		//æ›´æ–°å’Œè§†ç‚¹æ— å…³çš„Mesh ä¿¡æ¯
 		virtual unsigned int UpdateGeometry();
 
 		virtual bool PostLoad( void * pDate);
@@ -136,7 +136,7 @@ namespace VSEngine2
 		unsigned int m_uiCurUseMaterial;
 
 		virtual void UpDateView(VSCuller & Culler, double dAppTime);
-		virtual void UpdateWorldBound(double dAppTime);//¸üĞÂÊÀ½ç±ß½çÌå 
+		virtual void UpdateWorldBound(double dAppTime);//æ›´æ–°ä¸–ç•Œè¾¹ç•Œä½“ 
 		virtual void UpdateNodeAll(double dAppTime);
 		virtual void ComputeNodeVisibleSet(VSCuller & Culler,bool bNoCull,double dAppTime);
 		virtual void UpdateOther(double dAppTime);

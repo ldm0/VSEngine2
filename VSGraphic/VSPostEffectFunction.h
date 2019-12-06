@@ -75,7 +75,7 @@ namespace VSEngine2
 			}
 			return NULL;
 		}
-		//È¡×Ô¼º½Úµã
+		//å–è‡ªå·±èŠ‚ç‚¹
 		virtual VSRenderTarget * GetRenderTarget(const VSOutputNode * pPutNode)
 		{
 			for (unsigned int i = 0 ; i < m_pOutput.GetNum() ;i++)
@@ -113,7 +113,7 @@ namespace VSEngine2
 			}
 			return false;
 		}
-		//È¡Á´½ÓµÄÄÇ¸ö½Úµã
+		//å–é“¾æ¥çš„é‚£ä¸ªèŠ‚ç‚¹
 		virtual VSRenderTarget * GetRenderTarget(const VSInputNode * pPutNode)
 		{
 			if(pPutNode->GetOutputLink())

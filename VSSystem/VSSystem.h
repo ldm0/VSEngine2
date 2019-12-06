@@ -6,7 +6,7 @@
 #include <assert.h>
 #include <sys/stat.h>
 #include <atlsimpstr.h>
-#pragma warning(disable:4251) //È¥³ıÄ£°åµ¼³ö±àÒëµÄ¾¯¸æ
+#pragma warning(disable:4251) //å»é™¤æ¨¡æ¿å¯¼å‡ºç¼–è¯‘çš„è­¦å‘Š
 #pragma warning(disable:4595)
 #pragma warning(disable:4091)
 #ifdef VSSYSTEM_EXPORTS
@@ -206,7 +206,7 @@ namespace VSEngine2
 	}
 	
 
-	//Çó¾ø¶ÔÖµ
+	//æ±‚ç»å¯¹å€¼
 	template<typename T>
 	FORCEINLINE T ABS(T t) 
 	{ 

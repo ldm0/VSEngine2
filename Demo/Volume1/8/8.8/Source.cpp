@@ -1,5 +1,5 @@
 /*
-对象的克隆和拷贝
+瀵硅薄鐨勫厠闅嗗拰鎷疯礉
 */
 
 #include <VSObject.h>

@@ -1,4 +1,4 @@
-//Õâ¸öÊ¾ÀıÑİÊ¾ÁËC++´úÀíµÄÊ¹ÓÃ
+//è¿™ä¸ªç¤ºä¾‹æ¼”ç¤ºäº†C++ä»£ç†çš„ä½¿ç”¨
 #include <VSMemManager.h>
 #include <VSDelegateList.h>
 #include <iostream>

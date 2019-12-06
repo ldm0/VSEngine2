@@ -27,30 +27,30 @@ public:
 	}
 	void SetTCHARBufferNum(unsigned int uiLength);
 	void Clear();
-	//ÖØÔØ=²Ù×÷·û
+	//é‡è½½=æ“ä½œç¬¦
 	VSString & operator =(const VSString &String);
 	VSString & operator =(const TCHAR *String);
 
-	//ÖØÔØ[]²Ù×÷·û
+	//é‡è½½[]æ“ä½œç¬¦
 	TCHAR &operator[](unsigned int i);
 
-	//ÖØÔØ+=²Ù×÷·û
+	//é‡è½½+=æ“ä½œç¬¦
 	const VSString & operator +=(const VSString &String);
 	const VSString & operator +=(const TCHAR *String);
 
-	//È¡µÃÖ¸¶¨ÏÂ±êµÄÇ°¶Î×Ö·û´®»òÕßºó¶Î×Ö·û´®
+	//å–å¾—æŒ‡å®šä¸‹æ ‡çš„å‰æ®µå­—ç¬¦ä¸²æˆ–è€…åæ®µå­—ç¬¦ä¸²
 	bool GetString(const VSString & String,unsigned int uiFind,bool bIsFront = true, bool bIsHaveFind = false);
-	//²éÕÒµÚiFindNum´Î³öÏÖµÄÖ¸¶¨×Ö·û£¬È»ºóÈ¡Ç°¶Î×Ö·û´®»òÕßºó¶Î×Ö·û´®¡£iFIndNum = -1±íÊ¾×îºóÒ»´Î³öÏÖµÄ¡£
+	//æŸ¥æ‰¾ç¬¬iFindNumæ¬¡å‡ºç°çš„æŒ‡å®šå­—ç¬¦ï¼Œç„¶åå–å‰æ®µå­—ç¬¦ä¸²æˆ–è€…åæ®µå­—ç¬¦ä¸²ã€‚iFIndNum = -1è¡¨ç¤ºæœ€åä¸€æ¬¡å‡ºç°çš„ã€‚
 	bool GetString(const VSString & String,TCHAR cFind,int iFIndNum,bool bIsFront = true, bool bIsHaveFind = false);
-	//²éÕÒµ±Ç°×Ö·û´®ÖĞµÚiFindNum´Î³öÏÖµÄStringµÄÏÂ±ê£¬·µ»Ø-1Ôò±íÊ¾²éÕÒÊ§°Ü
+	//æŸ¥æ‰¾å½“å‰å­—ç¬¦ä¸²ä¸­ç¬¬iFindNumæ¬¡å‡ºç°çš„Stringçš„ä¸‹æ ‡ï¼Œè¿”å›-1åˆ™è¡¨ç¤ºæŸ¥æ‰¾å¤±è´¥
 	int GetSubStringIndex(const VSString &String, int iFindNum)const;
-	//È¥µôÖ¸¶¨µÄ×Ö·û
+	//å»æ‰æŒ‡å®šçš„å­—ç¬¦
 	bool StripChars(const VSString &String,TCHAR * pStripChars);
-	//Ìæ»»Ö¸¶¨µÄ×Ö·û
+	//æ›¿æ¢æŒ‡å®šçš„å­—ç¬¦
 	bool ReplaceChars(const VSString &String ,TCHAR * pReplaceChars,TCHAR UseChar);
-	//È¥µô×Ö·û´®µÄ×ó±ßËùÓĞ¿Õ¸ñ
+	//å»æ‰å­—ç¬¦ä¸²çš„å·¦è¾¹æ‰€æœ‰ç©ºæ ¼
 	void StringLtrim(const VSString &String);
-	//È¥µô×Ö·û´®µÄÓÒ±ßËùÓĞ¿Õ¸ñ
+	//å»æ‰å­—ç¬¦ä¸²çš„å³è¾¹æ‰€æœ‰ç©ºæ ¼
 	void StringRtrim(const VSString &String);
 
 	void Format(const TCHAR * pcString, ...);
@@ -58,21 +58,21 @@ protected:
 	TCHAR * m_pBuffer;
 
 };
-	//ÖØÔØ+²Ù×÷·û
+	//é‡è½½+æ“ä½œç¬¦
 	VSDATESTRUCT_API VSString operator +(const VSString & String1, const VSString &String2);
 	VSDATESTRUCT_API VSString operator +(const VSString &String1, const TCHAR *String2);
 	VSDATESTRUCT_API VSString operator +(const TCHAR *String1, const VSString &String2);
 
-	//´óÓÚ·µ»Ø´óÓÚ0£¬Ğ¡ÓÚ·µ»ØĞ¡ÓÚ0£¬µÈÓÚ·µ»Ø0 
+	//å¤§äºè¿”å›å¤§äº0ï¼Œå°äºè¿”å›å°äº0ï¼Œç­‰äºè¿”å›0 
 	VSDATESTRUCT_API int CompareString(const VSString &String1,const VSString &String2);
 	VSDATESTRUCT_API int CompareString(const VSString &String1,const TCHAR *String2);
 	VSDATESTRUCT_API int CompareString(const TCHAR *String1,const VSString &String2);
 
-	//ÖØÔØ==²Ù×÷·û
+	//é‡è½½==æ“ä½œç¬¦
 	VSDATESTRUCT_API bool operator ==(const VSString &String1,const VSString &String2);
 	VSDATESTRUCT_API bool operator ==(const VSString &String1,const TCHAR *String2);
 	VSDATESTRUCT_API bool operator ==(const TCHAR *String1,VSString &String2);
-	//ÖØÔØ!=²Ù×÷·û
+	//é‡è½½!=æ“ä½œç¬¦
 	VSDATESTRUCT_API bool operator !=(const VSString &String1,const VSString &String2);
 	VSDATESTRUCT_API bool operator !=(const VSString &String1,const TCHAR *String2);
 	VSDATESTRUCT_API bool operator !=(const TCHAR *String1,const VSString &String2);

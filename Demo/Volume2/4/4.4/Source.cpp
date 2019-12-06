@@ -1,4 +1,4 @@
-//给Demo14.21模型添加MorphTree资源
+//缁橠emo14.21妯″瀷娣诲姞MorphTree璧勬簮
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

@@ -1,4 +1,4 @@
-//建立一个异步加载测试场景，保存成Map文件
+//寤虹珛涓�涓紓姝ュ姞杞芥祴璇曞満鏅紝淇濆瓨鎴怣ap鏂囦欢
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

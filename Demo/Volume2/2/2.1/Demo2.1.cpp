@@ -1,4 +1,4 @@
-//¼ÓÔØÒýÇæ¸ñÊ½µÄ¶¯×÷µ½¶¯»­¼¯ºÏÖÐ£¬Ò»¹²µ¼Èë7¸ö¶¯»­£¬µÚËÄ¸öRootMotionÎª¸ù¹Ç¶¯»­£¬²¢Ò»Æð±£´æÔÚMeshÀïÃæ¡£
+//åŠ è½½å¼•æ“Žæ ¼å¼çš„åŠ¨ä½œåˆ°åŠ¨ç”»é›†åˆä¸­ï¼Œä¸€å…±å¯¼å…¥7ä¸ªåŠ¨ç”»ï¼Œç¬¬å››ä¸ªRootMotionä¸ºæ ¹éª¨åŠ¨ç”»ï¼Œå¹¶ä¸€èµ·ä¿å­˜åœ¨Meshé‡Œé¢ã€‚
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

@@ -158,10 +158,10 @@ bool VSCamera::SetAspect(VSREAL Aspect)
 	m_Aspect = Aspect;
 	return m_ProjMat.CreatePerspective(m_Fov,m_Aspect,m_ZNear,m_ZFar);
 }
-bool VSCamera::SetPerspectiveFov(VSREAL fFov ,				//X·½ÏòÕÅ½Ç
-					   VSREAL Aspect,			//¿í¸ß±È
-					   VSREAL fZN ,		//½ü¼ô²ÃÃæ
-					   VSREAL fZF)		//Ô¶¼ô²ÃÃæ
+bool VSCamera::SetPerspectiveFov(VSREAL fFov ,				//Xæ–¹å‘å¼ è§’
+					   VSREAL Aspect,			//å®½é«˜æ¯”
+					   VSREAL fZN ,		//è¿‘å‰ªè£é¢
+					   VSREAL fZF)		//è¿œå‰ªè£é¢
 {
 
 	m_Fov = fFov;
@@ -170,10 +170,10 @@ bool VSCamera::SetPerspectiveFov(VSREAL fFov ,				//X·½ÏòÕÅ½Ç
 	m_ZNear = fZN;
 	return m_ProjMat.CreatePerspective(m_Fov,m_Aspect,m_ZNear,m_ZFar);
 }
-bool VSCamera::SetOrthogonal(VSREAL fW ,				//¿í
-				   VSREAL fH,					//¸ß
-				   VSREAL fZN ,				//½ü¼ô²ÃÃæ
-				   VSREAL fZF)				//Ô¶¼ô²ÃÃæ
+bool VSCamera::SetOrthogonal(VSREAL fW ,				//å®½
+				   VSREAL fH,					//é«˜
+				   VSREAL fZN ,				//è¿‘å‰ªè£é¢
+				   VSREAL fZF)				//è¿œå‰ªè£é¢
 {
 	m_ZFar = fZF;
 	m_ZNear = fZN;
@@ -181,46 +181,46 @@ bool VSCamera::SetOrthogonal(VSREAL fW ,				//¿í
 }
 /*----------------------------------------------------------------*/
 /*
-Ïà»úÌåÆ½ÃæÇó·¨
+ç›¸æœºä½“å¹³é¢æ±‚æ³•
 
-¼ÙÉèViewProjÎªÏà»ú¾ØÕóºÍÍ¶Ó°¾ØÕóµÄ³Ë»ı
-ËùÒÔÊÀ½ç×ø±êÏÂ(x,y,z,1)ÈÎÒâÒ»µã¾­¹ıÕâ¸ö¾ØÕó±ä»»ºóÎª(x',y',z',1)
+å‡è®¾ViewProjä¸ºç›¸æœºçŸ©é˜µå’ŒæŠ•å½±çŸ©é˜µçš„ä¹˜ç§¯
+æ‰€ä»¥ä¸–ç•Œåæ ‡ä¸‹(x,y,z,1)ä»»æ„ä¸€ç‚¹ç»è¿‡è¿™ä¸ªçŸ©é˜µå˜æ¢åä¸º(x',y',z',1)
 
 (x,y,z,1)ViewProj = (x',y',z',1)''''''''''''''''''''''''''''''''''(1)
 
-¾­¹ı±ä»»ºóµÄµãµÄ·¶Î§-1 <= x <= 1 , -1 <= y <= 1 ,0 <= z <= 1
-Ò²¾ÍÊÇÏà»úÌåµÄÓÉÀâÌ¨±ä³ÉÁË³¤·½Ìå,¹²6¸öÃæ,ÎÒÃÇÈÃ·¨ÏòÁ¿³¯Íâ
-leftÃæÎª-x-1 = 0( x + 1 = 0 )
-nearÃæÎª -z = 0
-ÆäËûÃæÍ¬Àí
+ç»è¿‡å˜æ¢åçš„ç‚¹çš„èŒƒå›´-1 <= x <= 1 , -1 <= y <= 1 ,0 <= z <= 1
+ä¹Ÿå°±æ˜¯ç›¸æœºä½“çš„ç”±æ£±å°å˜æˆäº†é•¿æ–¹ä½“,å…±6ä¸ªé¢,æˆ‘ä»¬è®©æ³•å‘é‡æœå¤–
+lefté¢ä¸º-x-1 = 0( x + 1 = 0 )
+nearé¢ä¸º -z = 0
+å…¶ä»–é¢åŒç†
 
-¼ÙÉèÆ½ÃæÎ»ÓÚÊÀ½ç×ø±êÏÂµÄ·½³ÌÎªax + by + cz + d = 0
+å‡è®¾å¹³é¢ä½äºä¸–ç•Œåæ ‡ä¸‹çš„æ–¹ç¨‹ä¸ºax + by + cz + d = 0
 
 				a	
 				b
-ÔòÓĞ(x,y,z,1)(	c	) = 0				'''''''''''''''''''''''''(2)
+åˆ™æœ‰(x,y,z,1)(	c	) = 0				'''''''''''''''''''''''''(2)
 				d
 
-¼ÙÉèÆ½Ãæ±ä»»ºóµÄ·½³ÌÎªa'x + b'y + c'z + d' = 0
+å‡è®¾å¹³é¢å˜æ¢åçš„æ–¹ç¨‹ä¸ºa'x + b'y + c'z + d' = 0
 
 					a'	
 					b'
-ÔòÓĞ(x',y',z',1)(	c'	) = 0			''''''''''''''''''''''''''(3)
+åˆ™æœ‰(x',y',z',1)(	c'	) = 0			''''''''''''''''''''''''''(3)
 					d'
-(3)ºÍ(1)½áºÏ:
+(3)å’Œ(1)ç»“åˆ:
 
 						a'
 						b'
-µ¼³ö(x,y,z,1)ViewProj(	c'	) = 0		'''''''''''''''''''''''''''''(4)
+å¯¼å‡º(x,y,z,1)ViewProj(	c'	) = 0		'''''''''''''''''''''''''''''(4)
 						d'
-(4)ºÍ(2)µ¼³ö
+(4)å’Œ(2)å¯¼å‡º
 
 	a					a'
 	b					b'
 (	c	) = ViewProj(	c'	)
 	d					d'
 
-ËùÓĞÆ½ÃæµÄÍ¶Ó°·½³Ì¶¼ÖªµÀa',b',c',d'ÖªµÀ),¾ÍÄÜÇó³öa,b,c,d
+æ‰€æœ‰å¹³é¢çš„æŠ•å½±æ–¹ç¨‹éƒ½çŸ¥é“a',b',c',d'çŸ¥é“),å°±èƒ½æ±‚å‡ºa,b,c,d
 */
 void VSCamera::GetPlane(VSPlane3 Plane[VSCamera::CP_MAX])const
 {

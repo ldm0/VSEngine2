@@ -34,8 +34,8 @@ namespace VSEngine2
 		bool Open(const TCHAR * pFileName,unsigned int uiOpenMode);
 		bool Write(const void *pBuffer,unsigned int uiSize,unsigned int uiCount);
 		bool Read(void *pBuffer,unsigned int uiSize,unsigned int uiCount);
-		//Õâ¸öº¯Êı·µ»ØpbufferÖĞ£¬Èç¹ûbuffer´óĞ¡´óÓÚÈ¡µÃµÄ×Ö·û£¬Ôò×îºóÒ»¸ö×Ö·ûÊÇ»Ø³µ£¬
-		//µ¹ÊıµÚ2¸öÊÇ LF    (Line Feed)
+		//è¿™ä¸ªå‡½æ•°è¿”å›pbufferä¸­ï¼Œå¦‚æœbufferå¤§å°å¤§äºå–å¾—çš„å­—ç¬¦ï¼Œåˆ™æœ€åä¸€ä¸ªå­—ç¬¦æ˜¯å›è½¦ï¼Œ
+		//å€’æ•°ç¬¬2ä¸ªæ˜¯ LF    (Line Feed)
 		bool GetLine(void * pBuffer,unsigned int uiSize);
 		FORCEINLINE unsigned int GetFileSize()const
 		{

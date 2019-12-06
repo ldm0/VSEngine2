@@ -15,7 +15,7 @@ namespace VSEngine2
 		VSSegment3(const VSVector3 &Orig,const VSVector3 &End);
 		VSSegment3(const VSVector3 &Orig,const VSVector3 &Dir,VSREAL fLen);
 		bool GetParameter(const VSVector3 &Point,VSREAL &fSegmentParameter )const;
-		//ÓÃ¾ØÕó±ä»»ÉäÏß
+		//ç”¨çŸ©é˜µå˜æ¢å°„çº¿
 		void Transform(const VSSegment3 & Segment,const VSMatrix3X3W &Mat); 
 		/*************************************FORCEINLINE************************************************/
 		FORCEINLINE const VSVector3 & GetEnd()const;
@@ -26,60 +26,60 @@ namespace VSEngine2
 	
 		
 		/********************************RelationWith******************************************/
-		//²âÊÔÏß¶ÎÓëÈı½ÇĞÎÎ»ÖÃ¹ØÏµ bCullÎªÊÇ·ñÎª±³Ãæ¼ô²Ã,ÊÇ·ñ¿¼ÂÇ³¯Ïò,t·µ»ØÏà½»³¤¶È
+		//æµ‹è¯•çº¿æ®µä¸ä¸‰è§’å½¢ä½ç½®å…³ç³» bCullä¸ºæ˜¯å¦ä¸ºèƒŒé¢å‰ªè£,æ˜¯å¦è€ƒè™‘æœå‘,tè¿”å›ç›¸äº¤é•¿åº¦
 		//VSNOINTERSECT VSNTERSECT
 		int RelationWith(const VSTriangle3 & Triangle, bool bCull,VSREAL &fSegmentParameter,
 						VSREAL fTriangleParameter[3])const;
-		//²âÊÔÏß¶ÎÓëÆ½ÃæÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•çº¿æ®µä¸å¹³é¢ä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT VSON VSBACK VSFRONT
 		int RelationWith(const VSPlane3 &Plane, bool bCull,VSREAL &fSegmentParameter)const;
-		//²âÊÔÏß¶ÎÓë¾ØĞÎÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•çº¿æ®µä¸çŸ©å½¢ä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT
 		int RelationWith(const VSRectangle3 &Rectangle,bool bCull,VSREAL &fSegmentParameter,
 						VSREAL fRectangleParameter[2])const;
 
 
 
-		//²âÊÔÏß¶ÎÓëOBBÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•çº¿æ®µä¸OBBä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT VSIN
 		int RelationWith(const VSOBB3 &OBB, unsigned int &Quantity,VSREAL &tNear,VSREAL &tFar)const;
-		//²âÊÔÏß¶ÎÓëAABBÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•çº¿æ®µä¸AABBä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT VSIN
 		int RelationWith(const VSAABB3 &AABB, unsigned int &Quantity,VSREAL &tNear,VSREAL &tFar)const;
-		//²âÊÔÏß¶ÎÓëÇòÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•çº¿æ®µä¸çƒä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT VSIN
 		int RelationWith(const VSSphere3 &sphere, unsigned int &Quantity,VSREAL &tNear,VSREAL &tFar)const;
-		//²âÊÔÏß¶ÎÓë¶à±ßĞÎÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•çº¿æ®µä¸å¤šè¾¹å½¢ä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT
 		int RelationWith(const VSPolygon3 &Polygon,VSREAL &fSegmentParameter,
 						bool bCull,int &iIndexTriangle,VSREAL fTriangleParameter[3])const;
 
-		/*************************************¾àÀë************************************************/
-		//µãºÍÏß¶Î¾àÀë
+		/*************************************è·ç¦»************************************************/
+		//ç‚¹å’Œçº¿æ®µè·ç¦»
 		VSREAL SquaredDistance(const VSVector3 &Point,VSREAL &fSegmentParameter)const;
-		//Ö±ÏßºÍÏß¶Î¾àÀë
+		//ç›´çº¿å’Œçº¿æ®µè·ç¦»
 		VSREAL SquaredDistance(const VSLine3 &Line,VSREAL &fSegmentParameter,VSREAL &fLineParameter)const;
-		//ÉäÏßºÍÏß¶Î¾àÀë
+		//å°„çº¿å’Œçº¿æ®µè·ç¦»
 		VSREAL SquaredDistance(const VSRay3 &Ray,VSREAL &fSegmentParameter,VSREAL &fRayParameter)const;
-		//Ïß¶ÎºÍÏß¶Î¾àÀë
+		//çº¿æ®µå’Œçº¿æ®µè·ç¦»
 		VSREAL SquaredDistance(const VSSegment3 & Segment,VSREAL &fSegment1Parameter,VSREAL &fSegment2Parameter)const;
-		//Ïß¶ÎºÍÈı½ÇĞÎ¾àÀë
+		//çº¿æ®µå’Œä¸‰è§’å½¢è·ç¦»
 		VSREAL SquaredDistance(const VSTriangle3& Triangle,VSREAL &fSegmentParameter,VSREAL fTriangleParameter[3])const;
-		//Ïß¶ÎºÍ¾ØĞÎ¾àÀë
+		//çº¿æ®µå’ŒçŸ©å½¢è·ç¦»
 		VSREAL SquaredDistance(const VSRectangle3& Rectangle,VSREAL &fSegmentParameter,VSREAL fRectangleParameter[2])const;
-		//Ïß¶ÎºÍOBB¾àÀë
+		//çº¿æ®µå’ŒOBBè·ç¦»
 		VSREAL SquaredDistance(const VSOBB3 & OBB,VSREAL &fSegmentParameter,VSREAL fOBBParameter[3])const;
 
-		//Ïß¶ÎºÍÇòµÄ¾àÀë
+		//çº¿æ®µå’Œçƒçš„è·ç¦»
 		VSREAL Distance(const VSSphere3 &Sphere,VSREAL &fSegmentParameter,VSVector3 & SpherePoint)const;
 
-		//Ïß¶ÎºÍÆ½Ãæ¾àÀë
+		//çº¿æ®µå’Œå¹³é¢è·ç¦»
 		VSREAL Distance(const VSPlane3 & Plane,VSVector3 &SegmentPoint,VSVector3 &PlanePoint)const;
 
-		//Ïß¶ÎºÍAABB¾àÀë
+		//çº¿æ®µå’ŒAABBè·ç¦»
 		VSREAL SquaredDistance(const VSAABB3 &AABB,VSREAL &fSegmentParameter,VSREAL fAABBParameter[3])const;
 
-		//Ïß¶ÎºÍ¶à±ßĞÎ¾àÀë
+		//çº¿æ®µå’Œå¤šè¾¹å½¢è·ç¦»
 		VSREAL SquaredDistance(const VSPolygon3 &Polygon,VSREAL &fSegmentParameter,
 								int& IndexTriangle,
 								VSREAL fTriangleParameter[3])const;

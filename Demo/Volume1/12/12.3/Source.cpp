@@ -1,4 +1,4 @@
-//Õâ¸ödemoÊÇÕ¹Ê¾ÉÏÒ»¸ödemoµÄNewStoneÄ£ĞÍ¡£
+//è¿™ä¸ªdemoæ˜¯å±•ç¤ºä¸Šä¸€ä¸ªdemoçš„NewStoneæ¨¡å‹ã€‚
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

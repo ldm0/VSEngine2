@@ -31,27 +31,27 @@ void VSAABB3::GetPlane(VSPlane3 pPlanes[6])const
 {
 	VSVector3 vcN;
 
-	// 右面
+	// 鍙抽潰
 	vcN = m_A[0];
 	pPlanes[0].Set(vcN, m_Max);
 
-	// 左面
+	// 宸﹂潰
 	vcN = m_A[0] * (-1.0f);
 	pPlanes[1].Set(vcN, m_Min);
 
-	// 前面
+	// 鍓嶉潰
 	vcN = m_A[2] * (-1.0f);
 	pPlanes[2].Set(vcN, m_Min);
 
-	// 后面
+	// 鍚庨潰
 	vcN = m_A[2];
 	pPlanes[3].Set(vcN, m_Max);
 
-	// 上面
+	// 涓婇潰
 	vcN = m_A[1];
 	pPlanes[4].Set(vcN, m_Max);
 
-	// 下面
+	// 涓嬮潰
 	vcN = m_A[1] * (-1.0f);
 	pPlanes[5].Set(vcN, m_Min);
 }

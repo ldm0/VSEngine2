@@ -7,7 +7,7 @@
 //#include "VSPlane3.h"
 namespace VSEngine2
 {
-	//¾ØÕó
+	//çŸ©é˜µ
 	class  VSMATH_API VSMatrix3X3W 
 	{
 	public:
@@ -31,37 +31,37 @@ namespace VSEngine2
 					VSREAL m30,VSREAL m31,VSREAL m32,VSREAL m33);
 
 		
-		//ÓÃ3*3¾ØÕó´´½¨
+		//ç”¨3*3çŸ©é˜µåˆ›å»º
 		void CreateFrom3X3(const VSMatrix3X3 & Mat);
-		//Æ½ÒÆ¾ØÕó
+		//å¹³ç§»çŸ©é˜µ
 		void CreateTranslate(VSREAL dx, VSREAL dy, VSREAL dz);
 		void CreateTranslate(const VSVector3 & V);
-		//½¨Á¢±ä»»¾ØÕó
+		//å»ºç«‹å˜æ¢çŸ©é˜µ
 		void CreateInWorldObject(const VSVector3 &U,const VSVector3 &V,const VSVector3 & N,const VSVector3 &Point);
 		
-		//½¨Á¢¹ã¸æÅÆ±ä»»¾ØÕó
-		void CreateFormBillboard(const VSVector3 &vcPos,					//¹ã¸æÅÆÎ»ÖÃ
-								const VSMatrix3X3 &CameraRotMatrix,		//Ïà»ú»òÆäËû¾ØÕó
-								bool bAxisY);						//ÊÇ·ñÖ»ÈÆYÖáĞı×ª
-		//¹»½¨Ïà»ú¾ØÕó(¸ù¾İÊÓ¼û·½Ïò)
-		bool CreateFromLookDir(const VSVector3 &vcPos,					//Ïà»úÎ»ÖÃ
-					const VSVector3 &vcDir,								//¹Û²ì·½Ïò
+		//å»ºç«‹å¹¿å‘Šç‰Œå˜æ¢çŸ©é˜µ
+		void CreateFormBillboard(const VSVector3 &vcPos,					//å¹¿å‘Šç‰Œä½ç½®
+								const VSMatrix3X3 &CameraRotMatrix,		//ç›¸æœºæˆ–å…¶ä»–çŸ©é˜µ
+								bool bAxisY);						//æ˜¯å¦åªç»•Yè½´æ—‹è½¬
+		//å¤Ÿå»ºç›¸æœºçŸ©é˜µ(æ ¹æ®è§†è§æ–¹å‘)
+		bool CreateFromLookDir(const VSVector3 &vcPos,					//ç›¸æœºä½ç½®
+					const VSVector3 &vcDir,								//è§‚å¯Ÿæ–¹å‘
 					const VSVector3 &vcWorldUp = VSVector3(0,1,0));
-		//¹»½¨Ïà»ú¾ØÕó(¸ù¾İÄ¿±êÎ»ÖÃ)
-		bool CreateFromLookAt(const VSVector3 &vcPos,									//Ïà»úÎ»ÖÃ
-								const VSVector3 &vcLookAt,							//¹Û²ìÎ»ÖÃ
-								const VSVector3 &vcWorldUp = VSVector3(0,1,0));		//ÉÏ·½Ïò
-		//½¨Á¢Í¸ÊÓÍ¶Ó°¾ØÕó
-		bool CreatePerspective(VSREAL fFov ,				//X·½ÏòÕÅ½Ç
-								VSREAL fAspect,				//¿í¸ß±È
-								VSREAL fZN ,				//½ü¼ô²ÃÃæ
-								VSREAL fZF);				//Ô¶¼ô²ÃÃæ
-		//½¨Á¢Õı½»Í¶Ó°¾ØÕó
-		bool CreateOrthogonal(VSREAL fW ,				//¿í
-							VSREAL fH,					//¸ß
-							VSREAL fZN ,				//½ü¼ô²ÃÃæ
-							VSREAL fZF)	;				//Ô¶¼ô²ÃÃæ
-		//½¨Á¢ÊÓ¿Ú¾ØÕó
+		//å¤Ÿå»ºç›¸æœºçŸ©é˜µ(æ ¹æ®ç›®æ ‡ä½ç½®)
+		bool CreateFromLookAt(const VSVector3 &vcPos,									//ç›¸æœºä½ç½®
+								const VSVector3 &vcLookAt,							//è§‚å¯Ÿä½ç½®
+								const VSVector3 &vcWorldUp = VSVector3(0,1,0));		//ä¸Šæ–¹å‘
+		//å»ºç«‹é€è§†æŠ•å½±çŸ©é˜µ
+		bool CreatePerspective(VSREAL fFov ,				//Xæ–¹å‘å¼ è§’
+								VSREAL fAspect,				//å®½é«˜æ¯”
+								VSREAL fZN ,				//è¿‘å‰ªè£é¢
+								VSREAL fZF);				//è¿œå‰ªè£é¢
+		//å»ºç«‹æ­£äº¤æŠ•å½±çŸ©é˜µ
+		bool CreateOrthogonal(VSREAL fW ,				//å®½
+							VSREAL fH,					//é«˜
+							VSREAL fZN ,				//è¿‘å‰ªè£é¢
+							VSREAL fZF)	;				//è¿œå‰ªè£é¢
+		//å»ºç«‹è§†å£çŸ©é˜µ
 		bool CreateViewPort(VSREAL fX,VSREAL fY,VSREAL fWidth,VSREAL fHeight,VSREAL fMinz,VSREAL fMaxz);
 		//void CreatePointLightPlaneShadow(const VSVector3 & LightPoint,const VSPlane3 &Plane);
 		//void CreateInfiniteLightPlaneShadow(const VSVector3 & LightDir,const VSPlane3 &Plane);
@@ -79,36 +79,36 @@ namespace VSEngine2
 
 		bool operator ==(const VSMatrix3X3W &v)const;
 
-		//¼ÓÈë°Ñ3*3¾ØÕó Ğı×ª»òÕßËõ·Å
+		//åŠ å…¥æŠŠ3*3çŸ©é˜µ æ—‹è½¬æˆ–è€…ç¼©æ”¾
 		void Add3X3(const VSMatrix3X3 & Mat);
-		//Ìí¼ÓÆ½ÒÆ
+		//æ·»åŠ å¹³ç§»
 		void AddTranslate(const VSVector3 & V);
 		void AddTranslate(VSREAL dx, VSREAL dy, VSREAL dz);
 		/*********************************** FORCEINLINE *************************************/
 
-		FORCEINLINE void Identity(void);											//µ¥Î»¾ØÕó
+		FORCEINLINE void Identity(void);											//å•ä½çŸ©é˜µ
 		FORCEINLINE void SetZero();
-		FORCEINLINE void TransposeOf(const VSMatrix3X3W &Matrix);				//×ªÖÃ
-		FORCEINLINE void InverseOf(const VSMatrix3X3W & Mat);					//ÇóÄæ
+		FORCEINLINE void TransposeOf(const VSMatrix3X3W &Matrix);				//è½¬ç½®
+		FORCEINLINE void InverseOf(const VSMatrix3X3W & Mat);					//æ±‚é€†
 
-		FORCEINLINE VSMatrix3X3W GetTranspose()const;										//×ªÖÃ
-		FORCEINLINE VSMatrix3X3W GetInverse()const;											//ÇóÄæ
+		FORCEINLINE VSMatrix3X3W GetTranspose()const;										//è½¬ç½®
+		FORCEINLINE VSMatrix3X3W GetInverse()const;											//æ±‚é€†
 
-		FORCEINLINE VSVector3 GetTranslation(void)const;							//µÃµ½Æ½ÒÆÁ¿
-		FORCEINLINE void Get3X3(VSMatrix3X3 & Mat)const;							//µÃµ½3*3²¿·Ö
-		FORCEINLINE VSMatrix3X3W operator * (const VSMatrix3X3W &Matirx)const;    // ¾ØÕóÏà³Ë
-		FORCEINLINE VSVector3 operator * (const VSVector3 &vc)const;				// ¾ØÕóºÍÏòÁ¿³Ë
-		FORCEINLINE VSVector3W operator * (const VSVector3W &vc)const;			// ¾ØÕóºÍÏòÁ¿³Ë
+		FORCEINLINE VSVector3 GetTranslation(void)const;							//å¾—åˆ°å¹³ç§»é‡
+		FORCEINLINE void Get3X3(VSMatrix3X3 & Mat)const;							//å¾—åˆ°3*3éƒ¨åˆ†
+		FORCEINLINE VSMatrix3X3W operator * (const VSMatrix3X3W &Matirx)const;    // çŸ©é˜µç›¸ä¹˜
+		FORCEINLINE VSVector3 operator * (const VSVector3 &vc)const;				// çŸ©é˜µå’Œå‘é‡ä¹˜
+		FORCEINLINE VSVector3W operator * (const VSVector3W &vc)const;			// çŸ©é˜µå’Œå‘é‡ä¹˜
 
 
-		//Ó¦ÓÃ3X3²¿·Ö
+		//åº”ç”¨3X3éƒ¨åˆ†
 		FORCEINLINE VSVector3 Apply3X3(const VSVector3 &v)const;
-		//Ó¦ÓÃÆ½ÒÆ
+		//åº”ç”¨å¹³ç§»
 		FORCEINLINE VSVector3 ApplyTranlaste(const VSVector3 &Point)const;
 
-		//°´ĞĞ»ñµÃÏòÁ¿
+		//æŒ‰è¡Œè·å¾—å‘é‡
 		void GetRowVector(VSVector3W Row[4])const;
-		//°´ĞĞÁĞµÃÏòÁ¿
+		//æŒ‰è¡Œåˆ—å¾—å‘é‡
 		void GetColumnVector(VSVector3W Column[4])const;
 
 		void GetRowVector(VSVector3W &Row0,VSVector3W &Row1,VSVector3W &Row2,VSVector3W &Row3)const;

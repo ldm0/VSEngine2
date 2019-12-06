@@ -2,7 +2,7 @@
 #define VSNURBSSURFACE3_H
 #include "VSB_SplineSurface3.h"
 /*
-NURBÇúÃæ
+NURBæ›²é¢
 
 */
 namespace VSEngine2
@@ -12,20 +12,20 @@ namespace VSEngine2
 	public:
 		VSNURBSSurface3();
 		~VSNURBSSurface3();
-		//ÉèÖÃÈ¨ÖØ
+		//è®¾ç½®æƒé‡
 		bool Set(const VSREAL * pWeight,unsigned int uiRow,unsigned int uiColumn);
-		//¿½±´
+		//æ‹·è´
 		bool Copy(const VSNURBSSurface3 & NURBSSurface3);
 		/***************************************FORCEINLINE************************************/
-		//¸Ä±äÈ¨ÖØ
+		//æ”¹å˜æƒé‡
 		FORCEINLINE bool ChangeWeight(unsigned int U,unsigned int V,VSREAL Weight);
-		//»ñµÃÈ¨ÖØÖ¸Õë
+		//è·å¾—æƒé‡æŒ‡é’ˆ
 		FORCEINLINE const VSREAL * GetWeight()const;
-		//µÃµ½È¨ÖØ
+		//å¾—åˆ°æƒé‡
 		FORCEINLINE VSREAL GetWeight(unsigned int U,unsigned int V)const;
-		//È¡µÃµã
+		//å–å¾—ç‚¹
 		virtual VSVector3 GetPoint(VSREAL U,VSREAL V);
-		//µÃµ½Æ«µ¼
+		//å¾—åˆ°åå¯¼
 		virtual VSVector3 GetUPartialDerivative(VSREAL U,VSREAL V);
 		virtual VSVector3 GetVPartialDerivative(VSREAL U,VSREAL V);
 

@@ -15,7 +15,7 @@ namespace VSEngine2
 		DECLARE_INITIAL_NO_CLASS_FACTORY
 	public:
 		virtual ~VSAnimFunction() = 0;
-		//必须判断是否是SkelectonMeshNode,必须有skelecton
+		//蹇呴』鍒ゆ柇鏄惁鏄疭kelectonMeshNode,蹇呴』鏈塻kelecton
 		VSAnimFunction(const VSUsedName & ShowName,VSAnimTree * pAnimTree);
 		virtual bool Update(double dAppTime);
 	protected:

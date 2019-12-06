@@ -1,4 +1,4 @@
-//演示一个BlinnPhone光照模型
+//婕旂ず涓�涓狟linnPhone鍏夌収妯″瀷
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

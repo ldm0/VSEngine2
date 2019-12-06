@@ -992,7 +992,7 @@ bool VSDX9Renderer::SetRenderTarget(DWORD RenderTargetIndex,IDirect3DSurface9** 
 		HRESULT hResult = NULL;
 		VSMAC_RELEASE((*RenderTargetPara.ppRenderTarget));
 		hResult = m_pDevice->GetRenderTarget(RenderTargetPara.RenderTargetIndex,RenderTargetPara.ppRenderTarget);
-		//Èç¹ûi != 0  ²»ÊÇÖ÷buffer£¬¿ÉÄÜÓĞÎÊÌâ£¬Ã»ÓĞ¼ì²é¹ı¡£
+		//å¦‚æœi != 0  ä¸æ˜¯ä¸»bufferï¼Œå¯èƒ½æœ‰é—®é¢˜ï¼Œæ²¡æœ‰æ£€æŸ¥è¿‡ã€‚
 		VSMAC_ASSERT(!FAILED(hResult));
 
 		IDirect3DSurface9 * pRenderTarget = NULL;
@@ -1005,7 +1005,7 @@ bool VSDX9Renderer::SetRenderTarget(DWORD RenderTargetIndex,IDirect3DSurface9** 
 	})
 	VSMAC_RELEASE((*ppRenderTarget));
 	hResult = m_pDevice->GetRenderTarget(RenderTargetPara.RenderTargetIndex,RenderTargetPara.ppRenderTarget);
-	//Èç¹ûi != 0  ²»ÊÇÖ÷buffer£¬¿ÉÄÜÓĞÎÊÌâ£¬Ã»ÓĞ¼ì²é¹ı¡£
+	//å¦‚æœi != 0  ä¸æ˜¯ä¸»bufferï¼Œå¯èƒ½æœ‰é—®é¢˜ï¼Œæ²¡æœ‰æ£€æŸ¥è¿‡ã€‚
 	VSMAC_ASSERT(!FAILED(hResult));
 	IDirect3DSurface9 * pRenderTarget = NULL;
 	if(RenderTargetPara.pRenderTarget)

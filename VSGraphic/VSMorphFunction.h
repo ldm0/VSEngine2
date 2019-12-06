@@ -26,9 +26,9 @@ namespace VSEngine2
 	protected:
 		VSMorphFunction();
 		/*
-			¶¥µã¸ñÊ½µÄÉèÖÃÃ¿¸ö²¿·Ö¶¼¿ÉÒÔÉèÖÃ¶à¸öchannel£¬µ«MorphÖ»Ö§³Ö¹Ì¶¨µÄ³£ÓÃchannel£¬ÔÚÇø·Ö·½Ãæ£º
-			»áÔÚVSMorphSequenceÉÏ½øÐÐÅÐ¶Ï£¬Ò²¾ÍÊÇËµ£¬Èç¹ûmorphsetµÄmorph¶ÔÓ¦µÄ²¿·Öchannel²»·ûºÏmorph¶¥µãÌõ¼þ£¬
-			Ôò²»»áµ÷Ïà¶ÔÓ¦µÄsetº¯Êý£¬ÕâÑùflag¾ÍÎªfalse£¬ÔÚMorphMainfuntionÀïÃæ¾Í²»»á»ìºÏ¡£
+			é¡¶ç‚¹æ ¼å¼çš„è®¾ç½®æ¯ä¸ªéƒ¨åˆ†éƒ½å¯ä»¥è®¾ç½®å¤šä¸ªchannelï¼Œä½†Morphåªæ”¯æŒå›ºå®šçš„å¸¸ç”¨channelï¼Œåœ¨åŒºåˆ†æ–¹é¢ï¼š
+			ä¼šåœ¨VSMorphSequenceä¸Šè¿›è¡Œåˆ¤æ–­ï¼Œä¹Ÿå°±æ˜¯è¯´ï¼Œå¦‚æžœmorphsetçš„morphå¯¹åº”çš„éƒ¨åˆ†channelä¸ç¬¦åˆmorphé¡¶ç‚¹æ¡ä»¶ï¼Œ
+			åˆ™ä¸ä¼šè°ƒç›¸å¯¹åº”çš„setå‡½æ•°ï¼Œè¿™æ ·flagå°±ä¸ºfalseï¼Œåœ¨MorphMainfuntioné‡Œé¢å°±ä¸ä¼šæ··åˆã€‚
 		*/
 		VSVector3	m_Pos[MAX_NUM_POS3];
 		bool		m_bPosChange[MAX_NUM_POS3];

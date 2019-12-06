@@ -1,5 +1,5 @@
-//´´½¨µþ¼Ó¶¯»­ºÍ´´½¨Pos¶¯»­£¬È¡¹¥»÷¶¯»­µÄµÚ600ºÁÃëºÍ´ý»ú¶¯»­µÄµÚ0ºÁÃë×ö²îÖµ£¬
-//È»ºóµþ¼Óµ½´ý»ú¶¯»­ÉÏÈ¥²¥·Å£¬ÓÃ¹¥»÷¶¯»­µÄµÚ600ºÁÃë×öPos¶¯»­£¬Demo14.4ÖÐµÚ6¸öºÍµÚ7¸öÎ»ÕâÁ½¸ö¶¯»­µÄ²¥·Å¡£
+//åˆ›å»ºå åŠ åŠ¨ç”»å’Œåˆ›å»ºPosåŠ¨ç”»ï¼Œå–æ”»å‡»åŠ¨ç”»çš„ç¬¬600æ¯«ç§’å’Œå¾…æœºåŠ¨ç”»çš„ç¬¬0æ¯«ç§’åšå·®å€¼ï¼Œ
+//ç„¶åŽå åŠ åˆ°å¾…æœºåŠ¨ç”»ä¸ŠåŽ»æ’­æ”¾ï¼Œç”¨æ”»å‡»åŠ¨ç”»çš„ç¬¬600æ¯«ç§’åšPosåŠ¨ç”»ï¼ŒDemo14.4ä¸­ç¬¬6ä¸ªå’Œç¬¬7ä¸ªä½è¿™ä¸¤ä¸ªåŠ¨ç”»çš„æ’­æ”¾ã€‚
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

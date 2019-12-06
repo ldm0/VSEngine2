@@ -152,7 +152,7 @@ void VSMorphSequenceFunc::UpdateVertexDate(unsigned int uiVertexIndex)
 					
 					VSVector3W Temp;
 					Temp.CreateFormABGR(*pNormal);
-					//ËùÓĞµÄ»ìºÏ¶¼ÊÇÏßĞÔµÄ£¬ËùÒÔÕâÀï * 2 - 1Ê¡ÂÔ
+					//æ‰€æœ‰çš„æ··åˆéƒ½æ˜¯çº¿æ€§çš„ï¼Œæ‰€ä»¥è¿™é‡Œ * 2 - 1çœç•¥
 					SetNormal(Temp.GetV3(), uiLevel);
 				}
 			}
@@ -183,7 +183,7 @@ void VSMorphSequenceFunc::UpdateVertexDate(unsigned int uiVertexIndex)
 
 					VSVector3W Temp;
 					Temp.CreateFormABGR(*pTangent);
-					//ËùÓĞµÄ»ìºÏ¶¼ÊÇÏßĞÔµÄ£¬ËùÒÔÕâÀï * 2 - 1Ê¡ÂÔ
+					//æ‰€æœ‰çš„æ··åˆéƒ½æ˜¯çº¿æ€§çš„ï¼Œæ‰€ä»¥è¿™é‡Œ * 2 - 1çœç•¥
 					SetTangent(Temp);
 				}
 			}

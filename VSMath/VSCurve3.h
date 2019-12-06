@@ -3,7 +3,7 @@
 #include "VSVector3.h"
 #include "VSMatrix3X3.h"
 /*
-ÇúÏßÀà
+æ›²çº¿ç±»
 
 */
 namespace VSEngine2
@@ -21,26 +21,26 @@ namespace VSEngine2
 		virtual ~VSCurve3() = 0;
 
 		virtual unsigned int GetCurveType() = 0;
-		//»ñµÃFrenetFrame3¸ö·½Ïò
+		//è·å¾—FrenetFrame3ä¸ªæ–¹å‘
 		virtual void GetFrenetFrameBNT(VSREAL t,VSVector3 & B,VSVector3 & N,VSVector3 &T) = 0;
-		//»ñµÃFixedUp3¸ö·½Ïò
+		//è·å¾—FixedUp3ä¸ªæ–¹å‘
 		void	GetFixedUpBNT(VSREAL t ,VSVector3 & B,VSVector3 & N,VSVector3& T);
-		//Çóµ¼Êı
+		//æ±‚å¯¼æ•°
 		virtual VSVector3	GetFirstDerivative(VSREAL t)= 0 ;
 		virtual VSVector3	GetSecondDerivative(VSREAL t)= 0;
 		virtual VSVector3	GetThirdDerivative(VSREAL t)= 0;
-		//Çó³¤¶È
+		//æ±‚é•¿åº¦
 		virtual VSREAL		GetLength(VSREAL t1 ,VSREAL t2,unsigned int uiIterations)= 0;
-		//Çóµã
+		//æ±‚ç‚¹
 		virtual VSVector3	GetPoint(VSREAL t) = 0;
-		//Çó×Ü³¤
+		//æ±‚æ€»é•¿
 		virtual VSREAL		GetTotalLength(unsigned int uiIterations) = 0;
-		//¸ù¾İ³¤¶ÈµÃµ½Ê±¼ä
+		//æ ¹æ®é•¿åº¦å¾—åˆ°æ—¶é—´
 		virtual VSREAL GetTime (VSREAL fLength, unsigned int iIterations = 32,
 				VSREAL fTolerance = EPSILON_E4) = 0;
-		//ÇóÇúÂÊ
+		//æ±‚æ›²ç‡
 		virtual VSREAL GetCurvature(VSREAL fTime) = 0;
-		//Çó×ª¾Ø
+		//æ±‚è½¬çŸ©
 		virtual VSREAL GetTorsion(VSREAL fTime) = 0;
 	
 	};

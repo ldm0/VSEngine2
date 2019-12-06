@@ -927,7 +927,7 @@ void VSMatrix3X3::GetEigenSystem(VSREAL EigenValue[3],VSVector3 Eigen[3])const
 	A = *this;
 	do
 	{
-		//È¡³ö×î´óÖµ
+		//å–å‡ºæœ€å¤§å€¼
 		Max = A.M[0][2];
 		for(unsigned int i = 0 ; i < 3 ; i++)
 		{
@@ -974,7 +974,7 @@ void VSMatrix3X3::GetEigenSystem(VSREAL EigenValue[3],VSVector3 Eigen[3])const
 	}
 	EigenMatrix.GetUVN(Eigen);
 	/*
-	//Èı½Ç»¯
+	//ä¸‰è§’åŒ–
 	VSMatrix3X3 MatTemp;
 		VSVector3 d,e;
 		int l,k,j,i;
@@ -1052,7 +1052,7 @@ void VSMatrix3X3::GetEigenSystem(VSREAL EigenValue[3],VSVector3 Eigen[3])const
 				MatTemp.M[j][i] = MatTemp.M[i][j] = 0.0f;
 		}
 	
-		//ÇóÌØÕ÷Öµ
+		//æ±‚ç‰¹å¾å€¼
 		int m,iter;
 		VSREAL s,r,p,dd,c,b;
 		for (i = 1 ; i < n ; i++) 
@@ -1143,12 +1143,12 @@ void VSMatrix3X3::CreateFromDirection(VSVector3 & Direction , const VSVector3 &U
 	VSVector3 Dir = Direction;
 	Dir.Normalize();
 
-	//¼ÆËã³¯Ïò·½ÏòºÍÉÏ·½Ïòµã»ı,ÒòÎªDirÎªµ¥Î»ÏòÁ¿,ËùÒÔfDotÎªvcWorldÔÚ
-	//DirÉÏµÄÍ¶Ó°
+	//è®¡ç®—æœå‘æ–¹å‘å’Œä¸Šæ–¹å‘ç‚¹ç§¯,å› ä¸ºDirä¸ºå•ä½å‘é‡,æ‰€ä»¥fDotä¸ºvcWorldåœ¨
+	//Dirä¸Šçš„æŠ•å½±
 	VSREAL fDot = Up.Dot(Dir);
-	//¼ÆËãÍ¶Ó°³¤¶È,·½ÏòºÍDirÏàÍ¬µÄÏòÁ¿
+	//è®¡ç®—æŠ•å½±é•¿åº¦,æ–¹å‘å’ŒDirç›¸åŒçš„å‘é‡
 	vcTemp = Dir * fDot;
-	//¸ù¾İÏòÁ¿µÄÆ½ĞĞ4±ßĞÎ·¨ÔòÇó³öup
+	//æ ¹æ®å‘é‡çš„å¹³è¡Œ4è¾¹å½¢æ³•åˆ™æ±‚å‡ºup
 	/*
 	/|
 	worldup-->   / |<---up
@@ -1157,14 +1157,14 @@ void VSMatrix3X3::CreateFromDirection(VSVector3 & Direction , const VSVector3 &U
 	*/				
 	vcUp = Up - vcTemp;
 
-	//Çó³ö³¤¶È
+	//æ±‚å‡ºé•¿åº¦
 	VSREAL fL = vcUp.GetLength();
 
-	// ³¤¶ÈÎª0,ËµÃ÷ DirectionºÍworldUp¼¸ºõÆ½ĞĞ,½»½Ç¼¸ºõÎª0.
+	// é•¿åº¦ä¸º0,è¯´æ˜ Directionå’ŒworldUpå‡ ä¹å¹³è¡Œ,äº¤è§’å‡ ä¹ä¸º0.
 	if (fL < EPSILON_E4) 
 	{
 		VSVector3 vcY;
-		//´ÓĞÂÑ¡ÔñÏòÉÏÏòÁ¿,¼ÆËãupÏòÁ¿
+		//ä»æ–°é€‰æ‹©å‘ä¸Šå‘é‡,è®¡ç®—upå‘é‡
 		vcY.Set(0.0f, 1.0f, 0.0f);
 
 		vcTemp = Dir * Direction.y;
@@ -1172,10 +1172,10 @@ void VSMatrix3X3::CreateFromDirection(VSVector3 & Direction , const VSVector3 &U
 
 		fL = vcUp.GetLength();
 
-		// ³¤¶ÈÎª0,ËµÃ÷ DirectionºÍworldUp¼¸ºõÆ½ĞĞ,½»½Ç¼¸ºõÎª0.
+		// é•¿åº¦ä¸º0,è¯´æ˜ Directionå’ŒworldUpå‡ ä¹å¹³è¡Œ,äº¤è§’å‡ ä¹ä¸º0.
 		if (fL < EPSILON_E4) 
 		{
-			//´ÓĞÂÑ¡ÔñÏòÉÏÏòÁ¿,¼ÆËãupÏòÁ¿
+			//ä»æ–°é€‰æ‹©å‘ä¸Šå‘é‡,è®¡ç®—upå‘é‡
 			vcY.Set(0.0f, 0.0f, 1.0f);
 
 			vcTemp = Dir * Dir.z;
@@ -1186,7 +1186,7 @@ void VSMatrix3X3::CreateFromDirection(VSVector3 & Direction , const VSVector3 &U
 			if(fL < EPSILON_E4) return ;
 		}
 	}
-	//µ¥Î»»¯
+	//å•ä½åŒ–
 	vcUp /= fL;
 
 

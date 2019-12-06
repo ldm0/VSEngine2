@@ -52,7 +52,7 @@ namespace VSEngine2
 		/*explicit */VSUsedName(const TCHAR * pChar);
 		/*explicit */VSUsedName(const VSString & String);
 
-		//ÖØÔØ=²Ù×÷·û
+		//é‡è½½=æ“ä½œç¬¦
 		void operator =(const VSString &String);
 		void operator =(const TCHAR *pChar);
 		void operator =(const VSUsedName & Name);
@@ -94,22 +94,22 @@ namespace VSEngine2
 	
 		VSGRAPHIC_API friend bool operator <(const VSUsedName &Name1,const VSUsedName &Name2);
 
-		//ÖØÔØ==²Ù×÷·û
+		//é‡è½½==æ“ä½œç¬¦
 		VSGRAPHIC_API friend bool operator ==(const VSUsedName &Name1,const VSUsedName &Name2);
 
-		//ÖØÔØ!=²Ù×÷·û
+		//é‡è½½!=æ“ä½œç¬¦
 		VSGRAPHIC_API friend bool operator !=(const VSUsedName &Name1,const VSUsedName &Name2);
 
-		//ÖØÔØ==²Ù×÷·û
+		//é‡è½½==æ“ä½œç¬¦
 		VSGRAPHIC_API friend bool operator ==(const VSUsedName &Name,const VSString & String);
 
-		//ÖØÔØ!=²Ù×÷·û
+		//é‡è½½!=æ“ä½œç¬¦
 		VSGRAPHIC_API friend bool operator !=(const VSUsedName &Name,const VSString & String);
 
-		//ÖØÔØ==²Ù×÷·û
+		//é‡è½½==æ“ä½œç¬¦
 		VSGRAPHIC_API friend bool operator ==(const VSUsedName &Name,const TCHAR * pChar);
 
-		//ÖØÔØ!=²Ù×÷·û
+		//é‡è½½!=æ“ä½œç¬¦
 		VSGRAPHIC_API friend bool operator !=(const VSUsedName &Name,const TCHAR * pChar);
 
 		virtual void Archive(VSStream & Stream);

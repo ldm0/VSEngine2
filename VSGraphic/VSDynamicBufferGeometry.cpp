@@ -479,7 +479,7 @@ unsigned int VSDVDIGeometry::UpdateGeometry()
 
 	m_uiCurVUseBufferElementIndex = uiVElementEndIndex + 1;
 
-	//ÒòÎªUseVBuffer ºÍ UseIBuffer Element¸öÊýÒ»Ñù,Ìí¼ÓäÖÈ¾µÄ¸öÊýÒ²±£Ö¤Ò»Ñù£¬ËùÒÔÕâÀïÖ»ÅÐ¶ÏÒ»¸ö¡£
+	//å› ä¸ºUseVBuffer å’Œ UseIBuffer Elementä¸ªæ•°ä¸€æ ·,æ·»åŠ æ¸²æŸ“çš„ä¸ªæ•°ä¹Ÿä¿è¯ä¸€æ ·ï¼Œæ‰€ä»¥è¿™é‡Œåªåˆ¤æ–­ä¸€ä¸ªã€‚
 	if (m_uiCurVUseBufferElementIndex >= m_pVertexUseBufferRender->GetElementNum())
 	{
 		m_uiCurVUseBufferElementIndex = 0;
@@ -655,7 +655,7 @@ unsigned int VSSVDIGeometry::UpdateGeometry()
 	SetActiveNum(uiActiveNum);
 
 
-	//ÒòÎªUseVBuffer ºÍ UseIBuffer Element¸öÊýÒ»ÑùÃ¿ÌìÌí¼ÓäÖÈ¾µÄ¸öÊýÒ²±£Ö¤Ò»Ñù£¬ËùÒÔÕâÀïÖ»ÅÐ¶ÏÒ»¸ö¡£
+	//å› ä¸ºUseVBuffer å’Œ UseIBuffer Elementä¸ªæ•°ä¸€æ ·æ¯å¤©æ·»åŠ æ¸²æŸ“çš„ä¸ªæ•°ä¹Ÿä¿è¯ä¸€æ ·ï¼Œæ‰€ä»¥è¿™é‡Œåªåˆ¤æ–­ä¸€ä¸ªã€‚
 	if (m_uiCurIUseBufferElementIndex >= m_pIndexUseBufferRender->GetElementNum())
 	{
 		m_uiCurIUseBufferElementIndex = 0;
@@ -806,7 +806,7 @@ unsigned int VSDVSIGeometry::UpdateGeometry()
 	pVertexBuffer->UnLock();
 	m_uiCurVUseBufferElementIndex = uiVElementEndIndex + 1;
 
-	//ÒòÎªUseVBuffer ºÍ UseIBuffer Element¸öÊýÒ»ÑùÃ¿ÌìÌí¼ÓäÖÈ¾µÄ¸öÊýÒ²±£Ö¤Ò»Ñù£¬ËùÒÔÕâÀïÖ»ÅÐ¶ÏÒ»¸ö¡£
+	//å› ä¸ºUseVBuffer å’Œ UseIBuffer Elementä¸ªæ•°ä¸€æ ·æ¯å¤©æ·»åŠ æ¸²æŸ“çš„ä¸ªæ•°ä¹Ÿä¿è¯ä¸€æ ·ï¼Œæ‰€ä»¥è¿™é‡Œåªåˆ¤æ–­ä¸€ä¸ªã€‚
 	if (m_uiCurVUseBufferElementIndex >= m_pVertexUseBufferRender->GetElementNum())
 	{
 		m_uiCurVUseBufferElementIndex = 0;

@@ -4,16 +4,16 @@
 /**
 @class	MAY::VSThread
 
-@brief	�����̻߳���.
-����ʵ��Run()����, ͨ��IsStopRequested()���ж��߳��Ƿ����.
-�����Ҫ��VS����ʱ��ʾ�߳���, ��������������GetThreadName()����.
+@brief	多线线程基类.
+字类实现Run()方法, 通过IsStopRequested()来判断线程是否结束.
+如果需要在VS调试时显示线程名, 请在子类中重载GetThreadName()方法.
 */
 #include "VSSystem.h"
 #include "VSSynchronize.h"
 namespace VSEngine2
 {
 
-	//ֻ����һ���߳̿�������߳��࣬û���̰߳�ȫ�ԣ�2���߳�ͬʱ��������߳�����Щ�ط������
+	//只允许一个线程控制这个线程类，没有线程安全性，2个线程同时控制这个线程类有些地方会出错
 	class VSSYSTEM_API VSThread
 	{
 	public:

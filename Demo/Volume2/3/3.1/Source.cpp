@@ -1,4 +1,4 @@
-//����һ��AnimTree��Դ��ֻ�ǵ�һ�Ĳ��Ŷ�����û�л�ϡ�
+//保存一个AnimTree资源，只是单一的播放动画，没有混合。
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

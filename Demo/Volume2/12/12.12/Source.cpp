@@ -1,4 +1,4 @@
-//点光源的ShadowVolume
+//鐐瑰厜婧愮殑ShadowVolume
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

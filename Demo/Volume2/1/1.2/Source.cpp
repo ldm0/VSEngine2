@@ -1,4 +1,4 @@
-//加载14.1导出的模型并渲染
+//鍔犺浇14.1瀵煎嚭鐨勬ā鍨嬪苟娓叉煋
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

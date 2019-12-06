@@ -1,4 +1,4 @@
-//уБ╦ЖDemoящй╬╣ьпнCLODё╛╪стьакр╩╦Ж╦ъЁлм╪вВн╙╣ьпн║ё╟╢W©иртгп╩╩оъ©Рдёй╫║ё
+//Х©≥Д╦╙DemoФ╪■Г╓╨Е°╟Е╫╒CLODО╪▄Е┼═Х╫╫Д╨├Д╦─Д╦╙И╚≤Г╗▀Е⌡╬Д╫°Д╦╨Е°╟Е╫╒Ц─┌Ф▄┴WЕ▐╞Д╩╔Е┬┤Ф█╒Г╨©Ф║├Ф╗║Е╪▐Ц─┌
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

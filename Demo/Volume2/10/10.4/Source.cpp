@@ -1,4 +1,4 @@
-//演示一个Material中两个ShaderFunction混合材质
+//婕旂ず涓�涓狹aterial涓袱涓猄haderFunction娣峰悎鏉愯川
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

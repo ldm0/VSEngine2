@@ -1,4 +1,4 @@
-//¼ÓÔØ14.3µ¼³öµÄÄ£ÐÍ²¢äÖÈ¾£¬Ñ­»·²¥·Å7¸ö¶¯»­£¬µÚ4¸öÎª¸ù¹Ç¶¯»­£¬µÚ6¸öÎ»µþ¼Ó¶¯»­£¬µÚ7¸öÎ»pos£¬×ÐÏ¸¹Û²ì¸ù¹Ç¶¯»­ºÍÆäËû¶¯»­µÄ²»Í¬
+//åŠ è½½14.3å¯¼å‡ºçš„æ¨¡åž‹å¹¶æ¸²æŸ“ï¼Œå¾ªçŽ¯æ’­æ”¾7ä¸ªåŠ¨ç”»ï¼Œç¬¬4ä¸ªä¸ºæ ¹éª¨åŠ¨ç”»ï¼Œç¬¬6ä¸ªä½å åŠ åŠ¨ç”»ï¼Œç¬¬7ä¸ªä½posï¼Œä»”ç»†è§‚å¯Ÿæ ¹éª¨åŠ¨ç”»å’Œå…¶ä»–åŠ¨ç”»çš„ä¸åŒ
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

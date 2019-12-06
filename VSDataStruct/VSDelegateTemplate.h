@@ -191,7 +191,7 @@ public:
 		unsigned int i = m_handlers.FindElement(handler);
 		return i != m_handlers.GetNum();
 	}
-	/// ÊÇ·ñÓÐÐ§
+	/// æ˜¯å¦æœ‰æ•ˆ
 	bool IsValid() const
 	{
 		return m_handlers.GetNum() > 0;

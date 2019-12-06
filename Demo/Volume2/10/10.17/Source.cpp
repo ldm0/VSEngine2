@@ -1,4 +1,4 @@
-//演示聚光灯LightFunction。这里只设置一张贴图，Alpha设置了，但没有设置渲染状态，实际没有任何效果
+//婕旂ず鑱氬厜鐏疞ightFunction銆傝繖閲屽彧璁剧疆涓�寮犺创鍥撅紝Alpha璁剧疆浜嗭紝浣嗘病鏈夎缃覆鏌撶姸鎬侊紝瀹為檯娌℃湁浠讳綍鏁堟灉
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

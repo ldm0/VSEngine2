@@ -902,11 +902,11 @@ VSMaterial::VSMaterial()
 }
 VSMaterial::~VSMaterial()
 {
-	//ÓÉÓÚÊÍ·Åº¯Êı½Úµã£¬»áµ÷VSMaterial::DeleteShaderFuntion´Óm_pShaderFunctionArrayÖĞÉ¾³ı,ÕâÑù
-	//m_pShaderFunctionArrayÊıÁ¿¾Í»á¼õÉÙ£¬Õâ¸öFORÑ­»·ÖĞi¼ÌĞø¼Ó1£¬¶øm_pShaderFunctionArray.size()È´¼õÉÙ
-	//µ¼ÖÂÓĞĞ©½Úµã²»ÄÜÉ¾³ı
-	//ËùÒÔÓÃÒ»¸öÁÙÊ±±äÁ¿Ìæ´ú£¬È»ºó°ÑÕâ¸öm_pShaderFunctionArray¶ÔÓ¦µÄÉèÖÃÎª¿Õ£¬ÕâÑùÉ¾³ıÊ±ÕÒ²»µ½½Úµã£¬ÄÜ°ÑÕı½Úµã
-	//Õı³£ÊÍ·Å£¬¶øÇÒm_pShaderFunctionArray.size()±£³Ö²»±ä¡£
+	//ç”±äºé‡Šæ”¾å‡½æ•°èŠ‚ç‚¹ï¼Œä¼šè°ƒVSMaterial::DeleteShaderFuntionä»m_pShaderFunctionArrayä¸­åˆ é™¤,è¿™æ ·
+	//m_pShaderFunctionArrayæ•°é‡å°±ä¼šå‡å°‘ï¼Œè¿™ä¸ªFORå¾ªç¯ä¸­iç»§ç»­åŠ 1ï¼Œè€Œm_pShaderFunctionArray.size()å´å‡å°‘
+	//å¯¼è‡´æœ‰äº›èŠ‚ç‚¹ä¸èƒ½åˆ é™¤
+	//æ‰€ä»¥ç”¨ä¸€ä¸ªä¸´æ—¶å˜é‡æ›¿ä»£ï¼Œç„¶åæŠŠè¿™ä¸ªm_pShaderFunctionArrayå¯¹åº”çš„è®¾ç½®ä¸ºç©ºï¼Œè¿™æ ·åˆ é™¤æ—¶æ‰¾ä¸åˆ°èŠ‚ç‚¹ï¼Œèƒ½æŠŠæ­£èŠ‚ç‚¹
+	//æ­£å¸¸é‡Šæ”¾ï¼Œè€Œä¸”m_pShaderFunctionArray.size()ä¿æŒä¸å˜ã€‚
 	for(unsigned int i = 0 ; i < m_pShaderFunctionArray.GetNum() ; i++)
 	{
 		VSShaderFunction * pShaderFunction = m_pShaderFunctionArray[i];
@@ -931,7 +931,7 @@ VSMaterial::VSMaterial(const VSUsedName &ShowName, unsigned int uiMUT)
 {
 
 	m_ShowName = ShowName;
-	//Clear±ØĞëÒªÔÚshaderFunction´´½¨Ç°Ãæ
+	//Clearå¿…é¡»è¦åœ¨shaderFunctionåˆ›å»ºå‰é¢
 	m_pShaderFunctionArray.Clear();
 	m_pShaderMainFunction.Clear();
 	m_pLightShaderFunction = NULL;
@@ -1418,7 +1418,7 @@ void VSMaterialInstance::SetVShaderValue(const VSUsedName & Name,void *fValue,un
 			return;
 		}
 	}
-	//Èç¹ûÃ»ÓĞ
+	//å¦‚æœæ²¡æœ‰
 	CustomFloatValue Temp;
 	Temp.ConstValueName = Name;
 	Temp.Value.SetBufferNum(uiSize);
@@ -1478,7 +1478,7 @@ void VSMaterialInstance::SetPShaderValue(const VSUsedName & Name,void *fValue,un
 			return;
 		}
 	}
-	//Èç¹ûÃ»ÓĞ
+	//å¦‚æœæ²¡æœ‰
 	CustomFloatValue Temp;
 	Temp.ConstValueName = Name;
 	Temp.Value.SetBufferNum(uiSize);

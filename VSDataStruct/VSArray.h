@@ -44,8 +44,8 @@ namespace VSEngine2
 	
 		void Sort(unsigned int uiBegin,unsigned int uiEnd);
 		void Destroy();
-		//ÓÃÕâ¸öº¯ÊıÒª×¢Òâ£ºÈç¹ûTÊÇÖÇÄÜÖ¸Õë£¬²ÎÊıElement ´ÓÖ¸Õëµ½ÖÇÄÜÖ¸ÕëµÄÒşÊ½×ª»»£¬µ¼ÖÂÖÇÄÜÖ¸Õë¶ÔÏóµÄ´´½¨
-		//ºÍÏú»Ù¹ı³ÌÖĞ£¬reference¼Ó1¼õ1£¬Èç¹ûÔ­À´¶ÔÏóµÄreferenceÎª0£¬Ôò»áÏú»Ù¶ÔÏó£¬µ¼ÖÂ³ö´í
+		//ç”¨è¿™ä¸ªå‡½æ•°è¦æ³¨æ„ï¼šå¦‚æœTæ˜¯æ™ºèƒ½æŒ‡é’ˆï¼Œå‚æ•°Element ä»æŒ‡é’ˆåˆ°æ™ºèƒ½æŒ‡é’ˆçš„éšå¼è½¬æ¢ï¼Œå¯¼è‡´æ™ºèƒ½æŒ‡é’ˆå¯¹è±¡çš„åˆ›å»º
+		//å’Œé”€æ¯è¿‡ç¨‹ä¸­ï¼ŒreferenceåŠ 1å‡1ï¼Œå¦‚æœåŸæ¥å¯¹è±¡çš„referenceä¸º0ï¼Œåˆ™ä¼šé”€æ¯å¯¹è±¡ï¼Œå¯¼è‡´å‡ºé”™
 		unsigned int FindElement(const T & Element);
 	protected:
 
@@ -59,7 +59,7 @@ namespace VSEngine2
 	private:
 
 	};
-	//ÓĞĞòÊı×é
+	//æœ‰åºæ•°ç»„
 	template <class T,VSMemManagerFun MMFun = VSMemObject::GetMemManager>
 	class VSArrayOrder : public VSArray<T,MMFun>
 	{
@@ -68,8 +68,8 @@ namespace VSEngine2
 		~VSArrayOrder();
 		void AddElement(const T & Element);
 
-		//ÓÃÕâ¸öº¯ÊıÒª×¢Òâ£ºÈç¹ûTÊÇÖÇÄÜÖ¸Õë£¬²ÎÊıElement ´ÓÖ¸Õëµ½ÖÇÄÜÖ¸ÕëµÄÒşÊ½×ª»»£¬µ¼ÖÂÖÇÄÜÖ¸Õë¶ÔÏóµÄ´´½¨
-		//ºÍÏú»Ù¹ı³ÌÖĞ£¬reference¼Ó1¼õ1£¬Èç¹ûÔ­À´¶ÔÏóµÄreferenceÎª0£¬Ôò»áÏú»Ù¶ÔÏó£¬µ¼ÖÂ³ö´í
+		//ç”¨è¿™ä¸ªå‡½æ•°è¦æ³¨æ„ï¼šå¦‚æœTæ˜¯æ™ºèƒ½æŒ‡é’ˆï¼Œå‚æ•°Element ä»æŒ‡é’ˆåˆ°æ™ºèƒ½æŒ‡é’ˆçš„éšå¼è½¬æ¢ï¼Œå¯¼è‡´æ™ºèƒ½æŒ‡é’ˆå¯¹è±¡çš„åˆ›å»º
+		//å’Œé”€æ¯è¿‡ç¨‹ä¸­ï¼ŒreferenceåŠ 1å‡1ï¼Œå¦‚æœåŸæ¥å¯¹è±¡çš„referenceä¸º0ï¼Œåˆ™ä¼šé”€æ¯å¯¹è±¡ï¼Œå¯¼è‡´å‡ºé”™
 		unsigned int FindElement(const T & Element);
 
 		void ReSort(unsigned int i);

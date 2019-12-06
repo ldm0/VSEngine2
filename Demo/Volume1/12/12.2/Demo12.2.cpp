@@ -1,4 +1,4 @@
-//Õâ¸ödemo¸øµ¼³öµÄStone.STMODEL´´½¨Ò»¸ö²ÄÖÊ×ÊÔ´£¬²¢¸³ÓèËü£¬È»ºóµ¼³öÐÂµÄÄ£ÐÍ½Ð×öNewStone.STMODEL¡£
+//è¿™ä¸ªdemoç»™å¯¼å‡ºçš„Stone.STMODELåˆ›å»ºä¸€ä¸ªæè´¨èµ„æºï¼Œå¹¶èµ‹äºˆå®ƒï¼Œç„¶åŽå¯¼å‡ºæ–°çš„æ¨¡åž‹å«åšNewStone.STMODELã€‚
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

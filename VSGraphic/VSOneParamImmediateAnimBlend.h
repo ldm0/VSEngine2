@@ -4,7 +4,7 @@
 namespace VSEngine2
 {
 	/*
-	CrossFading IMMEDIATE|______|______|  [0,1) ÊÇ¶¯»­0 [1,2) ÊÇ¶¯»­1 £¬ÒÔ´ËÀàÍÆ
+	CrossFading IMMEDIATE|______|______|  [0,1) æ˜¯åŠ¨ç”»0 [1,2) æ˜¯åŠ¨ç”»1 ï¼Œä»¥æ­¤ç±»æŽ¨
 	0		1		2
 
 

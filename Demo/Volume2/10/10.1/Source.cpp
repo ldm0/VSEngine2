@@ -1,4 +1,4 @@
-//创建自定义材质，用于演示反射效果
+//鍒涘缓鑷畾涔夋潗璐紝鐢ㄤ簬婕旂ず鍙嶅皠鏁堟灉
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

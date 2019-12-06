@@ -69,18 +69,18 @@ public:
 	void CreateFromLookAtWorld(const VSVector3 &vcPos,
 		const VSVector3 &vcLookAt,
 		const VSVector3 &vcUp = VSVector3(0, 1, 0));
-	bool SetPerspectiveFov(VSREAL fFov ,		//X·½ÏòÕÅ½Ç
-						VSREAL Aspect,	//¿í¸ß±È
-						VSREAL fZN ,		//½ü¼ô²ÃÃæ
-						VSREAL fZF);		//Ô¶¼ô²ÃÃæ
+	bool SetPerspectiveFov(VSREAL fFov ,		//Xæ–¹å‘å¼ è§’
+						VSREAL Aspect,	//å®½é«˜æ¯”
+						VSREAL fZN ,		//è¿‘å‰ªè£é¢
+						VSREAL fZF);		//è¿œå‰ªè£é¢
 	bool SetAspect(VSREAL Aspect);
 	
-	bool SetOrthogonal(VSREAL fW ,				//¿í
-						VSREAL fH,					//¸ß
-						VSREAL fZN ,				//½ü¼ô²ÃÃæ
-						VSREAL fZF)	;				//Ô¶¼ô²ÃÃæ
+	bool SetOrthogonal(VSREAL fW ,				//å®½
+						VSREAL fH,					//é«˜
+						VSREAL fZN ,				//è¿‘å‰ªè£é¢
+						VSREAL fZF)	;				//è¿œå‰ªè£é¢
 	FORCEINLINE const VSMatrix3X3W &GetProjMatrix()const;
-	FORCEINLINE bool AddViewPort(const VSViewPort &ViewPort);//ÊÓ¿Ú				
+	FORCEINLINE bool AddViewPort(const VSViewPort &ViewPort);//è§†å£				
 	FORCEINLINE VSViewPort* GetViewPort(unsigned int i)const;
 	FORCEINLINE unsigned int GetViewPortNum()const
 	{
@@ -126,11 +126,11 @@ public:
 	VSArray<VSPlane3> m_CustomCullPlane;
 	virtual void UpdateCameraState(double dAppTime);
 public:
-	VSREAL		m_RotX;							//ÔÚ¾Ö²¿×ø±êÏµÏÂµÄEULER½Ç(Ğı×ª½Ç)
+	VSREAL		m_RotX;							//åœ¨å±€éƒ¨åæ ‡ç³»ä¸‹çš„EULERè§’(æ—‹è½¬è§’)
 	VSREAL		m_RotY;
 	VSREAL		m_RotZ;
 
-//	VSVector3	m_LocalPos;						//Î»ÖÃ
+//	VSVector3	m_LocalPos;						//ä½ç½®
 
 protected :
 	friend class VSFreeCameraController;
@@ -141,7 +141,7 @@ protected :
 	friend class VSViewFamily;
 	friend class VSLight;
 	VSArray<VSViewPort>		m_ViewPort;
-	VSMatrix3X3W	m_ViewMat;					//Ïà»ú¾ØÕó
+	VSMatrix3X3W	m_ViewMat;					//ç›¸æœºçŸ©é˜µ
 	VSMatrix3X3W	m_ProjMat;
 	
 
@@ -158,7 +158,7 @@ protected :
 
 	
 public:
-	virtual void UpdateTransform(double dAppTime);//¸üĞÂ±ä»»ĞÅÏ¢ 
+	virtual void UpdateTransform(double dAppTime);//æ›´æ–°å˜æ¢ä¿¡æ¯ 
 public:
 
 	static bool InitialDefaultState();

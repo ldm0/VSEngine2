@@ -9,8 +9,8 @@ void VSPolygon3::Clip(const VSPlane3 &Plane,
 {
 
 
-	int			nNumFront=0,     // Ç°Ãæ¶à±ßĞÎµãµÄ¸öÊı
-				nNumBack=0,      // ºóÃæ¶à±ßĞÎµãµÄ¸öÊı
+	int			nNumFront=0,     // å‰é¢å¤šè¾¹å½¢ç‚¹çš„ä¸ªæ•°
+				nNumBack=0,      // åé¢å¤šè¾¹å½¢ç‚¹çš„ä¸ªæ•°
 				nLoop=0,
 				nCurrent=0;
 

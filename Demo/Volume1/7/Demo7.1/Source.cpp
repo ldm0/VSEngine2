@@ -1,4 +1,4 @@
-//Õâ¸öÊ¾ÀýµÄÖ÷ÒªÄ¿µÄÑÝÊ¾Ò»¸öWindowApplicationµÄ´´½¨£¬°üÀ¨¸÷ÖÖÏûÏ¢µÄ»Øµ÷µÄÊ¹ÓÃ¡£¶ÁÕß¿ÉÒÔÑ¡Ôñ´´½¨ÄÇÖÖÊäÈëÊä³öÉè±¸·½Ê½£¬Ä¬ÈÏÊÇÓÃWindows£¬»¹¿ÉÒÔÑ¡ÔñÓÃDxµÄ
+//è¿™ä¸ªç¤ºä¾‹çš„ä¸»è¦ç›®çš„æ¼”ç¤ºä¸€ä¸ªWindowApplicationçš„åˆ›å»ºï¼ŒåŒ…æ‹¬å„ç§æ¶ˆæ¯çš„å›žè°ƒçš„ä½¿ç”¨ã€‚è¯»è€…å¯ä»¥é€‰æ‹©åˆ›å»ºé‚£ç§è¾“å…¥è¾“å‡ºè®¾å¤‡æ–¹å¼ï¼Œé»˜è®¤æ˜¯ç”¨Windowsï¼Œè¿˜å¯ä»¥é€‰æ‹©ç”¨Dxçš„
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 using namespace VSEngine2;

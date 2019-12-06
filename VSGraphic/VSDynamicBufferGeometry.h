@@ -35,7 +35,7 @@ namespace VSEngine2
 		virtual ~VSDVGeometry();
 		bool Add(const void * pVeretexDate,unsigned int uiVertexSize);
 		void * NewGetV(unsigned int uiVertexSize);
-		//更新和视点无关的Mesh 信息
+		//鏇存柊鍜岃鐐规棤鍏崇殑Mesh 淇℃伅
 		virtual unsigned int UpdateGeometry();
 		virtual void ClearInfo();
 		virtual bool HaveDate()
@@ -78,7 +78,7 @@ namespace VSEngine2
 
 		void * NewGetV(unsigned int uiVertexSize);
 		void * NewGetI(unsigned int uiIndexSize);
-		//更新和视点无关的Mesh 信息
+		//鏇存柊鍜岃鐐规棤鍏崇殑Mesh 淇℃伅
 		virtual unsigned int UpdateGeometry();
 		virtual void ClearInfo();
 		virtual bool HaveDate()
@@ -116,7 +116,7 @@ namespace VSEngine2
 		virtual ~VSSVDIGeometry();
 		bool Add(const void * pIndexDate,unsigned int uiIndexSize);
 		void * NewGetI(unsigned int uiIndexSize);
-		//更新和视点无关的Mesh 信息
+		//鏇存柊鍜岃鐐规棤鍏崇殑Mesh 淇℃伅
 		virtual unsigned int UpdateGeometry();
 		virtual void ClearInfo();
 		virtual bool HaveDate()
@@ -153,7 +153,7 @@ namespace VSEngine2
 		virtual ~VSDVSIGeometry();
 		bool Add(const void * pVeretexDate,unsigned int uiVertexSize);
 		void * NewGetV(unsigned int uiVertexSize);
-		//更新和视点无关的Mesh 信息
+		//鏇存柊鍜岃鐐规棤鍏崇殑Mesh 淇℃伅
 		virtual unsigned int UpdateGeometry();
 		virtual void ClearInfo();
 		virtual bool HaveDate()

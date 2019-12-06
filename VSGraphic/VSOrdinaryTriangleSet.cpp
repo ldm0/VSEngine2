@@ -19,24 +19,24 @@ VSOrdinaryTriangleSet::VSOrdinaryTriangleSet(const VSAABB3 & AABB)
 	m_pVertexBuffer = VS_NEW VSVertexBuffer(true);
 	m_pVertexBuffer->SetDate(pVertex,VSVertexFormat::VF_POSITION);
 	VSUSHORT_INDEX Index[36];
-	//Ç°ÃæµÄ2¸öÈı½ÇĞÎ
+	//å‰é¢çš„2ä¸ªä¸‰è§’å½¢
 	Index[0]=0;  Index[1]=1;  Index[2]=2;
 	Index[3]=0;  Index[4]=2;  Index[5]=3;
 	
-	//ºóÃæµÄ2¸öÈı½ÇĞÎ
+	//åé¢çš„2ä¸ªä¸‰è§’å½¢
 	Index[6]=4;   Index[7]=6;   Index[8]=5;
 	Index[9]=4;   Index[10]=7;  Index[11]=6;
 	
-	//ÓÒ²àÃæµÄ2¸öÈı½ÇĞÎ
+	//å³ä¾§é¢çš„2ä¸ªä¸‰è§’å½¢
 	Index[12]=0;  Index[13]=3;  Index[14]=7;
 	Index[15]=0;  Index[16]=7;  Index[17]=4;
-	//×ó²àÃæµÄ2¸öÈı½ÇĞÎ
+	//å·¦ä¾§é¢çš„2ä¸ªä¸‰è§’å½¢
 	Index[18]=1;  Index[19]=5;  Index[20]=6;
 	Index[21]=1;  Index[22]=6;  Index[23]=2;
-	//¶¥ÃæµÄ2¸öÈı½ÇĞÎ	
+	//é¡¶é¢çš„2ä¸ªä¸‰è§’å½¢	
 	Index[24]=0;  Index[25]=5;  Index[26]=1;
 	Index[27]=0;  Index[28]=4;  Index[29]=5;
-	//µ×ÃæµÄ2¸öÈı½ÇĞÎ
+	//åº•é¢çš„2ä¸ªä¸‰è§’å½¢
 	Index[30]=2;  Index[31]=6;  Index[32]=7;
 	Index[33]=2;  Index[34]=7;  Index[35]=3;
 	
@@ -60,24 +60,24 @@ VSOrdinaryTriangleSet::VSOrdinaryTriangleSet(const VSOBB3 & OBB)
 	m_pVertexBuffer = VS_NEW VSVertexBuffer(true);
 	m_pVertexBuffer->SetDate(pVertex,VSVertexFormat::VF_POSITION);
 	VSUSHORT_INDEX Index[36];
-	//Ç°ÃæµÄ2¸öÈı½ÇĞÎ
+	//å‰é¢çš„2ä¸ªä¸‰è§’å½¢
 	Index[0]=0;  Index[1]=1;  Index[2]=2;
 	Index[3]=0;  Index[4]=2;  Index[5]=3;
 
-	//ºóÃæµÄ2¸öÈı½ÇĞÎ
+	//åé¢çš„2ä¸ªä¸‰è§’å½¢
 	Index[6]=4;   Index[7]=6;   Index[8]=5;
 	Index[9]=4;   Index[10]=7;  Index[11]=6;
 
-	//ÓÒ²àÃæµÄ2¸öÈı½ÇĞÎ
+	//å³ä¾§é¢çš„2ä¸ªä¸‰è§’å½¢
 	Index[12]=0;  Index[13]=3;  Index[14]=7;
 	Index[15]=0;  Index[16]=7;  Index[17]=4;
-	//×ó²àÃæµÄ2¸öÈı½ÇĞÎ
+	//å·¦ä¾§é¢çš„2ä¸ªä¸‰è§’å½¢
 	Index[18]=1;  Index[19]=5;  Index[20]=6;
 	Index[21]=1;  Index[22]=6;  Index[23]=2;
-	//¶¥ÃæµÄ2¸öÈı½ÇĞÎ	
+	//é¡¶é¢çš„2ä¸ªä¸‰è§’å½¢	
 	Index[24]=0;  Index[25]=5;  Index[26]=1;
 	Index[27]=0;  Index[28]=4;  Index[29]=5;
-	//µ×ÃæµÄ2¸öÈı½ÇĞÎ
+	//åº•é¢çš„2ä¸ªä¸‰è§’å½¢
 	Index[30]=2;  Index[31]=6;  Index[32]=7;
 	Index[33]=2;  Index[34]=7;  Index[35]=3;
 
@@ -197,8 +197,8 @@ VSOrdinaryTriangleSet::VSOrdinaryTriangleSet(const VSPolygon3 &Polyon)
 }
 VSOrdinaryTriangleSet::VSOrdinaryTriangleSet(const VSSphere3 & Sphere)
 {
-	VSREAL LongitudeAngle = 10;//¾­¶ÈÏßÉÏµÄ»®·Ö½Ç
-	VSREAL LatitudeAngle = 10;//Î¬¶ÈÏßÉÏµÄ»®·Ö½Ç
+	VSREAL LongitudeAngle = 10;//ç»åº¦çº¿ä¸Šçš„åˆ’åˆ†è§’
+	VSREAL LatitudeAngle = 10;//ç»´åº¦çº¿ä¸Šçš„åˆ’åˆ†è§’
 
 	VSREAL AnglePI = 180.0f;
 	unsigned int LongitudeNum = 0;

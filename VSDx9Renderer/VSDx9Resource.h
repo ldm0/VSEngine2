@@ -23,7 +23,7 @@ namespace VSEngine2
 			VSMAC_RELEASE(m_pVertexShader)
 			
 		}
-		IDirect3DVertexShader9*      m_pVertexShader;  //¶¥µãäÖÈ¾Æ÷
+		IDirect3DVertexShader9*      m_pVertexShader;  //é¡¶ç‚¹æ¸²æŸ“å™¨
 		
 	};
 	class  VSDX9RENDERER_API VSPProgramID : public VSResourceIdentifier
@@ -39,7 +39,7 @@ namespace VSEngine2
 			VSMAC_RELEASE(m_pPixelShader)
 
 		}
-		IDirect3DPixelShader9*      m_pPixelShader;  //ÏñËØäÖÈ¾Æ÷
+		IDirect3DPixelShader9*      m_pPixelShader;  //åƒç´ æ¸²æŸ“å™¨
 
 	};
 

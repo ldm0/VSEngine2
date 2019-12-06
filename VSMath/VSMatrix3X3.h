@@ -4,7 +4,7 @@
 #include "VSQuat.h"
 namespace VSEngine2
 {
-	//¾ØÕó
+	//çŸ©é˜µ
 	class  VSMATH_API VSMatrix3X3 
 	{
 	public:
@@ -27,26 +27,26 @@ namespace VSEngine2
 		
 
 		void CreateFromDirection(VSVector3 & Direction , const VSVector3 &Up = VSVector3(0,1,0));
-		void CreateRotX(VSREAL a);								// ÈÆxÐý×ª
-		void CreateRotY(VSREAL a);								// ÈÆyÐý×ª
-		void CreateRotZ(VSREAL a);								// ÈÆzÐý×ª
-		void CreateEluer(VSREAL Roll,VSREAL Pitch, VSREAL Yaw);		// ÈÆz x and y¹¹½¨£¬Å·À­½Ç  -pi <= y z <= pi  -pi/2 < x < pi/2
-		void CreateAxisAngle(const VSVector3 &vAxis, VSREAL a);	//ÈÆvAxisÐý×ªa»¡¶È	
-		//´´½¨Ðý×ª¾ØÕó
+		void CreateRotX(VSREAL a);								// ç»•xæ—‹è½¬
+		void CreateRotY(VSREAL a);								// ç»•yæ—‹è½¬
+		void CreateRotZ(VSREAL a);								// ç»•zæ—‹è½¬
+		void CreateEluer(VSREAL Roll,VSREAL Pitch, VSREAL Yaw);		// ç»•z x and yæž„å»ºï¼Œæ¬§æ‹‰è§’  -pi <= y z <= pi  -pi/2 < x < pi/2
+		void CreateAxisAngle(const VSVector3 &vAxis, VSREAL a);	//ç»•vAxisæ—‹è½¬aå¼§åº¦	
+		//åˆ›å»ºæ—‹è½¬çŸ©é˜µ
 		void CreateRot(const VSVector3 &U,const VSVector3 &V,const VSVector3 & N);
-		//´´½¨Ëõ·Å¾ØÕó
+		//åˆ›å»ºç¼©æ”¾çŸ©é˜µ
 		void CreateScale(VSREAL fX,VSREAL fY,VSREAL fZ);
 
 		void CreateScale(const VSVector3 & Axis,VSREAL fScale);
-		//µÃµ½eluer½Ç¶È
+		//å¾—åˆ°eluerè§’åº¦
 		void GetEluer(VSREAL &Yaw,VSREAL &Pitch,VSREAL &Roll)const;
-		//µÃµ½Ðý×ªÖáºÍÐý×ª½Ç
+		//å¾—åˆ°æ—‹è½¬è½´å’Œæ—‹è½¬è§’
 		void GetAxisAngle(VSVector3 & Axis,VSREAL & fAngle)const;
-		//µÃµ½ËÄÔªÊý
+		//å¾—åˆ°å››å…ƒæ•°
 		VSQuat GetQuat()const;
-		//ÏßÐÔ²åÖµ
+		//çº¿æ€§æ’å€¼
 		void LineInterpolation(VSREAL t,const VSMatrix3X3 & M1, const VSMatrix3X3 &M2);
-		//ÇòÐÎ²åÖµ
+		//çƒå½¢æ’å€¼
 		void Slerp(VSREAL t,const VSMatrix3X3 & M1, const VSMatrix3X3 &M2);
 		VSMatrix3X3 operator *(VSREAL f)const;
 		VSMatrix3X3 operator +(VSREAL f)const;
@@ -61,27 +61,27 @@ namespace VSEngine2
 		void operator -= (const VSMatrix3X3 &Matirx);
 
 		bool operator ==(const VSMatrix3X3 &v)const;
-		//°´ÐÐ»ñµÃÏòÁ¿
+		//æŒ‰è¡ŒèŽ·å¾—å‘é‡
 		void GetRowVector(VSVector3 Row[3])const;
-		//°´ÐÐÁÐµÃÏòÁ¿
+		//æŒ‰è¡Œåˆ—å¾—å‘é‡
 		void GetColumnVector(VSVector3 Column[3])const;
 
 		void GetRowVector(VSVector3 &Row0,VSVector3 &Row1,VSVector3 &Row2)const;
 		void GetColumnVector(VSVector3 &Column0,VSVector3 &Column1,VSVector3 &Column2)const;
-		//°´UVN»ñµÃ
+		//æŒ‰UVNèŽ·å¾—
 		void GetUVN(VSVector3 UVN[3])const;
 		void GetUVN(VSVector3 & U,VSVector3 &V,VSVector3 &N)const;
-		//ÇóÌØÕ÷Öµ£¬ÌØÕ÷ÏòÁ¿
+		//æ±‚ç‰¹å¾å€¼ï¼Œç‰¹å¾å‘é‡
 		void GetEigenSystem(VSREAL EigenValue[3],VSVector3 Eigen[3])const;
 		/*********************************** FORCEINLINE *************************************/
-		FORCEINLINE void Identity(void);											//µ¥Î»¾ØÕó
-		FORCEINLINE void TransposeOf(const VSMatrix3X3 &Matirx);					//×ªÖÃ
-		FORCEINLINE void InverseOf(const VSMatrix3X3 &Matirx);					//ÇóÄæ
-		FORCEINLINE VSREAL Det()const;											//ÇóÅÐ±ðÊ½
-		FORCEINLINE VSMatrix3X3 operator * (const VSMatrix3X3 &Matirx)const;		// ¾ØÕóÏà³Ë
-		FORCEINLINE VSVector3 operator * (const VSVector3 &vc)const;				// ¾ØÕóºÍÏòÁ¿³Ë
+		FORCEINLINE void Identity(void);											//å•ä½çŸ©é˜µ
+		FORCEINLINE void TransposeOf(const VSMatrix3X3 &Matirx);					//è½¬ç½®
+		FORCEINLINE void InverseOf(const VSMatrix3X3 &Matirx);					//æ±‚é€†
+		FORCEINLINE VSREAL Det()const;											//æ±‚åˆ¤åˆ«å¼
+		FORCEINLINE VSMatrix3X3 operator * (const VSMatrix3X3 &Matirx)const;		// çŸ©é˜µç›¸ä¹˜
+		FORCEINLINE VSVector3 operator * (const VSVector3 &vc)const;				// çŸ©é˜µå’Œå‘é‡ä¹˜
 
-		//Ò»¸öÐÐÏòÁ¿ Ò»¸öÁÐÏòÁ¿¹¹Ôì
+		//ä¸€ä¸ªè¡Œå‘é‡ ä¸€ä¸ªåˆ—å‘é‡æž„é€ 
 		FORCEINLINE void CreateFromTwoVector(const VSVector3 & v1,const VSVector3 & v2);
 		FORCEINLINE void SetZero();
 		void GetScale(VSVector3 & Scale)const;

@@ -51,7 +51,7 @@ namespace VSEngine2
 			VSMAC_RELEASE(m_pRasterState)
 
 		}
-		ID3D11RasterizerState* m_pRasterState;  //¶¥µãäÖÈ¾Æ÷
+		ID3D11RasterizerState* m_pRasterState;  //é¡¶ç‚¹æ¸²æŸ“å™¨
 
 	};
 	class  VSDX11RENDERER_API VSDepthStencilStateID : public VSResourceIdentifier
@@ -66,7 +66,7 @@ namespace VSEngine2
 			VSMAC_RELEASE(m_pDepthStencilState)
 
 		}
-		ID3D11DepthStencilState* m_pDepthStencilState;  //¶¥µãäÖÈ¾Æ÷
+		ID3D11DepthStencilState* m_pDepthStencilState;  //é¡¶ç‚¹æ¸²æŸ“å™¨
 
 	};
 	class  VSDX11RENDERER_API VSVProgramID : public VSResourceIdentifier
@@ -82,7 +82,7 @@ namespace VSEngine2
 			VSMAC_RELEASE(m_pVertexShader)
 			VSMAC_RELEASE(m_pShaderBuffer)
 		}
-		ID3D11VertexShader*      m_pVertexShader;  //¶¥µãäÖÈ¾Æ÷
+		ID3D11VertexShader*      m_pVertexShader;  //é¡¶ç‚¹æ¸²æŸ“å™¨
 		ID3D11Buffer*			m_pShaderBuffer;
 	};
 	class  VSDX11RENDERER_API VSPProgramID : public VSResourceIdentifier
@@ -98,7 +98,7 @@ namespace VSEngine2
 			VSMAC_RELEASE(m_pPixelShader)
 			VSMAC_RELEASE(m_pShaderBuffer)
 		}
-		ID3D11PixelShader*      m_pPixelShader;  //ÏñËØäÖÈ¾Æ÷
+		ID3D11PixelShader*      m_pPixelShader;  //åƒç´ æ¸²æŸ“å™¨
 		ID3D11Buffer*			m_pShaderBuffer;
 	};
 	class  VSDX11RENDERER_API VSGProgramID : public VSResourceIdentifier
@@ -114,7 +114,7 @@ namespace VSEngine2
 			VSMAC_RELEASE(m_pGeometryShader)
 				VSMAC_RELEASE(m_pShaderBuffer)
 		}
-		ID3D11GeometryShader*      m_pGeometryShader;  //ÏñËØäÖÈ¾Æ÷
+		ID3D11GeometryShader*      m_pGeometryShader;  //åƒç´ æ¸²æŸ“å™¨
 		ID3D11Buffer*			m_pShaderBuffer;
 	};
 	class  VSDX11RENDERER_API VSDProgramID : public VSResourceIdentifier
@@ -130,7 +130,7 @@ namespace VSEngine2
 			VSMAC_RELEASE(m_pDomainShader)
 				VSMAC_RELEASE(m_pShaderBuffer)
 		}
-		ID3D11DomainShader*      m_pDomainShader;  //ÏñËØäÖÈ¾Æ÷
+		ID3D11DomainShader*      m_pDomainShader;  //åƒç´ æ¸²æŸ“å™¨
 		ID3D11Buffer*			m_pShaderBuffer;
 	};
 	class  VSDX11RENDERER_API VSHProgramID : public VSResourceIdentifier
@@ -146,7 +146,7 @@ namespace VSEngine2
 			VSMAC_RELEASE(m_pHullShader)
 				VSMAC_RELEASE(m_pShaderBuffer)
 		}
-		ID3D11HullShader*      m_pHullShader;  //ÏñËØäÖÈ¾Æ÷
+		ID3D11HullShader*      m_pHullShader;  //åƒç´ æ¸²æŸ“å™¨
 		ID3D11Buffer*			m_pShaderBuffer;
 	};
 // 

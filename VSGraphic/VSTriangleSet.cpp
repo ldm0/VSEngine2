@@ -76,7 +76,7 @@ bool VSTriangleSet::CreateNormal(unsigned int uiVertexLevel)
 
 	VSVector3 * pNormalBuffer = (VSVector3 *)pNormal->GetDate();
 
-	//计数
+	//璁℃暟
 	unsigned int * pVertexTemp = VS_NEW unsigned int[Num];
 	VSMemset((void *)pVertexTemp, 0, sizeof(unsigned int) * Num);
 
@@ -88,7 +88,7 @@ bool VSTriangleSet::CreateNormal(unsigned int uiVertexLevel)
 	{
 		return 0;
 	}
-	// 获取索引指针
+	// 鑾峰彇绱㈠紩鎸囬拡
 	VSUSHORT_INDEX * pIndexBuffer = (VSUSHORT_INDEX *)pIndexDate->GetDate();
 	if(!pIndexBuffer)
 		return 0;
@@ -98,12 +98,12 @@ bool VSTriangleSet::CreateNormal(unsigned int uiVertexLevel)
 		return 0;
 	if(pDate->GetChannel() != 3)
 		return 0;
-	//获取顶点指针
+	//鑾峰彇椤剁偣鎸囬拡
 	VSVector3 * pVertexBuffer = (VSVector3 *)pDate->GetDate();
 	if(!pVertexBuffer)
 		return 0;
 	
-	//遍历所有三角形
+	//閬嶅巻鎵�鏈変笁瑙掑舰
 	for (unsigned int poly = 0 ; poly < TriangleNum; poly++)
 	{
 
@@ -211,18 +211,18 @@ bool VSTriangleSet::CreateTangent(unsigned int uiTexCoordLevel)
 		return 0;
 	}
 
-	// 获取索引指针
+	// 鑾峰彇绱㈠紩鎸囬拡
 	VSUSHORT_INDEX * pIndexBuffer = (VSUSHORT_INDEX *)pIndexDate->GetDate();
 	if(!pIndexBuffer)
 		return 0;
 
-	//获取顶点
+	//鑾峰彇椤剁偣
 	VSDataBuffer * pDate = m_pVertexBuffer->GetPositionDate(0);
 	if(!pDate)
 		return 0;
 	if(pDate->GetChannel() != 3)
 		return 0;
-	//获取顶点指针
+	//鑾峰彇椤剁偣鎸囬拡
 	VSVector3 * pVertexBuffer = (VSVector3 *)pDate->GetDate();
 	if(!pVertexBuffer)
 		return 0;

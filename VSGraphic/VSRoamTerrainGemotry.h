@@ -9,7 +9,7 @@ namespace VSEngine2
 				 /\
 				/  \
 			  C/____\ B
-	顺时针排列，可见
+	椤烘椂閽堟帓鍒楋紝鍙
 
 	 |Z
 	 |

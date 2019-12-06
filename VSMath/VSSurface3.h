@@ -2,7 +2,7 @@
 #define VSSURFACE3_H
 #include "VSVector3.h"
 /*
-ÇúÃæÀà
+æ›²é¢ç±»
 */
 namespace VSEngine2
 {
@@ -11,12 +11,12 @@ namespace VSEngine2
 	public:
 		VSSurface3();
 		virtual ~VSSurface3() = 0;
-		//Çóµã
+		//æ±‚ç‚¹
 		virtual VSVector3 GetPoint(VSREAL U,VSREAL V) = 0;
-		//ÇóÆ«µ¼
+		//æ±‚åå¯¼
 		virtual VSVector3 GetUPartialDerivative(VSREAL U,VSREAL V) = 0;
 		virtual VSVector3 GetVPartialDerivative(VSREAL U,VSREAL V) = 0;
-		//µÃµ½·¨ÏòÁ¿
+		//å¾—åˆ°æ³•å‘é‡
 		FORCEINLINE VSVector3 GetN(VSREAL U,VSREAL V);
 	};
 

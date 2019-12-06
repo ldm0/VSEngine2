@@ -1,4 +1,4 @@
-//这个示例的主要目的是，查找内存泄漏，用debug执行
+//杩欎釜绀轰緥鐨勪富瑕佺洰鐨勬槸锛屾煡鎵惧唴瀛樻硠婕忥紝鐢╠ebug鎵ц
 #include <VSMemManager.h>
 void Fun()
 {

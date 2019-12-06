@@ -2,7 +2,7 @@
 #define VSCURVE3SUBDIVISION_H
 #include "VSControlCurve3.h"
 /*
-ÇúÏß»®·Ö·½·¨
+æ›²çº¿åˆ’åˆ†æ–¹æ³•
 
 */
 namespace VSEngine2
@@ -19,19 +19,19 @@ public:
 	};
 	VSCurve3Subdivision();
 	virtual ~VSCurve3Subdivision() = 0;
-	//ÉèÖÃÇúÏß
+	//è®¾ç½®æ›²çº¿
 	bool SetSubCurve(VSControlCurve3 * pCurve);
-    //µÃµ½»®·ÖºóµÄµã
+    //å¾—åˆ°åˆ’åˆ†åçš„ç‚¹
 	FORCEINLINE VSVector3 *GetPoints()const;
-	////µÃµ½»®·ÖºóµÄµã¸öÊı
+	////å¾—åˆ°åˆ’åˆ†åçš„ç‚¹ä¸ªæ•°
 	FORCEINLINE unsigned int GetPointNum()const;
-	//µÃµ½ÇúÏß
+	//å¾—åˆ°æ›²çº¿
 	FORCEINLINE VSControlCurve3 *GetCurve()const;
-	//µÃµ½»®·ÖºóÇúÏßµÄÊ±¼ä
+	//å¾—åˆ°åˆ’åˆ†åæ›²çº¿çš„æ—¶é—´
 	FORCEINLINE VSREAL *GetT()const;
-	//Ö¸¶¨ÇúÏßµÄÄ³¸ö¿ØÖÆµã±ä»¯£¬ÖØĞÂÇóËùÓĞ»®·ÖºóµÄµã
+	//æŒ‡å®šæ›²çº¿çš„æŸä¸ªæ§åˆ¶ç‚¹å˜åŒ–ï¼Œé‡æ–°æ±‚æ‰€æœ‰åˆ’åˆ†åçš„ç‚¹
 	bool ControlPointChange(unsigned int i);
-	//»®·ÖÇúÏß
+	//åˆ’åˆ†æ›²çº¿
 	virtual bool Subdivision() = 0;
 
 	virtual unsigned int GetSubdivisionMethod() = 0;

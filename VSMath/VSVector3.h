@@ -18,7 +18,7 @@ namespace VSEngine2
 	class VSAABB3;
 	class VSMatrix3X3W;
 	class VSPolygon3;
-	//ÏòÁ¿
+	//å‘é‡
 	class  VSMATH_API VSVector3 
 	{
 	public:
@@ -37,15 +37,15 @@ namespace VSEngine2
 
 		/*************************************FORCEINLINE************************************************/
 		FORCEINLINE void  Set(VSREAL _x, VSREAL _y, VSREAL _z);
-		FORCEINLINE VSREAL GetLength(void)const;                   // ³¤¶È
-		FORCEINLINE VSREAL GetSqrLength(void) const;          // ³¤¶ÈÆ½·½
-		FORCEINLINE void  Negate(void);                      // ³ËÒÔ-1
-		FORCEINLINE void  Normalize(void);                   // µ¥Î»»¯
-		FORCEINLINE void Cross(const VSVector3 &v1,          //²æ»ı
+		FORCEINLINE VSREAL GetLength(void)const;                   // é•¿åº¦
+		FORCEINLINE VSREAL GetSqrLength(void) const;          // é•¿åº¦å¹³æ–¹
+		FORCEINLINE void  Negate(void);                      // ä¹˜ä»¥-1
+		FORCEINLINE void  Normalize(void);                   // å•ä½åŒ–
+		FORCEINLINE void Cross(const VSVector3 &v1,          //å‰ç§¯
 						const VSVector3 &v2); 
 
-		VSREAL AngleWith( VSVector3 &v);          // Á½¸öÏòÁ¿µÄ¼Ğ½Ç(»¡¶È)
-		void  Create(const VSVector3 &v1,			// ¹¹ÔìÏòÁ¿´Óµãv1µ½v2
+		VSREAL AngleWith( VSVector3 &v);          // ä¸¤ä¸ªå‘é‡çš„å¤¹è§’(å¼§åº¦)
+		void  Create(const VSVector3 &v1,			// æ„é€ å‘é‡ä»ç‚¹v1åˆ°v2
 							const VSVector3 &v2);
 
 
@@ -66,7 +66,7 @@ namespace VSEngine2
 		VSVector3 & operator -= (VSREAL f);
 
 		
-		VSREAL Dot(const VSVector3 &v)const;//µã»ı
+		VSREAL Dot(const VSVector3 &v)const;//ç‚¹ç§¯
 		bool operator ==(const VSVector3 &v)const;
 
 
@@ -86,40 +86,40 @@ namespace VSEngine2
 		VSVector3 & operator /= (const VSVector3 &v);
 		VSVector3 & operator *= (const VSVector3 &v);
 		bool IsParallel(const VSVector3 & Vector)const;
-		/********************************¾àÀë******************************************/
-		//µãºÍµã¾àÀë
+		/********************************è·ç¦»******************************************/
+		//ç‚¹å’Œç‚¹è·ç¦»
 		VSREAL SquaredDistance(const VSVector3 &Point)const;
-		//µãµ½Ö±Ïß¾àÀë
+		//ç‚¹åˆ°ç›´çº¿è·ç¦»
 		VSREAL SquaredDistance(const VSLine3 & Line,VSREAL &fLineParameter)const;
-		//µãºÍÉäÏß¾àÀë
+		//ç‚¹å’Œå°„çº¿è·ç¦»
 		VSREAL SquaredDistance(const VSRay3 & Ray,VSREAL &fRayParameter)const;
-		//µãºÍÏß¶Î¾àÀë
+		//ç‚¹å’Œçº¿æ®µè·ç¦»
 		VSREAL SquaredDistance(const VSSegment3 & Segment,VSREAL &fSegmentParameter)const;
-		//µãºÍÈı½ÇĞÎ¾àÀë
+		//ç‚¹å’Œä¸‰è§’å½¢è·ç¦»
 		VSREAL SquaredDistance(const VSTriangle3 &Triangle,VSREAL fTriangleParameter[3])const;
-		//µãºÍ¾ØĞÎ¾àÀë
+		//ç‚¹å’ŒçŸ©å½¢è·ç¦»
 		VSREAL SquaredDistance(const VSRectangle3 &Rectangle,VSREAL fRectangleParameter[2])const;
-		//µãºÍOBB¾àÀë
+		//ç‚¹å’ŒOBBè·ç¦»
 		VSREAL SquaredDistance(const VSOBB3 &OBB,VSREAL fOBBParameter[3])const;
-		//µãºÍÇòµÄ¾àÀë
+		//ç‚¹å’Œçƒçš„è·ç¦»
 		VSREAL Distance(const VSSphere3& Sphere,VSVector3 & SpherePoint)const;
-		//µãºÍÆ½Ãæ¾àÀë
+		//ç‚¹å’Œå¹³é¢è·ç¦»
 		VSREAL Distance(const VSPlane3 & Plane,VSVector3 &PlanePoint)const;
-		//µãºÍAABB¾àÀë
+		//ç‚¹å’ŒAABBè·ç¦»
 		VSREAL SquaredDistance(const VSAABB3 &AABB,VSREAL fAABBParameter[3])const;
-		//µãºÍ¶à±ßĞÎ¾àÀë
+		//ç‚¹å’Œå¤šè¾¹å½¢è·ç¦»
 		VSREAL SquaredDistance(const VSPolygon3 & Polygon , int& IndexTriangle,VSREAL fTriangleParameter[3])const;
 		/********************************RelationWith******************************************/
-		//µãºÍÇòÎ»ÖÃ¹ØÏµ
+		//ç‚¹å’Œçƒä½ç½®å…³ç³»
 		//VSIN VSOUT VSON	
 		int RelationWith(const VSSphere3 & Sphere)const;
-		//µãºÍÆ½ÃæÎ»ÖÃ¹ØÏµ
+		//ç‚¹å’Œå¹³é¢ä½ç½®å…³ç³»
 		//VSFRONT VSBACK VSON
 		int RelationWith(const VSPlane3 &Plane)const;
-		//µãºÍOBBÎ»ÖÃ¹ØÏµ
+		//ç‚¹å’ŒOBBä½ç½®å…³ç³»
 		//VSIN VSOUT VSON
 		int RelationWith(const VSOBB3 &OBB)const; 
-		//µãºÍAABBÎ»ÖÃ¹ØÏµ
+		//ç‚¹å’ŒAABBä½ç½®å…³ç³»
 		//VSIN VSOUT VSON
 		int RelationWith(const VSAABB3 &AABB)const; 
 		const static VSVector3 ms_Up;

@@ -24,7 +24,7 @@ VSWorld::VSWorld()
 	VSSceneMap * pSceneMap = VS_NEW VSSceneMap("Main");
 	m_SceneArray.AddElement(pSceneMap);
 	VSResourceManager::AddRootObject(this);
-	IncreRef();//default reference = 1 ,±ÜÃâÖÇÄÜÖ¸ÕëÖ¸ÏòºóÊÍ·Å¡£
+	IncreRef();//default reference = 1 ,é¿å…æ™ºèƒ½æŒ‡é’ˆæŒ‡å‘åé‡Šæ”¾ã€‚
 }
 VSWorld::~VSWorld()
 {

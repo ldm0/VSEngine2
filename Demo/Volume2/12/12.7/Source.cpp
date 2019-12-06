@@ -1,4 +1,4 @@
-//随机创建了一个大场景，演示方向光CSM
+//闅忔満鍒涘缓浜嗕竴涓ぇ鍦烘櫙锛屾紨绀烘柟鍚戝厜CSM
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

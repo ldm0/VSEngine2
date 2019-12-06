@@ -1,4 +1,4 @@
-//ящй╬фад╩╩ри╚╨Сфза╢
+//Ф╪■Г╓╨Е╠▐Е╧∙Г│╟Х┴╡Е░▌Ф°÷И⌠╬
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

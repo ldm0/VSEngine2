@@ -25,7 +25,7 @@ namespace VSEngine2
 			return m_Edge;
 		}
 	protected:
-		//可通过的边
+		//鍙�氳繃鐨勮竟
 		VSList<VSGraphEdge *> m_Edge;
 	};
 	class VSDATESTRUCT_API VSGraphEdge
@@ -135,7 +135,7 @@ namespace VSEngine2
 		VSMAC_DELETEA(pGraphNode);
 		return pGraph;
 	}
-	//0 可以通过 大于0表示通过不了
+	//0 鍙互閫氳繃 澶т簬0琛ㄧず閫氳繃涓嶄簡
 	template<class T>
 	T *CreateFrom2DMatrix(unsigned char ** pMatrixArray,int uiWidth,int uiHeight)
 	{

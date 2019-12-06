@@ -853,7 +853,7 @@ void VSASYNLoadManager::AddJob(VSResourceJob* pResourceProxyJob)
 {
 
 	m_ResourceJobArray.AddElement(pResourceProxyJob);
-	//m_ResourceLoadThread.AddJob(pResourceProxyJob); //·ÅÔÚÕâÀïm_ResourceLoadThread Ïß³Ì»áËÀËø
+	//m_ResourceLoadThread.AddJob(pResourceProxyJob); //æ”¾åœ¨è¿™é‡Œm_ResourceLoadThread çº¿ç¨‹ä¼šæ­»é”
 	if (m_ResourceJobArray.GetNum() == 1)
 	{
 		m_ResourceLoadThread.Start();

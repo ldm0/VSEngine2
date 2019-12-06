@@ -1,4 +1,4 @@
-//��ʾһ���Զ������ģ�͡����Ҳ�Ƚϼ򵥣����ǹ�Դ����ͷ��ߵ��
+//演示一个自定义光照模型。这个也比较简单，就是光源方向和法线点乘
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

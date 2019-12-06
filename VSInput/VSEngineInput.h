@@ -31,7 +31,7 @@ namespace VSEngine2
 		};
 		enum	//Board Key
 		{
-			//¼üÅÌ¼üÉ¨ÃèÂë
+			//é”®ç›˜é”®æ‰«æç 
 			BK_ESCAPE			,	//0         
 			BK_TAB				,	//1
 			BK_SPACE           ,	//2
@@ -79,7 +79,7 @@ namespace VSEngine2
 			BK_O               ,	//41
 			BK_P               ,	//42
 
-			//Êı×Ö¼ü
+			//æ•°å­—é”®
 			BK_1               ,	//43
 			BK_2               ,	//44
 			BK_3               ,	//45
@@ -91,7 +91,7 @@ namespace VSEngine2
 			BK_9               ,	//51
 			BK_0               ,	//52
 
-			// FUNCTION ¼ü
+			// FUNCTION é”®
 			BK_F1              ,	//53
 			BK_F2              ,	//54
 			BK_F3              ,	//55
@@ -209,19 +209,19 @@ namespace VSEngine2
 		virtual	bool IsMouseReleased(UINT nBtn) = 0;
 		virtual void MouseUpdate() = 0;
 		
-		//Êó±ê
+		//é¼ æ ‡
 		
-		MouseRange      m_Cage;							//Êó±ê·¶Î§
-		bool			m_bPressed[3];					//´æ´¢Êó±êÊÇ·ñ°´ÏÂ
-		bool			m_bReleased[3];					//ÅĞ¶ÏÊó±êÊÇ·ñÊÍ·Å
-		MousePoint      m_Delta;							//Êó±êÆ«ÒÆÁ¿
+		MouseRange      m_Cage;							//é¼ æ ‡èŒƒå›´
+		bool			m_bPressed[3];					//å­˜å‚¨é¼ æ ‡æ˜¯å¦æŒ‰ä¸‹
+		bool			m_bReleased[3];					//åˆ¤æ–­é¼ æ ‡æ˜¯å¦é‡Šæ”¾
+		MousePoint      m_Delta;							//é¼ æ ‡åç§»é‡
 		int                m_lX;
 		int                m_lY;
 		int					m_lZ;
 
-		//¼üÅÌ
-		TCHAR  m_Keys[256];					//´æ´¢¼üÅÌ¼üÂëÊÇ·ñ°´ÏÂ
-		TCHAR  m_KeysOld[256];				//ÉÏÒ»´Î¼üÅÌ¼üÂë£¬ÓÃÀ´ÅĞ¶Ï¼üÅÌÊÇ·ñÊÍ·Å
+		//é”®ç›˜
+		TCHAR  m_Keys[256];					//å­˜å‚¨é”®ç›˜é”®ç æ˜¯å¦æŒ‰ä¸‹
+		TCHAR  m_KeysOld[256];				//ä¸Šä¸€æ¬¡é”®ç›˜é”®ç ï¼Œç”¨æ¥åˆ¤æ–­é”®ç›˜æ˜¯å¦é‡Šæ”¾
 
 		InputMsgProc	m_pMsgProc;
 	};

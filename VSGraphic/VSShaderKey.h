@@ -100,7 +100,7 @@ namespace VSEngine2
 		VSGRAPHIC_API friend bool operator > (const VSShaderKey & Key1,const VSShaderKey & Key2);
 		VSGRAPHIC_API friend bool operator < (const VSShaderKey & Key1,const VSShaderKey & Key2);
 
-		//ÖØÔØ=²Ù×÷·û
+		//é‡è½½=æ“ä½œç¬¦
 		void operator =(const VSShaderKey &ShaderKey);
 
 		void GetDefine(VSMap<VSString,VSString> & Define);

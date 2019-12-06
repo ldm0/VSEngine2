@@ -110,7 +110,7 @@ void VSRoamTerrainGeometry::RecursiveTessellate(VSTriTreeNode * pTri,const VSVec
 {
 	
 	
-	//ÓĞ×ã¹»µÄ¿Õ¼ä±£³Ö¼ÌĞø»®·Ö£¬ÒòÎª¿Õ¼ä×ÜÊıÊÇ¸ù¾İ×î´óÏŞ¶ÈÈı½ÇĞÎÀ´È·¶¨µÄ¡£
+	//æœ‰è¶³å¤Ÿçš„ç©ºé—´ä¿æŒç»§ç»­åˆ’åˆ†ï¼Œå› ä¸ºç©ºé—´æ€»æ•°æ˜¯æ ¹æ®æœ€å¤§é™åº¦ä¸‰è§’å½¢æ¥ç¡®å®šçš„ã€‚
 	if (((uiIndex << 1) + 2) < Variance.GetNum())
 	{
 		VSVector3 * pVer = (VSVector3 *)m_pMeshDate->GetVertexBuffer()->GetPositionDate(0)->GetDate();

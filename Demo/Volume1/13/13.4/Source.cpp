@@ -1,4 +1,4 @@
-//չʾ����һ��Demo�洢����Mesh�����߿�����Զ���룬�۲�ģ����Ⱦ��������
+//展示了上一个Demo存储的新Mesh，读者可以拉远距离，观察模型渲染的面数。
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

@@ -468,7 +468,7 @@ namespace VSEngine2
 			return 0;
 		}
 
-		//ÓĞĞòÊı×é
+		//æœ‰åºæ•°ç»„
 		for (unsigned int i = 0 ; i < Key1.m_KeyMap.GetNum() ;i++)
 		{
 			MapElement<VSUsedName,unsigned int> & Element1 = Key1.m_KeyMap[i];
@@ -486,7 +486,7 @@ namespace VSEngine2
 	bool operator > (const VSShaderKey & Key1,const VSShaderKey & Key2)
 	{
 
-		//°´¸öÊıÅÅĞò
+		//æŒ‰ä¸ªæ•°æ’åº
 		if (Key1.m_KeyMap.GetNum() > Key2.m_KeyMap.GetNum())
 		{
 			return 1;
@@ -496,7 +496,7 @@ namespace VSEngine2
 			return 0;
 		}
 
-		//¸öÊıÏàµÈ£¬°´keyÖµÅÅĞò
+		//ä¸ªæ•°ç›¸ç­‰ï¼ŒæŒ‰keyå€¼æ’åº
 		for (unsigned int i = 0 ; i < Key1.m_KeyMap.GetNum() ;i++)
 		{
 			MapElement<VSUsedName,unsigned int> & Element1 = Key1.m_KeyMap[i];
@@ -512,7 +512,7 @@ namespace VSEngine2
 			}			
 		}
 
-		//°´valueÖµÅÅĞò
+		//æŒ‰valueå€¼æ’åº
 		for (unsigned int i = 0 ; i < Key1.m_KeyMap.GetNum() ;i++)
 		{
 			MapElement<VSUsedName,unsigned int> & Element1 = Key1.m_KeyMap[i];
@@ -533,7 +533,7 @@ namespace VSEngine2
 	bool operator < (const VSShaderKey & Key1,const VSShaderKey & Key2)
 	{
 
-		//°´¸öÊıÅÅĞò
+		//æŒ‰ä¸ªæ•°æ’åº
 		if (Key1.m_KeyMap.GetNum() > Key2.m_KeyMap.GetNum())
 		{
 			return 0;
@@ -543,7 +543,7 @@ namespace VSEngine2
 			return 1;
 		}
 
-		//¸öÊıÏàµÈ£¬°´keyÖµÅÅĞò
+		//ä¸ªæ•°ç›¸ç­‰ï¼ŒæŒ‰keyå€¼æ’åº
 		for (unsigned int i = 0 ; i < Key1.m_KeyMap.GetNum() ;i++)
 		{
 			MapElement<VSUsedName,unsigned int> & Element1 = Key1.m_KeyMap[i];
@@ -559,7 +559,7 @@ namespace VSEngine2
 			}			
 		}
 
-		//°´valueÖµÅÅĞò
+		//æŒ‰valueå€¼æ’åº
 		for (unsigned int i = 0 ; i < Key1.m_KeyMap.GetNum() ;i++)
 		{
 			MapElement<VSUsedName,unsigned int> & Element1 = Key1.m_KeyMap[i];

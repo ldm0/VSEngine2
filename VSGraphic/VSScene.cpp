@@ -406,7 +406,7 @@ bool VSQuadNode::RecursiveBuild(const VSArray<VSSpatial *> &pObjectArray)
 	{
 		return 0;
 	}
-	//µİ¹é½áÊøµôÌõ¼ş
+	//é€’å½’ç»“æŸæ‰æ¡ä»¶
 	if (pObjectArray.GetNum() < MAX_NUM)
 	{
 		for (unsigned int i = 0 ; i < pObjectArray.GetNum() ; i++)
@@ -415,7 +415,7 @@ bool VSQuadNode::RecursiveBuild(const VSArray<VSSpatial *> &pObjectArray)
 		}
 		return 1;
 	}
-	//Ëã³öµ±Ç°ËùÓĞ½ÚµãµÄ×î´óBounds
+	//ç®—å‡ºå½“å‰æ‰€æœ‰èŠ‚ç‚¹çš„æœ€å¤§Bounds
 	bool bFound = false;
 	VSAABB3 Total;
 	for (unsigned int i = 0 ; i < pObjectArray.GetNum() ; i++)
@@ -436,7 +436,7 @@ bool VSQuadNode::RecursiveBuild(const VSArray<VSSpatial *> &pObjectArray)
 
 		}
 	}
-	//»®·ÖËÄ¸öÇøÓò£¬È»ºó¸ø½Úµã¹éÀà
+	//åˆ’åˆ†å››ä¸ªåŒºåŸŸï¼Œç„¶åç»™èŠ‚ç‚¹å½’ç±»
 	VSAABB3 ChildAABB[4];
 	Total.GetQuadAABB(ChildAABB);
 	VSArray<VSSpatial *> ChildStatic[4];
@@ -455,7 +455,7 @@ bool VSQuadNode::RecursiveBuild(const VSArray<VSSpatial *> &pObjectArray)
 			}
 		}
 	}
-	//µİ¹é¼ÌĞø»®·Ö
+	//é€’å½’ç»§ç»­åˆ’åˆ†
 	for (unsigned int i = 0 ; i < 4 ; i++)
 	{
 		if (ChildStatic[i].GetNum())

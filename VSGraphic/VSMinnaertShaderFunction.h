@@ -3,7 +3,7 @@
 #include "VSShaderMainFunction.h"
 namespace VSEngine2
 {
-	//»ﬁ±Ì√Ê no specular
+	//ÁªíË°®Èù¢ no specular
 	class VSGRAPHIC_API VSMinnaertShaderFunction : public VSShaderMainFunction
 	{
 		//RTTI

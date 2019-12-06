@@ -15,8 +15,8 @@ namespace VSEngine2
 DECLARE_Ptr(VSObject);
 
 
-// 默认clone指针类型VSType property 都是会重新创建一个实例然后再拷贝数据，为了让不重新创建，添加property的时候，这个property不要加入VSProperty::F_CLONE标志
-//然后再postclone 函数中自己再重新设置 如果只是默认的值拷贝而非创建实例可以设置F_COPY
+// 榛樿clone鎸囬拡绫诲瀷VSType property 閮芥槸浼氶噸鏂板垱寤轰竴涓疄渚嬬劧鍚庡啀鎷疯礉鏁版嵁锛屼负浜嗚涓嶉噸鏂板垱寤猴紝娣诲姞property鐨勬椂鍊欙紝杩欎釜property涓嶈鍔犲叆VSProperty::F_CLONE鏍囧織
+//鐒跺悗鍐峱ostclone 鍑芥暟涓嚜宸卞啀閲嶆柊璁剧疆 濡傛灉鍙槸榛樿鐨勫�兼嫹璐濊�岄潪鍒涘缓瀹炰緥鍙互璁剧疆F_COPY
 template<typename T>
 void Copy(T & Dest,T & Src,VSMap<VSObject *,VSObject*>& CloneMap)
 {

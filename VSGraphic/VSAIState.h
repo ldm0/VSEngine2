@@ -8,9 +8,9 @@
 namespace VSEngine2
 {
 	class VSStream;
-	//״̬�任һ�����������ڲ�����������任����һ�������ġ�
-	//����������ͨ��update���任��������ͨ������Ϣ���任�����ǿ�ȷ���������Ϣ������任״̬������ǰ����״̬���ܲ�Ҫ�任
-	//������������¾Ͳ��ܱ任��
+	//状态变换一种是自身的内部提出的主动变换，还一种是外界的。
+	//自身主动的通过update来变换，而外界的通过发消息来变换。外界强迫发过来的消息，提出变换状态，但当前所在状态可能不要变换
+	//所以这种情况下就不能变换。
 	class  VSAIStateInputNode : public VSInputNode
 	{
 		//RTTI

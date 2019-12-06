@@ -1,4 +1,4 @@
-//Õâ¸öÊ¾ÀıÑİÊ¾ÁËVSArrayOrderµÄÊ¹ÓÃ
+//è¿™ä¸ªç¤ºä¾‹æ¼”ç¤ºäº†VSArrayOrderçš„ä½¿ç”¨
 #include <VSMemManager.h>
 #include <VSArray.h>
 #include <iostream>

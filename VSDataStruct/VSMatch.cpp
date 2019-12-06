@@ -34,18 +34,18 @@ bool VSMatch::Getline()
 	VSMemset(buffer,0,sizeof(buffer));
 	while(1)
 	{
-		//¶ÁÈ¡Ò»ÐÐÊý¾Ý£¬Èç¹ûÒ»ÐÐÊý¾Ý³¬¹ýmaxlength£¬Ôò¶ÁÈ¡maxlength³¤¶È£¬ÎÄ¼þÖ¸ÕëÒÆ¶¯
-		//maxlengthµ¥Î»£¬Èç¹ûÒ»ÐÐÊý¾ÝÐ¡ÓÚmaxlength£¬ÔòÎÄ¼þÖ¸ÕëÒÆ¶¯µ½ÏÂÒ»ÐÐ£¡
+		//è¯»å–ä¸€è¡Œæ•°æ®ï¼Œå¦‚æžœä¸€è¡Œæ•°æ®è¶…è¿‡maxlengthï¼Œåˆ™è¯»å–maxlengthé•¿åº¦ï¼Œæ–‡ä»¶æŒ‡é’ˆç§»åŠ¨
+		//maxlengthå•ä½ï¼Œå¦‚æžœä¸€è¡Œæ•°æ®å°äºŽmaxlengthï¼Œåˆ™æ–‡ä»¶æŒ‡é’ˆç§»åŠ¨åˆ°ä¸‹ä¸€è¡Œï¼
 		index = 0;
 		if (!File.GetLine(buffer,BUFFER_SIZE))
 			return false;
-		//¶ÁÈ¡ÕâÒ»ÐÐÊµ¼Ê³¤¶È
+		//è¯»å–è¿™ä¸€è¡Œå®žé™…é•¿åº¦
 		length = VSStrLen(buffer);
-		//²âÊÔ±¾ÐÐÓöµ½ÎÄ±¾Ç°µÄ¿Õ¸ñÊý
+		//æµ‹è¯•æœ¬è¡Œé‡åˆ°æ–‡æœ¬å‰çš„ç©ºæ ¼æ•°
 		while(_istspace(buffer[index]))
 			index++;
 
-		//¿ÕÐÐ»ò×¢ÊÍÔò¼ÌÐø
+		//ç©ºè¡Œæˆ–æ³¨é‡Šåˆ™ç»§ç»­
 		if (index >= length) 
 			continue;
 		VSMemcpy((void *)buffer, (void *)(buffer+index),  ((length - index) + 1) * sizeof(TCHAR));

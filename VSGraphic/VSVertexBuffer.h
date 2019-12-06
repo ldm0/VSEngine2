@@ -113,7 +113,7 @@ namespace VSEngine2
 		VSVertexFormatPtr m_pVertexFormat;
 		
 		void * m_pLockDate;
-		//都要重新实现
+		//閮借閲嶆柊瀹炵幇
 	public:
 	
 

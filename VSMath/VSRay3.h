@@ -3,7 +3,7 @@
 #include "VSLine3.h"
 namespace VSEngine2
 {
-	//ÉäÏß
+	//å°„çº¿
 	class  VSMATH_API VSRay3 :public VSLine3
 	{
 	public:
@@ -17,53 +17,53 @@ namespace VSEngine2
 		FORCEINLINE VSVector3 GetParameterPoint(VSREAL fRayParameter)const;
 
 		/********************************RelationWith******************************************/
-		//²âÊÔÉäÏßÓëÈı½ÇĞÎÊÇ·ñÎ»ÖÃ¹ØÏµ bCullÎªÊÇ·ñÎª±³Ãæ¼ô²Ã,ÊÇ·ñ¿¼ÂÇ³¯Ïò,t·µ»ØÏà½»³¤¶È
+		//æµ‹è¯•å°„çº¿ä¸ä¸‰è§’å½¢æ˜¯å¦ä½ç½®å…³ç³» bCullä¸ºæ˜¯å¦ä¸ºèƒŒé¢å‰ªè£,æ˜¯å¦è€ƒè™‘æœå‘,tè¿”å›ç›¸äº¤é•¿åº¦
 		//VSNOINTERSECT VSNTERSECT
 		int RelationWith(const VSTriangle3 & Triangle, bool bCull,VSREAL &fRayParameter,
 						VSREAL fTriangleParameter[3])const;
-		//²âÊÔÉäÏßÓëÆ½ÃæÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•å°„çº¿ä¸å¹³é¢ä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT VSON VSBACK VSFRONT
 		int RelationWith(const VSPlane3 &Plane, bool bCull,VSREAL &fRayParameter)const;
-		//²âÊÔÉäÏßÓë¾ØĞÎÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•å°„çº¿ä¸çŸ©å½¢ä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT
 		int RelationWith(const VSRectangle3 &Rectangle,bool bCull,VSREAL &fRayParameter,
 						VSREAL fRectangleParameter[2])const;
 
-		//²âÊÔÉäÏßÓëOBBÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•å°„çº¿ä¸OBBä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT
 		int RelationWith(const VSOBB3 &OBB, unsigned int &Quantity,VSREAL &tNear,VSREAL &tFar)const;
-		//²âÊÔÖ±ÏßÓëAABBÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•ç›´çº¿ä¸AABBä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT
 		int RelationWith(const VSAABB3 &AABB, unsigned int &Quantity,VSREAL &tNear,VSREAL &tFar)const;
-		//²âÊÔÉäÏßÓëÇòÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•å°„çº¿ä¸çƒä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT
 		int RelationWith(const VSSphere3 &sphere, unsigned int &Quantity,VSREAL &tNear,VSREAL &tFar)const;
-		//²âÊÔÉäÏßÓë¶à±ßĞÎÎ»ÖÃ¹ØÏµ
+		//æµ‹è¯•å°„çº¿ä¸å¤šè¾¹å½¢ä½ç½®å…³ç³»
 		//VSNOINTERSECT VSNTERSECT
 		int RelationWith(const VSPolygon3 &Polygon,VSREAL &fRayParameter ,
 						bool bCull,int &iIndexTriangle,VSREAL fTriangleParameter[3])const;
-		/*************************************¾àÀë************************************************/
-		//µãºÍÉäÏß¾àÀë
+		/*************************************è·ç¦»************************************************/
+		//ç‚¹å’Œå°„çº¿è·ç¦»
 		VSREAL SquaredDistance(const VSVector3 &Point,VSREAL &fLineParameter)const;
-		//Ö±ÏßºÍÉäÏß¾àÀë
+		//ç›´çº¿å’Œå°„çº¿è·ç¦»
 		VSREAL SquaredDistance(const VSLine3 &Line,VSREAL &fRayParameter,VSREAL &fLineParameter)const;
-		//ÉäÏßºÍÉäÏß¾àÀë
+		//å°„çº¿å’Œå°„çº¿è·ç¦»
 		VSREAL SquaredDistance(const VSRay3 &Ray,VSREAL &fRay1Parameter,VSREAL &fRay2Parameter)const;
-		//ÉäÏßºÍÏß¶Î¾àÀë
+		//å°„çº¿å’Œçº¿æ®µè·ç¦»
 		VSREAL SquaredDistance(const VSSegment3 & Segment,VSREAL &fRayParameter,VSREAL &fSegmentParameter)const;
-		//ÉäÏßºÍÈı½ÇĞÎ¾àÀë
+		//å°„çº¿å’Œä¸‰è§’å½¢è·ç¦»
 		VSREAL SquaredDistance(const VSTriangle3& Triangle,VSREAL &fRayParameter,VSREAL fTriangleParameter[3])const;
-		//ÉäÏßºÍ¾ØĞÎ¾àÀë
+		//å°„çº¿å’ŒçŸ©å½¢è·ç¦»
 		VSREAL SquaredDistance(const VSRectangle3& Rectangle,VSREAL &fRayParameter,VSREAL fRectangleParameter[2])const;
-		//ÉäÏßºÍOBB¾àÀë
+		//å°„çº¿å’ŒOBBè·ç¦»
 		VSREAL SquaredDistance(const VSOBB3 & OBB,VSREAL &fRayParameter,VSREAL fOBBParameter[3])const;
-		//ÉäÏßºÍÇòµÄ¾àÀë
+		//å°„çº¿å’Œçƒçš„è·ç¦»
 		VSREAL Distance(const VSSphere3 &Sphere,VSREAL &fRayParameter,VSVector3 & SpherePoint)const;
-		//ÉäÏßºÍÆ½Ãæ¾àÀë
+		//å°„çº¿å’Œå¹³é¢è·ç¦»
 		VSREAL Distance(const VSPlane3 & Plane,VSVector3 &RayPoint,VSVector3 &PlanePoint)const;
-		//ÉäÏßºÍAABB¾àÀë
+		//å°„çº¿å’ŒAABBè·ç¦»
 		VSREAL SquaredDistance(const VSAABB3 &AABB,VSREAL &fRayParameter, VSREAL fAABBParameter[3])const;
-		//ÉäÏßºÍ¶à±ßĞÎ¾àÀë
+		//å°„çº¿å’Œå¤šè¾¹å½¢è·ç¦»
 		VSREAL SquaredDistance(const VSPolygon3 &Polygon,VSREAL &fRayParameter,
 								int& IndexTriangle,
 								VSREAL fTriangleParameter[3])const;

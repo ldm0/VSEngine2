@@ -1,4 +1,4 @@
-//²¥·ÅDemo14.22´øMorphTreeµÄÄ£ÐÍ¡£¶ÁÕß¿ÉÒÔÍ¨¹ý¡°+¡±ºÍ¡°-¡±À´µ÷½Ú»ìºÏ²ÎÊý£¬À´²¥·ÅMorphÁ³²¿±íÇé¶¯»­
+//æ’­æ”¾Demo14.22å¸¦MorphTreeçš„æ¨¡åž‹ã€‚è¯»è€…å¯ä»¥é€šè¿‡â€œ+â€å’Œâ€œ-â€æ¥è°ƒèŠ‚æ··åˆå‚æ•°ï¼Œæ¥æ’­æ”¾Morphè„¸éƒ¨è¡¨æƒ…åŠ¨ç”»
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

@@ -1,4 +1,4 @@
-//给导出的Morph模型添加材质
+//缁欏鍑虹殑Morph妯″瀷娣诲姞鏉愯川
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

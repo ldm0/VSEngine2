@@ -2,7 +2,7 @@
 #define VSSURFACE3SUBDIVISIONBYLENGTH_H
 #include "VSSurface3Subdivision.h"
 /*
-等分曲面方法
+绛夊垎鏇查潰鏂规硶
 
 
 */

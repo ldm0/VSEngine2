@@ -3,18 +3,18 @@ using namespace VSEngine2;
 namespace VSEngine2
 {
 #define CPU_NAME_LEN	48
-/******************************CPU½á¹¹*************************************/
+/******************************CPUç»“æ„*************************************/
 typedef struct CPUINFO_TYP 
 {
 	bool bSSE;					// SIMD 
 	bool bSSE2;					// SIMD2
 	bool b3DNOW;				// 3DNow!
-	bool b3DNOWEX;				// 3DNow! AMDÀ©Õ¹
+	bool b3DNOWEX;				// 3DNow! AMDæ‰©å±•
 	bool bMMX;					// MMX
-	bool bMMXEX;				// MMX AMDÀ©Õ¹
-	bool bEXT;					// À©Õ¹ÌØĞÔ
-	char vendor[13];			// ¿ª·¢ÉÌ
-	char name[CPU_NAME_LEN];    // cpuÃû×Ö
+	bool bMMXEX;				// MMX AMDæ‰©å±•
+	bool bEXT;					// æ‰©å±•ç‰¹æ€§
+	char vendor[13];			// å¼€å‘å•†
+	char name[CPU_NAME_LEN];    // cpuåå­—
 } CPUINFO;
 // G L O B A L S ///////////////////////////////////////////////////
 
@@ -41,7 +41,7 @@ VSREAL GetFastCos(unsigned int i)
 	return FastCos[i];
 }
 /**
-* ³õÊ¼»¯
+* åˆå§‹åŒ–
 */
 bool VSInitCPU(void) 
 {
@@ -58,7 +58,7 @@ bool VSInitCPU(void)
 
 
 /**
-* µÃµ½CPUÏà¹ØĞÅÏ¢
+* å¾—åˆ°CPUç›¸å…³ä¿¡æ¯
 */
 bool GetCPUInfo() 
 {
@@ -70,46 +70,46 @@ bool GetCPUInfo()
 
 	VSMemset(&info, 0, sizeof(CPUINFO));
 
-	//ÓÃCPUIDÖ¸Áî²é¿´µ±Ç°CPUÊÇ·ñÖ§³ÖMMX,SSE2,SSE1
+	//ç”¨CPUIDæŒ‡ä»¤æŸ¥çœ‹å½“å‰CPUæ˜¯å¦æ”¯æŒMMX,SSE2,SSE1
 
 	_asm 
 	{
-		mov  eax, 0          // ·µ»Ø³§ÉÌÃû×Ö
+		mov  eax, 0          // è¿”å›å‚å•†åå­—
 			CPUID                
 
 			mov  esi,     pStr
-			mov  [esi],   ebx    // µÚ1¸ö4×Ö½Ú
-			mov  [esi+4], edx    // µÚ2¸ö4×Ö½Ú
-			mov  [esi+8], ecx    // ×îºóÒ»¸ö4×Ö½Ú
+			mov  [esi],   ebx    // ç¬¬1ä¸ª4å­—èŠ‚
+			mov  [esi+4], edx    // ç¬¬2ä¸ª4å­—èŠ‚
+			mov  [esi+8], ecx    // æœ€åä¸€ä¸ª4å­—èŠ‚
 
-			mov  eax, 1          // »ñµÃCPUÌØĞÔ
+			mov  eax, 1          // è·å¾—CPUç‰¹æ€§
 			CPUID                // 
 
-			test edx, 04000000h  // ²é¿´SSE2
+			test edx, 04000000h  // æŸ¥çœ‹SSE2
 			jz   _NOSSE2         
 			mov  [info.bSSE2], 1 
 
-_NOSSE2: test edx, 02000000h  // ²é¿´SSE1
+_NOSSE2: test edx, 02000000h  // æŸ¥çœ‹SSE1
 		 jz   _NOSSE          
 		 mov  [info.bSSE], 1  
 
-_NOSSE:  test edx, 00800000h  // ²é¿´MMX
+_NOSSE:  test edx, 00800000h  // æŸ¥çœ‹MMX
 		 jz   _EXIT1          
 		 mov  [info.bMMX], 1  
 _EXIT1:  
 	}
 
 
-	// 2:²é¿´ÊÇ·ñÖ§³ÖEXT 3DNOW
+	// 2:æŸ¥çœ‹æ˜¯å¦æ”¯æŒEXT 3DNOW
 	_asm 
 	{
-		mov  eax, 80000000h     //ÊÇ·ñÖ§³ÖEXT
+		mov  eax, 80000000h     //æ˜¯å¦æ”¯æŒEXT
 			CPUID
 			cmp  eax, 80000000h     
 			jbe  _EXIT2             
 			mov [info.bEXT], 1      
 
-			mov  eax, 80000001h     //ÊÇ·ñÖ§³Ö3DNOW
+			mov  eax, 80000001h     //æ˜¯å¦æ”¯æŒ3DNOW
 			CPUID
 			test edx, 80000000h     
 			jz   _EXIT2             
@@ -117,7 +117,7 @@ _EXIT1:
 _EXIT2:
 	}
 
-	// 3: µÃµ½CPU À©Õ¹ĞÔÄÜ
+	// 3: å¾—åˆ°CPU æ‰©å±•æ€§èƒ½
 
 	if ( (strncmp(info.vendor, "GenuineIntel", 12)==0) && info.bEXT) 
 	{   // INTEL
@@ -164,15 +164,15 @@ _AMD2:
 			;
 	}
 
-	info.vendor[13] = '\0';                // ×Ö·û´®½áÊø
-	GetCPUName(info.name, n, info.vendor); // È¡µÃCPUÃû³Æ
+	info.vendor[13] = '\0';                // å­—ç¬¦ä¸²ç»“æŸ
+	GetCPUName(info.name, n, info.vendor); // å–å¾—CPUåç§°
 
 	return info.bSSE;
 }
 /*----------------------------------------------------------------*/
 
 /**
-* ²é¿´µ±Ç°²Ù×÷ÏµÍ³ÊÇ·ñÖ§³ÖSSE
+* æŸ¥çœ‹å½“å‰æ“ä½œç³»ç»Ÿæ˜¯å¦æ”¯æŒSSE
 */
 bool OSSupportsSSE() 
 {
@@ -194,7 +194,7 @@ bool OSSupportsSSE()
 
 
 /**
-* µÃµ½CPUÃû³Æ
+* å¾—åˆ°CPUåç§°
 * 
 */
 void GetCPUName(char *chName, int n, const char *vendor) 

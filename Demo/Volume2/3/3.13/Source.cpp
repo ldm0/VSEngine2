@@ -1,4 +1,4 @@
-//加载Demo14.18的模型，播放部分混合动画
+//鍔犺浇Demo14.18鐨勬ā鍨嬶紝鎾斁閮ㄥ垎娣峰悎鍔ㄧ敾
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

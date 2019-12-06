@@ -3,7 +3,7 @@
 #include "VSCurve3.h"
 #include "VSSurface3.h"
 /*
-¹ÜĞÍÇúÃæ
+ç®¡å‹æ›²é¢
 
 */
 namespace VSEngine2
@@ -13,7 +13,7 @@ namespace VSEngine2
 	public:
 		VSTubeSurface3();
 		~VSTubeSurface3();
-		//ÉèÖÃÇúÏß£¬°´ÕÕU,V·½ÏòµÄ³¤¶È
+		//è®¾ç½®æ›²çº¿ï¼ŒæŒ‰ç…§U,Væ–¹å‘çš„é•¿åº¦
 		bool SetCurve(VSCurve3 * pCurve,VSREAL fN,VSREAL fB);	
 		virtual VSVector3 GetPoint(VSREAL U,VSREAL V);
 		virtual VSVector3 GetUPartialDerivative(VSREAL U,VSREAL V);

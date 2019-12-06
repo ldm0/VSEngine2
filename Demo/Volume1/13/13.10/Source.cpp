@@ -1,4 +1,4 @@
-//这个Demo演示地形ROAM，创建了一个空地形。按W可以切换线框模式
+//杩欎釜Demo婕旂ず鍦板舰ROAM锛屽垱寤轰簡涓�涓┖鍦板舰銆傛寜W鍙互鍒囨崲绾挎妯″紡
 #include <VSApplication.h>
 #include <VSEngineInput.h>
 #include <VSCameraActor.h>

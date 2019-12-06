@@ -12,7 +12,7 @@ VSREAL VSTriangle3::SquaredDistance(const VSLine3 &Line,VSREAL fTriangleParamete
 
 }
 /*----------------------------------------------------------------*/
-//Èı½ÇĞÎºÍOBB¾àÀë
+//ä¸‰è§’å½¢å’ŒOBBè·ç¦»
 VSREAL VSTriangle3::SquaredDistance(const VSOBB3 &OBB,VSREAL TriangleParameter[3], VSREAL OBBParameter[3])const
 {
 
@@ -20,21 +20,21 @@ VSREAL VSTriangle3::SquaredDistance(const VSOBB3 &OBB,VSREAL TriangleParameter[3
 
 }
 /*----------------------------------------------------------------*/
-//ÉäÏßºÍÈı½ÇĞÎ¾àÀë
+//å°„çº¿å’Œä¸‰è§’å½¢è·ç¦»
 VSREAL VSTriangle3::SquaredDistance(const VSRay3 & Ray,VSREAL fTriangleParameter[3],VSREAL &fRayParameter)const
 {
 	return Ray.SquaredDistance(*this,fRayParameter,fTriangleParameter);
 
 }
 /*----------------------------------------------------------------*/
-//Ïß¶ÎºÍÈı½ÇĞÎ¾àÀë
+//çº¿æ®µå’Œä¸‰è§’å½¢è·ç¦»
 VSREAL VSTriangle3::SquaredDistance(const VSSegment3& Segment,VSREAL fTriangleParameter[3],VSREAL &fSegmentParameter)const
 {
 	return Segment.SquaredDistance(*this,fSegmentParameter,fTriangleParameter);
 
 }
 /*----------------------------------------------------------------*/
-//µãºÍÈı½ÇĞÎ¾àÀë
+//ç‚¹å’Œä¸‰è§’å½¢è·ç¦»
 VSREAL VSTriangle3::SquaredDistance(const VSVector3 & Point,VSREAL fTriangleParameter[3])const
 {
 	return Point.SquaredDistance(*this,fTriangleParameter);

@@ -1,4 +1,4 @@
-//���Demo��ʾ�˼���5���㼶LOD Mesh��������ʣ��洢���µ�Mesh�����Demo���Կ���Material Instance��ʹ�ã�����Ļ��ں����½ڽ��ܡ�
+//这个Demo演示了加载5个层级LOD Mesh并赋予材质，存储成新的Mesh。这个Demo可以看见Material Instance的使用，具体的会在后面章节介绍。
 #ifndef VSSAMPLE_H
 #define VSSAMPLE_H
 #include "VSApplication.h"

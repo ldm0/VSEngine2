@@ -3,7 +3,7 @@
 #include "VSCurve3.h"
 #include "VSSegment3.h"
 /*
-ÇúÏß¶Î
+æ›²çº¿æ®µ
 
 */
 namespace VSEngine2

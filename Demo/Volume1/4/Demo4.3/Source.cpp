@@ -1,4 +1,4 @@
-//Õâ¸öÊ¾ÀıÑİÊ¾ÁËVSMapµÄÊ¹ÓÃ
+//è¿™ä¸ªç¤ºä¾‹æ¼”ç¤ºäº†VSMapçš„ä½¿ç”¨
 #include <VSMemManager.h>
 #include <VSMap.h>
 #include <iostream>

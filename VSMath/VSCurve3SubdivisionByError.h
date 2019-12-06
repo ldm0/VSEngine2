@@ -2,7 +2,7 @@
 #define VSCURVESUBDIVISIONBYERROR_H
 #include "VSCurve3Subdivision.h"
 /*
-	Îó²î»®·Ö·½·¨
+	è¯¯å·®åˆ’åˆ†æ–¹æ³•
 
 
 
@@ -15,7 +15,7 @@ namespace VSEngine2
 		VSCurve3SubdivisionByError(VSREAL t1 = 0.0f,VSREAL t2 = 1.0f,
 									unsigned int Level = 5, VSREAL error = EPSILON_E4);
 		~VSCurve3SubdivisionByError();
-		//Ö¸µãµÝ¹é²ã´ÎºÍÎó²î »®·ÖÇúÏßt1,t2Ö®¼ä
+		//æŒ‡ç‚¹é€’å½’å±‚æ¬¡å’Œè¯¯å·® åˆ’åˆ†æ›²çº¿t1,t2ä¹‹é—´
 		virtual bool Subdivision();
 		
 

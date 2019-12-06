@@ -140,11 +140,11 @@ namespace VSEngine2
 	public:
 		VSResourceSet(unsigned int uiGCMaxTimeCount = 5000);
 		~VSResourceSet();
-		//Ğ´ÔÚÃ¿¸ö¼ÓÔØ×ÊÔ´º¯ÊıÀïÃæµÄ£¬Èç¹û´æÔÚÕâ¸ö×ÊÔ´£¬Ôò·µ»ØÕâ¸ö×ÊÔ´Ö¸Õë£¬·ñÔòÔÚ¼ÓÔØ×ÊÔ´º¯ÊıÀïÃæ´´½¨Õâ¸ö×ÊÔ´
+		//å†™åœ¨æ¯ä¸ªåŠ è½½èµ„æºå‡½æ•°é‡Œé¢çš„ï¼Œå¦‚æœå­˜åœ¨è¿™ä¸ªèµ„æºï¼Œåˆ™è¿”å›è¿™ä¸ªèµ„æºæŒ‡é’ˆï¼Œå¦åˆ™åœ¨åŠ è½½èµ„æºå‡½æ•°é‡Œé¢åˆ›å»ºè¿™ä¸ªèµ„æº
 		VALUE  CheckIsHaveTheResource(const KEY & Key);
 		
 		bool AddResource(const KEY & Key,VALUE pObject);
-		//Ğ´ÔÚÃ¿¸ö×ÊÔ´µÄÎö¹¹º¯ÊıÀïÃæ
+		//å†™åœ¨æ¯ä¸ªèµ„æºçš„ææ„å‡½æ•°é‡Œé¢
 		bool DeleteResource(const KEY & Key);
 
 
@@ -420,7 +420,7 @@ namespace VSEngine2
 			return s_##ResouceName##Set; \
 		}
 
-		//ÄÚ²¿¹ÜÀíresource
+		//å†…éƒ¨ç®¡ç†resource
 		GET_INNER_RESOUCE_SET(VertexFormat);
 		GET_INNER_RESOUCE_SET(Name);
 		GET_INNER_RESOUCE_SET(BlendState);
@@ -634,7 +634,7 @@ namespace VSEngine2
 		static VSDepthStencil * CreateDepthStencil(unsigned int uiWidth,unsigned int uiHeight,
 			unsigned int uiMulSample,unsigned int uiFormatType);
 
-		//È¡µÃÂú×ãÌõ¼şµÄ£¬Æ½ÇÒÃ»ÓĞÔÙÊ¹ÓÃµÄRT£¬ÎªÁË½ÚÊ¡ÏÔ´æ¿Õ¼ä£¬Ò»°ãÕâÖÖRTºÍtexture°ó¶¨µÄ£¬²¢ÇÒÌùÍ¼miplevel¶¼ÊÇ1
+		//å–å¾—æ»¡è¶³æ¡ä»¶çš„ï¼Œå¹³ä¸”æ²¡æœ‰å†ä½¿ç”¨çš„RTï¼Œä¸ºäº†èŠ‚çœæ˜¾å­˜ç©ºé—´ï¼Œä¸€èˆ¬è¿™ç§RTå’Œtextureç»‘å®šçš„ï¼Œå¹¶ä¸”è´´å›¾mipleveléƒ½æ˜¯1
 		static VSRenderTarget * Get2DRenderTarget(unsigned int uiWidth, unsigned int uiHeight,unsigned int uiFormatType,unsigned int uiMulSample);
 
 		static void Release2DRenderTarget(VSRenderTarget * pRenderTarget);
@@ -805,10 +805,10 @@ protected:
 		static VSArrayOrder<VSObject *> ms_pGCObject;
 public:
 	/*
-		GC¹æÔò£º
-		Ä¬ÈÏ´ÓVS_NEW´´½¨µÄOBJECT ²»²ÎÓëGC£¬ËùÒÔ²»»á±»GCµô£¬Òª×Ô¼º¹ÜÀí¡£
-		Ö»ÓĞ´ÓObject GetInstance ´´½¨³öÀ´µÄ²Å²ÎÓëGC£¬Èç¹ûÏëÒª²»²ÎÓëGCÇëµ÷ÓÃAddRootObject¡£
-		°ÑÖ¸Õë¼ÓÈëÊôĞÔ±í£¬±£Ö¤Òª²ÎÓëGCµÄObject¿ÉÒÔ·ÃÎÊµÄµ½£¬·ñÔò¾Í»á±»GCµô¡£
+		GCè§„åˆ™ï¼š
+		é»˜è®¤ä»VS_NEWåˆ›å»ºçš„OBJECT ä¸å‚ä¸GCï¼Œæ‰€ä»¥ä¸ä¼šè¢«GCæ‰ï¼Œè¦è‡ªå·±ç®¡ç†ã€‚
+		åªæœ‰ä»Object GetInstance åˆ›å»ºå‡ºæ¥çš„æ‰å‚ä¸GCï¼Œå¦‚æœæƒ³è¦ä¸å‚ä¸GCè¯·è°ƒç”¨AddRootObjectã€‚
+		æŠŠæŒ‡é’ˆåŠ å…¥å±æ€§è¡¨ï¼Œä¿è¯è¦å‚ä¸GCçš„Objectå¯ä»¥è®¿é—®çš„åˆ°ï¼Œå¦åˆ™å°±ä¼šè¢«GCæ‰ã€‚
 	
 	*/
 		static DelayUpdatObjectOneFrame & GetDelayUpdateObjectOneFrame()

@@ -50,9 +50,9 @@ namespace VSEngine2
 		FORCEINLINE unsigned int GetNum()const{return m_uiNum;}
 		FORCEINLINE unsigned int GetSize()const{return GetStride() * m_uiNum;}
 		FORCEINLINE void *GetDate()const {return m_pDate;}
-		//Èç¹ûÄãÌí¼ÓÊı¾İÍ¨µÀÊı´óÓÚ¹æ¶¨ÊıÔò·µ»Ø0
+		//å¦‚æœä½ æ·»åŠ æ•°æ®é€šé“æ•°å¤§äºè§„å®šæ•°åˆ™è¿”å›0
 		bool SetDate(const void *pDate,unsigned int uiNum,unsigned int uiDT);
-		//Èç¹ûÄãÌí¼ÓÊı¾İÍ¨µÀÊı´óÓÚ¹æ¶¨ÊıÔò·µ»Ø0
+		//å¦‚æœä½ æ·»åŠ æ•°æ®é€šé“æ•°å¤§äºè§„å®šæ•°åˆ™è¿”å›0
 		bool AddDate(const void *pDate,unsigned int uiNum,unsigned int uiDT);
 		bool CreateEmptyBuffer(unsigned int uiNum,unsigned int uiDT);
 		static unsigned int ms_uiDateTypeByte[DT_MAXNUM];

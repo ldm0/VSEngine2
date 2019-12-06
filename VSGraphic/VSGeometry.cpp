@@ -100,7 +100,7 @@ void VSGeometry::LoadDefault()
 		VSDataBufferPtr pIndex = VS_NEW VSDataBuffer;
 		pIndex->SetDate(&IndexArray[0],(unsigned int)IndexArray.GetNum(),VSDataBuffer::DT_USHORT);
 
-		//创建顶点BUFFER
+		//鍒涘缓椤剁偣BUFFER
 		VSVertexBufferPtr pVertexBuffer = VS_NEW VSVertexBuffer(true);
 		pVertexBuffer->SetDate(pVertexDate,VSVertexFormat::VF_POSITION);
 		pVertexBuffer->SetDate(pTexcoord,VSVertexFormat::VF_TEXCOORD);
@@ -189,7 +189,7 @@ void VSGeometry::LoadDefault()
 		VSDataBufferPtr pIndex = VS_NEW VSDataBuffer;
 		pIndex->SetDate(&IndexArray[0],(unsigned int)IndexArray.GetNum(),VSDataBuffer::DT_USHORT);
 
-		//创建顶点BUFFER
+		//鍒涘缓椤剁偣BUFFER
 		VSVertexBufferPtr pVertexBuffer = VS_NEW VSVertexBuffer(true);
 		pVertexBuffer->SetDate(pVertexDate,VSVertexFormat::VF_POSITION);
 
@@ -259,7 +259,7 @@ void VSGeometry::LoadDefault()
 		VSDataBufferPtr pIndex = VS_NEW VSDataBuffer;
 		pIndex->SetDate(&IndexArray[0],(unsigned int)IndexArray.GetNum(),VSDataBuffer::DT_USHORT);
 
-		//创建顶点BUFFER
+		//鍒涘缓椤剁偣BUFFER
 		VSVertexBufferPtr pVertexBuffer = VS_NEW VSVertexBuffer(true);
 		pVertexBuffer->SetDate(pVertexDate,VSVertexFormat::VF_POSITION);
 
@@ -371,7 +371,7 @@ void VSGeometry::LoadDefault()
 		VSDataBufferPtr pIndex = VS_NEW VSDataBuffer;
 		pIndex->SetDate(&IndexArray[0],(unsigned int)IndexArray.GetNum(),VSDataBuffer::DT_USHORT);
 
-		//创建顶点BUFFER
+		//鍒涘缓椤剁偣BUFFER
 		VSVertexBufferPtr pVertexBuffer = VS_NEW VSVertexBuffer(true);
 		pVertexBuffer->SetDate(pVertexDate,VSVertexFormat::VF_POSITION);
 
@@ -551,7 +551,7 @@ void VSGeometry::LoadDefault()
 		VSDataBufferPtr pIndex = VS_NEW VSDataBuffer;
 		pIndex->SetDate(&IndexArray[0], (unsigned int)IndexArray.GetNum(), VSDataBuffer::DT_USHORT);
 
-		//创建顶点BUFFER
+		//鍒涘缓椤剁偣BUFFER
 		VSVertexBufferPtr pVertexBuffer = VS_NEW VSVertexBuffer(true);
 		pVertexBuffer->SetDate(pVertexDate, VSVertexFormat::VF_POSITION);
 		pVertexBuffer->SetDate(pTexcoord, VSVertexFormat::VF_TEXCOORD);
@@ -572,7 +572,7 @@ void VSGeometry::LoadDefault()
 }
 unsigned int VSGeometry::UpdateGeometry()
 {
-	//更新顶点坐标，更新法向量
+	//鏇存柊椤剁偣鍧愭爣锛屾洿鏂版硶鍚戦噺
 	if (m_pMeshDate && VSEngineFlag::EnableCLODMesh)
 	{
 		m_pMeshDate->SetLodDesirePercent(m_fCLodPercent);

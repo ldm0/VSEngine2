@@ -28,7 +28,7 @@ namespace VSEngine2
 
 	protected:
 		
-		virtual void UpdateWorldBound(double dAppTime);//¸üÐÂÊÀ½ç±ß½çÌå 
+		virtual void UpdateWorldBound(double dAppTime);//æ›´æ–°ä¸–ç•Œè¾¹ç•Œä½“ 
 
 		virtual void UpdateNodeAll(double dAppTime);
 		virtual void ComputeNodeVisibleSet(VSCuller & Culler,bool bNoCull,double dAppTime);

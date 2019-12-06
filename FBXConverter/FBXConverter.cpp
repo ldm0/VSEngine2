@@ -256,7 +256,7 @@ namespace VSEngine2
 
 			m_pGeoNode = VS_NEW VSGeometryNode();
 
-			//Ä¬ÈÏMAX YZÁ½¸ö·½ÏòºÍÒıÇæÖĞYZ·½ÏòÊÇ·´ÏòµÄ
+			//é»˜è®¤MAX YZä¸¤ä¸ªæ–¹å‘å’Œå¼•æ“ä¸­YZæ–¹å‘æ˜¯åå‘çš„
 			VSMatrix3X3 M1(1.0f,0.0f,0.0f,
 							0.0f,0.0f,1.0f,
 							0.0f,1.0f,0.0f);
@@ -277,7 +277,7 @@ namespace VSEngine2
 			m_pNode = VS_NEW VSSkelectonMeshNode();
 			m_pSkeleton = VS_NEW VSSkelecton();
 			GetSkeleton(m_pFbxScene->GetRootNode());
-			//ÓÃEvaluateLocalTransform»ñÈ¡ĞÅÏ¢ ZÖá Òª¾µÏñ ¾Í¿ÉÒÔÁË
+			//ç”¨EvaluateLocalTransformè·å–ä¿¡æ¯ Zè½´ è¦é•œåƒ å°±å¯ä»¥äº†
 			m_pSkeleton->SetLocalScale(VSVector3(1.0f,1.0f,-1.0f));
 			m_pSkeleton->CreateBoneArray();
 
@@ -342,7 +342,7 @@ namespace VSEngine2
 				{
 					VSMeshNode * m_pSkelectonMesh = m_pNode;
 					((VSSkelectonMeshNode *)m_pSkelectonMesh)->SetSkelecton(m_pSkeleton);
-					//¸üĞÂÍê¹Ç¼Ü£¬ÔÚ´´½¨AABB
+					//æ›´æ–°å®Œéª¨æ¶ï¼Œåœ¨åˆ›å»ºAABB
 					m_pNode->CreateLocalAABB();
 					m_pNode->UpdateAll(0.0f);
 					AddMorph();
@@ -1342,10 +1342,10 @@ namespace VSEngine2
 
 						}//for f vertex
 
-						//Èç¹ûf×ß³öÁËÉÏÃæµÄÑ­»·µÈÓÚ m_VertexArray.GetNum()±íÃ÷¸ù±¾Ã»ÓĞÕâ¸ö¶¥µã£¬ÔòÌí¼Ó
+						//å¦‚æœfèµ°å‡ºäº†ä¸Šé¢çš„å¾ªç¯ç­‰äº m_VertexArray.GetNum()è¡¨æ˜æ ¹æœ¬æ²¡æœ‰è¿™ä¸ªé¡¶ç‚¹ï¼Œåˆ™æ·»åŠ 
 						if(f == m_VertexArray.GetNum())
 						{
-							//·Ö±ğÌí¼ÓÎ»ÖÃ£¬GroupID,ÎÆÀí×ø±ê£¬·¨ÏòÁ¿
+							//åˆ†åˆ«æ·»åŠ ä½ç½®ï¼ŒGroupID,çº¹ç†åæ ‡ï¼Œæ³•å‘é‡
 							m_VertexArray.AddElement(V);
 							if (pMorph)
 							{
@@ -1383,17 +1383,17 @@ namespace VSEngine2
 
 							if (pFBXSkin)
 							{
-								//»ñµÃÓ°Ïìµ±Ç°¶¥µãµÄËùÓĞ¹ÇÍ·ºÍÈ¨ÖØ
+								//è·å¾—å½±å“å½“å‰é¡¶ç‚¹çš„æ‰€æœ‰éª¨å¤´å’Œæƒé‡
 								VSArray<VSString> BoneTemp;
 								VSArray<VSREAL>  Weight;
 								BoneSkin(pFBXSkin,BoneTemp,Weight,ctrlPointIndex);
 
-								//Ã»ÓĞ¹ÇÍ·Ó°Ïì¸Ã¶¥µã
+								//æ²¡æœ‰éª¨å¤´å½±å“è¯¥é¡¶ç‚¹
 								if(BoneTemp.GetNum() == 0)
 								{
 									return false;
 								}
-								//Èç¹ûÓ°ÏìÕû¸ö¶¥µãµÄ¹ÇÍ·´óÓÚ4¸ö£¬Ôò°ÑÈ¨ÖØĞ¡µÄ¹ÇÍ·È¥µô£¬¼õÉÙµ½4¸ö¹ÇÍ·
+								//å¦‚æœå½±å“æ•´ä¸ªé¡¶ç‚¹çš„éª¨å¤´å¤§äº4ä¸ªï¼Œåˆ™æŠŠæƒé‡å°çš„éª¨å¤´å»æ‰ï¼Œå‡å°‘åˆ°4ä¸ªéª¨å¤´
 								while(BoneTemp.GetNum() > 4)
 								{
 									VSREAL MinWeight = Weight[0];
@@ -1412,7 +1412,7 @@ namespace VSEngine2
 									Weight.Erase(MinWeightIndex);					 	
 								}
 
-								//ÔÙÒ»´Î¹ıÂËÈ¨ÖØ¹ıĞ¡µÄ¹ÇÍ·£¬Õâ´Î¹ıÂËºó£¬²»ÄÜ±£Ö¤Ó°Ïì¶¥µãµÄ¹ÇÍ·ÊıÎª4¸ö
+								//å†ä¸€æ¬¡è¿‡æ»¤æƒé‡è¿‡å°çš„éª¨å¤´ï¼Œè¿™æ¬¡è¿‡æ»¤åï¼Œä¸èƒ½ä¿è¯å½±å“é¡¶ç‚¹çš„éª¨å¤´æ•°ä¸º4ä¸ª
 								for(unsigned int uiBoneTemp = 0 ; uiBoneTemp < BoneTemp.GetNum() ; uiBoneTemp++)
 								{
 									if(Weight[uiBoneTemp] < EPSILON_E4)
@@ -1424,7 +1424,7 @@ namespace VSEngine2
 
 								}
 
-								//ÖØĞÂ¼ÆËãÈ¨ÖØ
+								//é‡æ–°è®¡ç®—æƒé‡
 								VSREAL TotleWeight = 0;
 								for(unsigned int uiBoneTemp = 0 ; uiBoneTemp < BoneTemp.GetNum() ; uiBoneTemp++)
 								{
@@ -1436,15 +1436,15 @@ namespace VSEngine2
 										Weight[uiBoneTemp] = Weight[uiBoneTemp] /TotleWeight;
 								}
 
-								//°Ñ¹ÇÍ··ÅÈëMesh¹ÇÍ·ÁĞ±í£¬²¢Î´Õâ¸ö¶¥µãÉú³ÉÏà¶ÔÓÚÕâ¸ö¹ÇÍ·ÁĞ±íµÄË÷ÒıºÍÈ¨ÖØ
-								//Ò»¸ö¶¥µã×î¶àÖ§³Ö4¸ö¹ÇÍ·£¬ËùÒÔÓÃVSVector3W
+								//æŠŠéª¨å¤´æ”¾å…¥Meshéª¨å¤´åˆ—è¡¨ï¼Œå¹¶æœªè¿™ä¸ªé¡¶ç‚¹ç”Ÿæˆç›¸å¯¹äºè¿™ä¸ªéª¨å¤´åˆ—è¡¨çš„ç´¢å¼•å’Œæƒé‡
+								//ä¸€ä¸ªé¡¶ç‚¹æœ€å¤šæ”¯æŒ4ä¸ªéª¨å¤´ï¼Œæ‰€ä»¥ç”¨VSVector3W
 								VSVector3W BoneIndexTemp(0.0f,0.0f,0.0f,0.0f);
 								VSVector3W BoneWeightTemp(0.0f,0.0f,0.0f,0.0f);
 								for (unsigned int uiBoneTemp = 0 ; uiBoneTemp < BoneTemp.GetNum() ; uiBoneTemp++)
 								{
 									VSBoneNode * pBoneNode = m_pSkeleton->GetBoneNode(BoneTemp[uiBoneTemp]);
 									VSMAC_ASSERT(pBoneNode);
-									//Ã»ÓĞÕÒµ½¶ÔÓ¦µÄ¹ÇÍ·
+									//æ²¡æœ‰æ‰¾åˆ°å¯¹åº”çš„éª¨å¤´
 									if(!pBoneNode)
 									{
 										return false;
@@ -1459,23 +1459,23 @@ namespace VSEngine2
 										}
 
 									}
-									//°ÑÓ°ÏìÕâ¸öMESHµÄËùÓĞ¹ÇÍ·¶¼Ìí¼Óµ½¹ÇÍ·ÁĞ±íÖĞ
+									//æŠŠå½±å“è¿™ä¸ªMESHçš„æ‰€æœ‰éª¨å¤´éƒ½æ·»åŠ åˆ°éª¨å¤´åˆ—è¡¨ä¸­
 									if(uiBoneIndex == m_MeshBoneNode.GetNum())
 									{
 										m_MeshBoneNode.AddElement(BoneTemp[uiBoneTemp]);
 									}
-									//¼ÇÂ¼Ó°ÏìÕû¸ö¶¥µãµÄ¹ÇÍ·ËùÔÚ¹ÇÍ·ÁĞ±íÖĞµÄË÷ÒıºÍÈ¨ÖØ
+									//è®°å½•å½±å“æ•´ä¸ªé¡¶ç‚¹çš„éª¨å¤´æ‰€åœ¨éª¨å¤´åˆ—è¡¨ä¸­çš„ç´¢å¼•å’Œæƒé‡
 									BoneIndexTemp.m[uiBoneTemp] = uiBoneIndex * 1.0f;
 									BoneWeightTemp.m[uiBoneTemp] = Weight[uiBoneTemp];
 
 								}
-								//¼ÓÈëÈ¨ÖØºÍ¹ÇÍ·Ë÷Òı
+								//åŠ å…¥æƒé‡å’Œéª¨å¤´ç´¢å¼•
 								m_BoneIndex.AddElement(BoneIndexTemp);
 								m_BoneWeight.AddElement(BoneWeightTemp);
 							}
 						}
 
-						//¼ÇÂ¼Èı½ÇĞÎÃæµÄË÷Òı
+						//è®°å½•ä¸‰è§’å½¢é¢çš„ç´¢å¼•
 						m_IndexArray.AddElement(f);
 					}//for j triangle index
 				}
@@ -1523,7 +1523,7 @@ namespace VSEngine2
 		
 		VSOutPutDebugString("Orthogonal T B N \n");
 		printf("Orthogonal T B N \n");
-		//Õı½»»¯
+		//æ­£äº¤åŒ–
 		if (TexCoordNum && !m_bUseFbxNormal)
 		{
 			for(unsigned int v = 0 ; v < m_VertexArray.GetNum() ; v++)
@@ -1542,7 +1542,7 @@ namespace VSEngine2
 
 		VSOutPutDebugString("Vertex Num %d\n", m_VertexArray.GetNum());
 		printf("Vertex Num %d\n", m_VertexArray.GetNum());
-		//´´½¨Î»ÖÃBUFFER
+		//åˆ›å»ºä½ç½®BUFFER
 		VSDataBufferPtr pVertexDate = NULL;
 		pVertexDate = VS_NEW VSDataBuffer;
 		if(!pVertexDate)
@@ -1570,7 +1570,7 @@ namespace VSEngine2
 			
 		}
 
-		//´´½¨ÎÆÀí×ø±êBUFFER
+		//åˆ›å»ºçº¹ç†åæ ‡BUFFER
 		VSDataBufferPtr pTexcoord[TEXLEVEL];
 		for (unsigned int uiChannel = 0 ;  uiChannel < TexCoordNum ; uiChannel++)
 		{
@@ -1603,7 +1603,7 @@ namespace VSEngine2
 		}
 
 
-		//´´½¨·¨ÏòÁ¿BUFFER
+		//åˆ›å»ºæ³•å‘é‡BUFFER
 		VSDataBufferPtr pNormalDate = NULL;
 		pNormalDate = VS_NEW VSDataBuffer;
 		if(!pNormalDate)
@@ -1661,7 +1661,7 @@ namespace VSEngine2
 		}
 
 
-		//´´½¨ÇĞÏòÁ¿BUFFER
+		//åˆ›å»ºåˆ‡å‘é‡BUFFER
 		VSDataBufferPtr pTangentDate = NULL;
 		VSArray<VSDataBufferPtr> pMorphTangentDate;
 	
@@ -1767,7 +1767,7 @@ namespace VSEngine2
 			}
 		}
 
-		//Ìí¼ÓÈ¨ÖØ
+		//æ·»åŠ æƒé‡
 		VSDataBufferPtr pBoneWeight = NULL;
 		if(HasSkin)
 		{
@@ -1792,7 +1792,7 @@ namespace VSEngine2
 
 		}
 
-		//Ìí¼Ó¹ÇÍ·Ë÷Òı
+		//æ·»åŠ éª¨å¤´ç´¢å¼•
 		VSDataBufferPtr pBoneIndex = NULL;
 		if(HasSkin)
 		{
@@ -1821,7 +1821,7 @@ namespace VSEngine2
 
 
 		}
-		//´´½¨Ë÷ÒıBUUFER
+		//åˆ›å»ºç´¢å¼•BUUFER
 		VSDataBufferPtr pIndex = NULL;
 		pIndex = VS_NEW VSDataBuffer;
 		if(!pIndex)
@@ -1842,21 +1842,21 @@ namespace VSEngine2
 		}
 
 
-		//´´½¨¶¥µãBUFFER
+		//åˆ›å»ºé¡¶ç‚¹BUFFER
 		VSVertexBufferPtr pVertexBuffer = NULL;
 		pVertexBuffer = VS_NEW VSVertexBuffer(true);
 		if(!pVertexBuffer)
 			return 0;
 
-		//Ìí¼Ó¶¥µã
+		//æ·»åŠ é¡¶ç‚¹
 		pVertexBuffer->SetDate(pVertexDate,VSVertexFormat::VF_POSITION);
-		//Ìí¼ÓÎÆÀí×ø±ê
+		//æ·»åŠ çº¹ç†åæ ‡
 		for(unsigned int uiChannel = 0 ;  uiChannel < TexCoordNum ; uiChannel++)
 		{
 			if(pTexcoord[uiChannel])
 				pVertexBuffer->SetDate(pTexcoord[uiChannel],VSVertexFormat::VF_TEXCOORD);
 		}
-		//Ìí¼Ó·¨ÏòÁ¿
+		//æ·»åŠ æ³•å‘é‡
 		pVertexBuffer->SetDate(pNormalDate,VSVertexFormat::VF_NORMAL);
 		if(TexCoordNum)
 		{
@@ -1884,10 +1884,10 @@ namespace VSEngine2
 				if (!pMorphVertexBuffer[ShapeIndex])
 					return 0;
 
-				//Ìí¼Ó¶¥µã
+				//æ·»åŠ é¡¶ç‚¹
 				pMorphVertexBuffer[ShapeIndex]->SetDate(pMorphVertexData[ShapeIndex], VSVertexFormat::VF_POSITION);
 
-				//Ìí¼Ó·¨ÏòÁ¿
+				//æ·»åŠ æ³•å‘é‡
 				pMorphVertexBuffer[ShapeIndex]->SetDate(pMorphNormalDate[ShapeIndex], VSVertexFormat::VF_NORMAL);
 				if (TexCoordNum)
 				{
@@ -1902,13 +1902,13 @@ namespace VSEngine2
 		}
 
 
-		//´´½¨Mesh
+		//åˆ›å»ºMesh
 		VSTriangleSetPtr pVSMesh = NULL ;
 		pVSMesh = VS_NEW VSTriangleSet();
 		if(!pVSMesh)
 			return 0;
 
-		//ÉèÖÃ¶¥µãºÍË÷ÒıBUFFER
+		//è®¾ç½®é¡¶ç‚¹å’Œç´¢å¼•BUFFER
 		pVSMesh->SetVertexBuffer(pVertexBuffer);
 
 		VSIndexBufferPtr pIndexBuffer = VS_NEW VSIndexBuffer();
@@ -2184,7 +2184,7 @@ namespace VSEngine2
 		pVertexDate->SetDate(&SVVertexArray[0],(unsigned int)SVVertexArray.GetNum(),VSDataBuffer::DT_FLOAT32_3);
 
 
-		//´´½¨·¨ÏòÁ¿BUFFER
+		//åˆ›å»ºæ³•å‘é‡BUFFER
 		VSDataBufferPtr pNormalDate = NULL;
 		pNormalDate = VS_NEW VSDataBuffer;
 		if(!pNormalDate)
@@ -2207,7 +2207,7 @@ namespace VSEngine2
 			pNormalDate->SetDate(&SVNormalArray[0],(unsigned int)SVNormalArray.GetNum(),VSDataBuffer::DT_FLOAT32_3);
 		}
 
-		//Ìí¼ÓÈ¨ÖØ
+		//æ·»åŠ æƒé‡
 		VSDataBufferPtr pBoneWeight = NULL;
 		if(HasSkin)
 		{
@@ -2232,7 +2232,7 @@ namespace VSEngine2
 
 		}
 
-		//Ìí¼Ó¹ÇÍ·Ë÷Òı
+		//æ·»åŠ éª¨å¤´ç´¢å¼•
 		VSDataBufferPtr pBoneIndex = NULL;
 		if(HasSkin)
 		{
@@ -2263,10 +2263,10 @@ namespace VSEngine2
 		}
 
 
-		//Ìí¼Ó¶¥µã
+		//æ·»åŠ é¡¶ç‚¹
 		pVertexBuffer->SetDate(pVertexDate,VSVertexFormat::VF_POSITION);
 
-		//Ìí¼Ó·¨ÏòÁ¿
+		//æ·»åŠ æ³•å‘é‡
 		pVertexBuffer->SetDate(pNormalDate,VSVertexFormat::VF_NORMAL);
 
 		if(HasSkin)
@@ -2276,7 +2276,7 @@ namespace VSEngine2
 		}
 
 		
-		//´´½¨Ë÷ÒıBUUFER
+		//åˆ›å»ºç´¢å¼•BUUFER
 		VSDataBufferPtr pIndex = NULL;
 		pIndex = VS_NEW VSDataBuffer;
 		if(!pIndex)

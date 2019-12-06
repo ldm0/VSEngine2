@@ -1,4 +1,4 @@
-//演示自定义类的初始化顺序
+//婕旂ず鑷畾涔夌被鐨勫垵濮嬪寲椤哄簭
 #include <VSObject.h>
 #include <VSProperty.h>
 #include <iostream>

@@ -47,7 +47,7 @@ namespace VSEngine2
 		VSResourceIdentifier* GetIdentifier();
 		unsigned int GetInfoQuantity () const;
 		bool IsStatic()const {return m_bIsStatic;}
-		//如果此资源需要lock，并且是多线程渲染，为了有效利用多线效率，lock函数如果在主线程使用请设置bmulthreadUse为true
+		//濡傛灉姝よ祫婧愰渶瑕乴ock锛屽苟涓旀槸澶氱嚎绋嬫覆鏌擄紝涓轰簡鏈夋晥鍒╃敤澶氱嚎鏁堢巼锛宭ock鍑芥暟濡傛灉鍦ㄤ富绾跨▼浣跨敤璇疯缃産multhreadUse涓簍rue
 		void SetStatic(bool bIsStatic,bool bMulThreadUse = false);
 		static VSArray<VSBind *> ms_DynamicTwoBindArray;
 		static VSArray<VSBind *> ms_BindArray;

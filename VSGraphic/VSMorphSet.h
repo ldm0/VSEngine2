@@ -7,11 +7,11 @@
 namespace VSEngine2
 {
 	/*
-		ÿ��Morph���ݶ��ж�Ӧ��GeometryNode��GeometryNode���м����ڵ㣨����Geometry��Mesh��,��Ӧ��Morph
-		Ҳ���м���Buffer��Morph��ÿ��Buffer�Ǻ�GeometryNode�Ľڵ�һһ��Ӧ�ġ��ڰ�Morph���뵽MorphSetʱ�����е�Morph��Buffer��Ҫһ����
-		���Ҷ�ӦBuffer��������ݣ���Ӧ�Ķ������ҲҪһ����
-		��ΪGeometryNode����MorphSet��ʱ��Ҫ���GeometryNode�Ľڵ��MorphSetBuffer�Ƿ�һ������Ҫ���ÿ��Mesh�Ķ������
-		�Ƿ��ÿ��Morph��Buffer�Ķ���һ���������Buffer��Ϊ�յ�ʱ��
+		每个Morph数据都有对应的GeometryNode，GeometryNode下有几个节点（几个Geometry，Mesh）,对应的Morph
+		也就有几个Buffer。Morph的每个Buffer是和GeometryNode的节点一一对应的。在把Morph导入到MorphSet时候，所有的Morph的Buffer都要一样，
+		并且对应Buffer如果有数据，对应的顶点个数也要一样。
+		再为GeometryNode设置MorphSet的时候，要检查GeometryNode的节点和MorphSetBuffer是否一样，还要检查每个Mesh的顶点个数
+		是否和每个Morph的Buffer的顶点一样（当这个Buffer不为空的时候）
 
 	*/
 	class VSStream;

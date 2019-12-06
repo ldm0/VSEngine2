@@ -1,4 +1,4 @@
-//Õ¹Ê¾ÖÇÄÜÖ¸ÕëµÄÓÃ·¨¡£
+//å±•ç¤ºæ™ºèƒ½æŒ‡é’ˆçš„ç”¨æ³•ã€‚
 #include <VSObject.h>
 #include <iostream>
 using namespace VSEngine2;

@@ -1,5 +1,5 @@
 /*
-展示了序列化加载，加载Demo8.5中的test_stream文件，读者可以自己前后对比下数据
+灞曠ず浜嗗簭鍒楀寲鍔犺浇锛屽姞杞紻emo8.5涓殑test_stream鏂囦欢锛岃鑰呭彲浠ヨ嚜宸卞墠鍚庡姣斾笅鏁版嵁
 */
 #include <VSObject.h>
 #include "TestSaveLoad.h"

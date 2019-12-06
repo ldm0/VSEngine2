@@ -241,7 +241,7 @@ namespace VSEngine2
 		{
 			BEGIN_MASK = 0xDEADC0DE,
 			END_MASK = 0xDEADC0DE,
-			RECORD_NUM = 32, //±ØĞë´óÓÚ2
+			RECORD_NUM = 32, //å¿…é¡»å¤§äº2
 			CALLSTACK_NUM = 32
 		};
 
@@ -258,13 +258,13 @@ namespace VSEngine2
 				m_pPrev = NULL;
 				m_pNext = NULL;
 			}
-			void * pAddr[CALLSTACK_NUM];	//ÉêÇëÄÚ´æÊ±ºòµÄµ÷ÓÃ¶ÑÕ»ĞÅÏ¢
-			unsigned int m_uiStackInfoNum;	//¶ÑÕ»²ãÊı
-			unsigned int m_uiSize;			//ÉêÇë¿Õ¼äµÄ´óĞ¡
-			bool m_bIsArray;				//ÊÇ·ñÊÇÊı×é
-			bool m_bAlignment;				//ÊÇ·ñ×Ö½Ú¶ÔÆë
-			Block * m_pPrev;				//Ç°Ò»¸ö½Úµã
-			Block * m_pNext;				//ºóÒ»¸ö½Úµã
+			void * pAddr[CALLSTACK_NUM];	//ç”³è¯·å†…å­˜æ—¶å€™çš„è°ƒç”¨å †æ ˆä¿¡æ¯
+			unsigned int m_uiStackInfoNum;	//å †æ ˆå±‚æ•°
+			unsigned int m_uiSize;			//ç”³è¯·ç©ºé—´çš„å¤§å°
+			bool m_bIsArray;				//æ˜¯å¦æ˜¯æ•°ç»„
+			bool m_bAlignment;				//æ˜¯å¦å­—èŠ‚å¯¹é½
+			Block * m_pPrev;				//å‰ä¸€ä¸ªèŠ‚ç‚¹
+			Block * m_pNext;				//åä¸€ä¸ªèŠ‚ç‚¹
 		};
 		unsigned int m_uiNumNewCalls;
 		unsigned int m_uiNumDeleteCalls;
@@ -382,7 +382,7 @@ namespace VSEngine2
 		template<class T>
 		friend class VSStackMemAlloc;
 		
-		//Ã¿Ö¡½áÊø»òÕß¿ªÊ¼µÄÊ±ºòµ÷ÓÃ
+		//æ¯å¸§ç»“æŸæˆ–è€…å¼€å§‹çš„æ—¶å€™è°ƒç”¨
 		void Clear();
 	private:
 
@@ -414,7 +414,7 @@ namespace VSEngine2
 		BYTE* AllocateNewChunk( INT MinSize );
 
 		/** Frees the chunks above the specified chunk on the stack. */
-		/*ÒÆ³ıÕâ¸öchunkºÍÕâ¸öchunkÖ®Ç°µÄËùÓĞchunk*/
+		/*ç§»é™¤è¿™ä¸ªchunkå’Œè¿™ä¸ªchunkä¹‹å‰çš„æ‰€æœ‰chunk*/
 		void FreeChunks( FTaggedMemory* NewTopChunk );
 	};
 
