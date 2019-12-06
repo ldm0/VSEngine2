@@ -1,0 +1,15 @@
+.vs
+.vscode
+*.iobj
+*.ipdb
+*.ilk
+*.pdb
+*.suo
+
+*.lib
+*.exe
+*.dll
+*.exp
+Debug
+Release
+Output
